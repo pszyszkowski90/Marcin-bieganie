@@ -13,6 +13,7 @@ Pełna chronologia (od najnowszych) — fundament dla [[10-Cele/Modele predykcyj
 
 | # | Data | Wyścig | Dystans | Czas | Miejsce | Uwagi |
 |---|------|--------|---------|------|---------|-------|
+| 0 | **30.05.2026** | **PZLA MP 24h Pabianice** | **212,7 km** | **24:00:00** | **#8 open / #5 M40** | Pętla 1725 m asfalt. Tempo 6:36/km śr. CV tempa 14.8% (★ elita). 1. połowa ~5:57/km (≈ plan 220 km), noc/finisz 8:00/km (= plan 200 km). Brak SSR. Pełna analiza → biegi/PZLA-MP-24h-Pabianice-2026/ |
 | 1 | 16.01.2026 | Ultra Way Stary Wilk | 103,09 km | 15:48:17 | 6. 🥉 | Trail nocny, start 21:00. **Pozytywny marker tolerancji deprywacji snu**. Strava 17079069822 |
 | 2 | 22.11.2025 | Borecka Łękuk Trail | 73 km | 06:32:49 | 10. 🥈 | Trail, ~5:22/km |
 | 3 | 31.05.2024 | X Rzeźnik Ultra | 94,4 km | 14:14:07 | 13. | Bieszczady, trail |
