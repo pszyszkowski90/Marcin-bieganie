@@ -35,6 +35,21 @@ Last race: PZLA MP 24h Pabianice 30.05.2026 — **212.7 km, #8 open**.
 `.mcp.json` wires up: `mcp__strava__*`, `mcp__notion__*`, `mcp__hackmd__*`.  
 On Strava auth errors call `connect-strava`. Never commit `.mcp.json`.
 
+## Kto jest kim — kontekst sesji
+
+**User = Paweł** (brat Marcina), rola: **supporter**, nie zawodnik.
+- Gdy user mówi „ja"/„moje zadania" — chodzi o rolę supportera (pit-stop, komunikacja, decyzje logistyczne), nie o trening czy żywienie zawodnika.
+- Gdy pada pytanie o plan treningowy / tempo / żywienie — to plan dla **Marcina** (Paweł koordynuje, ale to nie on biegnie).
+- Paweł czyta dokumentację z perspektywy „co muszę zrobić **dla brata**".
+
+## Strava — ograniczone zaufanie
+
+Strava to pomocnicze źródło danych historycznych, nie autorytet.
+- Brak aktywności w Stravie ≠ dowód że twierdzenie o starcie jest błędne.
+- Niektóre starty mogą być prywatne, w Garmin Connect, w papierowym logu lub niezalogowane.
+- Jeśli aktywność NIE istnieje w Stravie → oznaczaj jako „wg pamięci Marcina" lub „do weryfikacji", nie odrzucaj twierdzenia.
+- Jeśli istnieje → konfrontuj liczby (data, dystans, czas, HR) i koryguj plan ze wskazaniem źródła.
+
 ## Working conventions
 
 - **Language**: Polish for all plans, notes, analyses. Technical terms in English.
