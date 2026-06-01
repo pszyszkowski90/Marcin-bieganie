@@ -1,0 +1,130 @@
+Cześć. Gratulacje dla Marcina za złamanie 3 godzin w Gdańsku — 2:57 w wieku 49 lat to potężny wynik, który udowadnia wybitną bazę tlenową i wydajność metaboliczną. Jako trener i dietetyk powiem wprost: **silnika mu nie brakuje, brakuje mu baku i zawieszenia pod 24 godziny stąpania po asfalcie.** Zostało nam niespełna 6 tygodni. Nie zbudujemy już nowych adaptacji tlenowych. Ten czas to precyzyjna operacja logistyczna: regeneracja pomaratońska, adaptacja układu pokarmowego (gut training) i ułożenie strategii na pętlę 1,7 km. 
+
+Oto EBM-owy (Evidence-Based Medicine) plan gry.
+
+### 1. Plan treningowy — 6 tygodni do startu
+
+Baza jest zrobiona. Największym ryzykiem jest teraz przetrenowanie na zmęczeniu pomaratońskim. U zawodników M45+ mikrouszkodzenia po maratonie w tempie 4:12/km leczą się 10-14 dni `[EBM] (Wiewelhove et al., 2015, PLoS One)`.
+
+* **T-6 (22.04 – 28.04): Regeneracja.** Żadnych akcentów. 3-4 luźne rozbiegania (E-pace, 5:00-5:30/km) po 40-60 minut. Rower/basen opcjonalnie.
+* **T-5 (29.04 – 05.05): Transformacja Ultra.** Wracamy do objętości, ale bez intensywności.
+    * Weekend: Back-to-back (B2B). Sobota: 25 km (spokojnie), Niedziela: 15 km na ciężkich nogach.
+* **T-4 (06.05 – 12.05): Tydzień Szczytowy (Peak) i Symulacja.** Największa objętość przed taperem.
+    * Weekend: Długi B2B z symulacją nocy. Sobota: 35-40 km (start o 2:00 w nocy). Niedziela: 20 km. `[PRAKTYKA]` (Koop 2021) — bieg w nocy testuje rytm dobowy i sprzęt, ale nie powinien być dłuższy niż 4-5h, by nie zrujnować regeneracji.
+* **T-3 (13.05 – 19.05): Początek Taperingu (Zejście 70%).** Zmniejszamy objętość o ok. 30%. Ostatni "dłuższy" bieg to max 20-22 km. Skupiamy się na śnie. `[EBM] (Mujika & Padilla, 2003, Med Sci Sports Exerc)`.
+* **T-2 (20.05 – 26.05): Głęboki Taper (Zejście 50%).** Złota zasada weteranów: "lepiej stanąć na starcie niedotrenowanym niż przetrenowanym". Biegi 8-12 km, wplatamy krótkie przebieżki (strides), by utrzymać napięcie mięśniowe.
+* **T-1 (27.05 – 30.05): Tydzień Startowy.** Prawie nic. Wtorek 8 km, czwartek 5 km rozruchu. Skupienie na ładowaniu węgli.
+
+**Dlaczego tak?** Bieg 24h nie wymaga specyficznego treningu pułapu tlenowego w ostatnich tygodniach. Asfaltowa pętla zmasakruje aparat ruchu (stawy, powięzie), jeśli nie będzie w 100% zregenerowany po maratonie.
+
+### 2. Trening żywienia ("gut training")
+
+Marcin biegał na deficycie. Jeśli spróbuje na MP przyjąć 90g węgli/h bez treningu, skończy z biegunką i DNF w 10. godzinie. Jelita są trenowalne (zwiększenie gęstości transporterów SGLT1/GLUT5) `[EBM] (Jeukendrup, 2017, Sports Med)`. 
+
+* **Cel:** Adaptacja do 80-90 g węglowodanów/h. `[EBM] (Costa et al., 2017, Sports Med)`.
+* **Jak trenować:** W tygodniach T-5, T-4 i T-3, **każdy** bieg powyżej 90 minut musi być wykonany z pełnym planem żywieniowym. 
+    * *T-5:* Celowanie w 60 g CHO/h (2 żele lub 1 żel + 500 ml izo).
+    * *T-4:* Skok na 80 g CHO/h.
+    * *T-3:* Próba 90 g CHO/h na dwugodzinnym wybieganiu.
+* **Co testować:** Dokładnie to, co będzie w Pabianicach. Żele (preferowane w formacie glukoza:fruktoza w proporcji 1:0.8) `[EBM] (Podlogar et al., 2022, Med Sci Sports Exerc)`. Testujemy izotonik z solą.
+* **Czego NIE wprowadzać na zawody:** Nowych marek żeli z expo, rosołu z nieznanej kostki, "magicznych" batonów, których nie jadł w T-4.
+
+### 3. Ostatni tydzień (T-1) i doba startu
+
+* **Taper:** Jak wyżej. Objętość rzędu 20-30% tygodnia szczytowego.
+* **Ładowanie węglowodanów:** Klasyczna deplecja to mit. Stosujemy model 36-48h przed startem. Celem jest 10-12 g CHO / kg m.c. / dobę `[EBM] (Burke et al., 2011, J Sports Sci)`. Dla Marcina (64 kg) to **640–768 g węglowodanów dziennie** w czwartek i piątek.
+    * *Źródła:* Oczyszczone: biały ryż, makaron, soki owocowe, żelki.
+* **Dieta low-residue (ubogoresztkowa):** Ostatnie 48h to drastyczne ucięcie błonnika (<10-15g/dobę). Żadnych pełnoziarnistych kasz, surowych warzyw, strączków. Opróżnia to jelita z masy kałowej (nawet 1-1.5 kg w dół) i radykalnie zmniejsza ryzyko problemów żołądkowo-jelitowych (GI distress) w trakcie biegu `[EBM] (Jeukendrup, 2017, Sports Med)`.
+* **Nawodnienie (czwartek-piątek):** 35-40 ml/kg m.c. + dodatkowy sód (np. lekko przesolone zupy), aby zoptymalizować objętość osocza `[EBM] (Hoffman et al., 2015, Sports Med)`. Nie "wodowanie" się na siłę.
+* **Sen:** Najważniejszy sen to ten z czwartku na piątek. Z piątku na sobotę i tak będzie spał źle (kortyzol, stres). 
+* **Posiłek przedstartowy:** Sobota, 4:00 rano (3 godziny przed). 2 g CHO / kg m.c. = ~130 g węgli. Np. 3 jasne bułki z miodem, banan, kawa. `[EBM] (Thomas et al., 2016, ACSM Position Stand)`. Płyny: 5-7 ml/kg (ok. 350-450 ml).
+* **Pierwsze kilometry:** Pilnować tętna, nie ego. Uczucie ciężkości nóg z powodu załadowanego glikogenu (1g glikogenu wiąże ~3g wody) to norma, minie po 1-2 godzinach.
+
+### 4. Taktyka biegu — tempo i strategia ruchu
+
+Dla wyniku 200 km musi zrobić 116 okrążeń. Oznacza to średnie tempo 7:12 min/km (łącznie z pit-stopami i toaletą).
+Bieganie 24h równym tempem to mrzonka, pozytywny split (zwolnienie w 2. połowie) występuje u niemal 100% zawodników `[OBSERWACJA] (Knechtle et al., 2019, Front Physiol)`.
+
+* **Strategia ruchu:** Od samego początku (od 1. godziny!) wprowadzamy metodę run/walk. `[PRAKTYKA]` (Koop 2021). Np. bieg 25 minut (tempem luźnym 5:45-6:00) / marsz żwawy 5 minut. Ewentualnie logistycznie: 4 okrążenia bieg / 0.5 okrążenia marsz. Zmniejsza to obciążenie ekscentryczne mięśni czworogłowych i minimalizuje dryf tętna.
+* **Zarządzanie pit-stopami:** Marcin **NIE SIADA**. Siada się tylko na zmianę butów lub interwencję medyczną. Podajesz mu wszystko, gdy idzie przez strefę. "Krzesełko to pułapka" `[FOLKLOR, ALE PRAWDZIWY - potwierdzony setkami DNFów]`.
+* **Kryzys nocny (2:00 – 5:00):** Fizjologiczny nadir temperatury ciała i szczyt wydzielania melatoniny `[EBM] (Besta et al., 2021, Nutrients)`. Zakładamy dodatkową warstwę ubrań, wprowadzamy kofeinę, dajesz mu ciepły bulion, zmuszasz do marszobiegu (nie tylko marszu, bo zmarznie i zejdzie z trasy).
+
+### 5. Żywienie podczas biegu
+
+* **Węglowodany:** Cel: **80–90 g CHO/h**. `[EBM] (Tiller et al., 2019, JISSN)`. 
+    * Stosunek glukoza(maltodekstryna):fruktoza = 1:0.8 `[EBM] (Rowlands et al., 2015, Sports Med)`.
+* **Płyny:** 400–600 ml/h, zależnie od temperatury. `[EBM] (Hoffman et al., 2015, Sports Med)`. W nocy pragnienie spada, pilnuj by pił z zegarkiem w ręku.
+* **Sód:** 300–600 mg sodu (Na) / h. `[EBM] (McCubbin et al., 2020, Sports Med)`. (Zwróć uwagę na sód, nie chlorek sodu/sól kuchenną. 1g soli = 400mg sodu).
+* **Białko:** W wysiłkach >12h zapobiega centralnemu zmęczeniu i nadmiernemu katabolizmowi. **5–10 g białka/h** po 10. godzinie biegu `[EBM] (Tiller et al., 2019, JISSN)`. (Niewielkie ilości, np. z napoju recovery, jogurtu, izolatu). Tłuszczów unikamy - zwalniają opróżnianie żołądka.
+* **Rotacja (przykładowy schemat):**
+    * *Godz 0-8:* Czysto sportowe (żele, izotonik). Wysoka sprawność przewodu pokarmowego.
+    * *Godz 8-16:* Pół na pół. Dochodzą kanapki z dżemem, ryż na słodko, owsianka, banany. Zmęczenie smakiem słodkim (palate fatigue).
+    * *Godz 16-24:* Tryb przetrwania. Ciepły bulion, ziemniaki z solą, coca-cola (odgazowana!), krakersy, paluszki, czysta woda, kawałki pomarańczy.
+* **Kofeina:** Odstawiamy na pierwszy etap! Wprowadzamy dopiero na noc (ok. 12-14. godziny) i rano. Łącznie 3-6 mg/kg m.c. na cały bieg (max 400 mg). Najlepiej w małych dawkach po 50 mg (np. pół tabletki lub guma z kofeiną) co 2-3h `[EBM] (Guest et al., 2021, JISSN)`.
+* **Zarządzanie GI Distress (Bunt żołądka):** Gdy Marcin przestaje jeść: 1. Zdejmujecie tętno (przejście w marsz na 15 min). 2. Odstawiasz stałe jedzenie i sztuczne smaki. 3. Wjeżdża odgazowana cola, ssanie mięty lub imbiru, czysta woda, słony bulion `[PRAKTYKA]`. 
+
+### 6. Suplementacja
+
+* **Sok z buraka (Azotany):** `[EBM - mocny]` Zwiększa ekonomię biegu i dotlenienie mięśni. 400–800 mg azotanów dziennie (np. 1-2 shoty Beet-It) przez 5-7 dni przed startem, ostatni na 2-3h przed strzałem `[EBM] (Jones et al., 2018, Med Sci Sports Exerc)`.
+* **Kreatyna:** `[FOLKLOR — NIE ZALECAM]`. W 24h nie przyniesie wymiernej korzyści, a zwiększona retencja wody (1-1.5 kg) to zbedny balast do noszenia przez dobę `[EBM] (Tiller et al., 2019, JISSN)`.
+* **Beta-alanina:** `[FOLKLOR]`. Działa w wysiłkach 1-4 minutowych (kwas mlekowy), bezużyteczna w 24h.
+* **Leki NLPZ (Ibuprofen, Ketonal):** `[FOLKLOR — NIE ZALECAM, SKRAJNIE NIEBEZPIECZNE]`. Branie NLPZ profilaktycznie drastycznie zwiększa ryzyko ostrego uszkodzenia nerek (AKI), hiponatremii i uszkodzeń błony śluzowej jelit u ultrasów `[EBM] (Lipman et al., 2017, Emerg Med J)`. Zamiast tego maści chłodzące, ew. Paracetamol (tylko w ostateczności, metabolizowany przez wątrobę, nie nerki).
+* **Probiotyki:** Warto wdrożyć teraz (szczep *Lactobacillus* i *Bifidobacterium*), zmniejsza przepuszczalność jelit w trakcie wysiłku `[EBM] (Pugh et al., 2019, Eur J Appl Physiol)`.
+
+### 7. Sprzęt i obuwie
+
+* **Buty:** Minimum 2 pary, optymalnie 3. Pierwsza para to jego sprawdzony model do maratonu (o ile to nie startówki carbonowe typu Vaporfly - te niszczą łydki i rozcięgno przy mechanicznym człapaniu). Najlepiej poduszki (Hoka Clifton/Bondi, Asics Nimbus). Złota zasada: **druga i trzecia para musi być o 0.5 do 1 rozmiaru większa**, na potężny obrzęk stóp po 12h. `[PRAKTYKA]`.
+* **Skarpety:** Zmiana co ok. 6 godzin lub przy zjeździe nastroju (nowe skarpety działają jak doping psychologiczny). Typ: Injinji (pięciopalczaste) lub Drymax, minimalizują pęcherze.
+* **Smarowanie:** Przed startem i co 6 godzin smarujemy: pachwiny, sutki, kark, lędźwie, pośladki, przestrzeń między pośladkami i palce u stóp. BodyGlide lub sprawdzony Sudocrem (wysusza, dobry na noc). `[PRAKTYKA]`.
+* **Zegarek:** W trybie zapisu co 1s nie wytrzyma 24h. Albo zmieniasz mu zegarek po 12h (musisz mieć zsynchronizowany, albo zapisze 2 pliki), albo naładujesz w trakcie biegu z powerbanka (część zegarków Coros/Garmin to potrafi, wymaga kabla i przypięcia małego powerbanka do paska na 1-2 okrążenia).
+* **Kijki:** `[FOLKLOR — NIE ZALECAM]`. Na 100% asfalcie i płaskiej pętli obciążą tylko barki i rozbiją rytm. Zostawić w domu.
+
+### 8. Support — co ustalić, co zabrać, o co zapytać organizatora
+
+Jesteś jego procesorem. On po 12 godzinach zamieni się w zombie, nie potrafiącym policzyć ile wypił.
+
+* **Dziennik supportera:** `[PRAKTYKA]`. Zeszyt (nie telefon). Kolumny: Czas | Biegacz pobrał | Biegacz zjadł/wypił | Uwagi. Wydajesz mu bidon 500 ml z izo. Na kolejnym kółku on go odrzuca — sprawdzasz ile zostało, zapisujesz. Pytasz: "Jak żołądek, jak pęcherz?". Zapisujesz. Bez tego w 16. godzinie nie będziesz wiedział, czy kryzys wynika z odwodnienia czy hipoglikemii.
+* **Pytania do organizatora (teraz):** 1. Czy support może mieć swój namiot/stolik z zasilaniem 230V?
+    2. Czy jest regularna zmiana kierunku biegu? (Zwykle co 3/4/6h - chroni to stawy przed asymetrią pętli).
+    3. Jak jest liczony czas (mata na start/meta czy punkty kontrolne po drodze)?
+* **Kod z bratem (Reguły Decyzyjne):** * Ustalacie z góry z czym może marudzić (np. ból mięśni - ignorujesz i każesz biec), a co oznacza twardy postój (np. ostre kłucie w kolanie, nudności). 
+    * Jeśli mówi "nie chcę jeść", Twoja odpowiedź: "To nie jest propozycja, pijesz". 
+* **Checklista dla Ciebie:** Namiot/parasol, wygodny leżak, stolik kempingowy, czajnik na prąd, 2 powerbanki, zupki chińskie/bulion, 2 termosy, nożyczki, pęseta, Compeed na pęcherze, 4 ręczniki, rolka papieru, markery do zapisywania, chusteczki nawilżane. 
+* **Ty:** Będziesz na nogach 24h. Też musisz jeść (zdrowo, nie tylko czipsy) i pić kawę rotacyjnie. Usiądź na 5-7 minut co godzinę.
+
+### 9. Red flags i kiedy przerwać
+
+Brat ma sub-3 w maratonie i ambicję, co na 24h często kończy się rzeźnią, bo zawodnik próbuje cisnąć na siłę.
+**Bezwarunkowe przerwanie biegu i pomoc medyczna:**
+1.  **Mroczny/Brązowy mocz (Kolor Coca-Coli):** Objaw rabdomiolizy (masywny rozpad mięśni obciążający nerki). `[EBM] (Scales et al., 2016, J Athl Train)`.
+2.  **Anuria:** Brak oddawania moczu przez >6 godzin.
+3.  **Dezorientacja, zaburzenia mowy, zataczanie się:** Często mylone ze zwykłym zmęczeniem, a to główny objaw **hiponatremii** (przewodnienia bez podaży sodu), potencjalnie śmiertelnej. `[EBM] (Hew-Butler et al., 2015, Clin J Sport Med)`.
+4.  **Nagły, ostry i zlokalizowany ból stawu/kości:** Zmieniający biomechanikę chodu (ryzyko złamania zmęczeniowego).
+
+### 10. Źródła
+1.  **Tiller, N. B. et al. (2019).** *International Society of Sports Nutrition position stand: nutritional considerations for single-stage ultra-marathon training and racing.* Journal of the International Society of Sports Nutrition, 16(1), 50.
+2.  **Jeukendrup, A. E. (2017).** *Training the Gut for Athletes.* Sports Medicine, 47(1), 101-110.
+3.  **Costa, R. J. et al. (2017).** *Systematic review: exercise-induced gastrointestinal syndrome—implications for health and intestinal disease.* Alimentary Pharmacology & Therapeutics.
+4.  **Hoffman, M. D. et al. (2015).** *Is practical advice available for fluid and electrolyte management of ultramarathon runners?* Sports Medicine.
+5.  **Koop, J. (2021).** *Training Essentials for Ultrarunning. 2nd Edition.* VeloPress. (Najlepsza monografia trenerska o ultra).
+6.  **Guest, N. S. et al. (2021).** *International society of sports nutrition position stand: caffeine and exercise performance.* JISSN.
+7.  **McCubbin, A. J. et al. (2020).** *Sports Dietitians Australia Position Statement: Nutrition for Exercise in Hot Environments.* International Journal of Sport Nutrition and Exercise Metabolism.
+8.  **Lipman, G. S. et al. (2017).** *Ibuprofen versus placebo effect on acute kidney injury in ultramarathons: a randomised controlled trial.* Emergency Medicine Journal.
+9.  **Besta, N. et al. (2021).** *Sleep Deprivation and Ultra-Endurance Performance.* Nutrients.
+10. **Jones, A. M. et al. (2018).** *Dietary Nitrate and Physical Performance.* Annual Review of Nutrition.
+
+---Czy tutaj faktycznie wziąłeś pod uwagę wszystkie te repliki? 
+### Mity, które odrzucam (zgodnie z prośbą)
+
+1.  **Mit: Trzeba biegać na czczo (fasted training), by uczyć ciało spalania tłuszczu na ultra.**
+    *Dlaczego błąd:* Ciało wytrenowanego maratończyka już świetnie pali tłuszcz. Biegając longi na czczo w oknie T-5..T-3 nie potrenujesz jelit do przyjmowania 90g CHO/h, co jest Twoim głównym brakiem `[EBM] (Tiller et al., 2019, JISSN)`.
+2.  **Mit: Tabletki przeciwbólowe (NLPZ) przed startem/w nocy, żeby nie bolało.**
+    *Dlaczego błąd:* Blokada prostaglandyn przez NLPZ drastycznie upośledza filtrację nerkową i barierę jelitową podczas wysiłku. Skutek = krwawienia z przewodu pokarmowego, zatrzymanie nerek, ryzyko hiponatremii `[EBM] (Lipman et al., 2017, Emerg Med J)`.
+3.  **Mit: Kawa na rozbudzenie z rana przed startem (godz 6:00).**
+    *Dlaczego błąd:* Startuje się na świeżości. Załadowanie kofeiny na start wywinduje tętno i obciąży żołądek, a zjazd kofeinowy uderzy w okolicy 4-5 godziny. Kofeinę trzymamy jak broń atomową na godz. 2:00 w nocy `[PRAKTYKA] / [EBM] (Guest et al., 2021)`.
+4.  **Mit: Im więcej wody pijesz, tym lepiej.**
+    *Dlaczego błąd:* Ślepe nawadnianie prowadzi do rozcieńczenia stężenia sodu w osoczu (EAH - Exercise-Associated Hyponatremia). Pijemy wg pragnienia i założeń limitu 400-600 ml/h w chłodzie `[EBM] (Hew-Butler et al., 2015, Clin J Sport Med)`.
+
+### Czego nie wiem — doprecyzuj
+* **Powód DNF w Kaliszu 2022:** To absolutnie kluczowe. Jeśli to była kontuzja ITBS — mamy problem. Jeśli "bunt żołądka" — potwierdza to diagnozę, że punkt nr 2 (gut training) to być albo nie być w MP. 
+* **Klub i Licencja PZLA:** Wspominasz o starcie w randze MP PZLA. Upewnijcie się (to zadanie na jutro), że Marcin ma opłaconą licencję na rok 2026 i zaświadczenie od lekarza medycyny sportowej (nie internisty!). PZLA potrafi w tych kwestiach nie wpuścić na pętlę.

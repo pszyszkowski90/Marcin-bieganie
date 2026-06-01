@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🏃 Marcin #45 — Support</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d1117;--card:#161b22;--brd:#30363d;
+  --txt:#e6edf3;--mut:#8b949e;
+  --grn:#3fb950;--ylw:#d29922;--red:#f85149;--blu:#58a6ff;--org:#f0883e;
+}
+html,body{
+  background:var(--bg);color:var(--txt);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  height:100vh;overflow:hidden;font-size:14px;
+}
+.page{display:flex;flex-direction:column;height:100vh;gap:6px;padding:6px}
+.hdr{display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--brd);border-radius:6px;padding:0 12px}
+.hdr h1{font-size:16px;font-weight:700}
+.hdr-mid{display:flex;align-items:center;gap:16px}
+.upd{font-size:12px;color:var(--mut)}
+.pulse{width:8px;height:8px;border-radius:50%;background:var(--grn);animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.pulse.err{background:var(--red);animation:none}
+
+
+.card{background:var(--card);border:1px solid var(--brd);border-radius:8px;padding:10px 12px;overflow:hidden;display:flex;flex-direction:column}
+.clbl{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--mut);margin-bottom:6px;flex-shrink:0}
+.col-left{display:flex;flex-direction:column;gap:6px;overflow-y:auto;min-height:0}
+.nalert{border-radius:8px;padding:10px 12px;border:2px solid;flex:0 0 auto;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s,border-color .3s;max-height:190px}
+.nalert.ok  {background:#0a1e0a;border-color:#2a5a2a}
+.nalert.soon{background:#2a1e00;border-color:var(--ylw)}
+.nalert.now {background:#2a0a0a;border-color:var(--red);animation:pulse 1s ease-in-out infinite}
+@keyframes pulse{0%,100%{border-color:var(--red)}50%{border-color:#ff8080}}
+.na-top{display:flex;align-items:baseline;gap:8px}
+.na-icon{font-size:22px;line-height:1}
+.na-title{font-size:17px;font-weight:700}
+.na-when{font-size:11px;color:var(--mut);margin-top:2px}
+.na-cd{font-size:52px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1;text-align:center;padding:4px 0}
+.na-cd.ok{color:var(--grn)}.na-cd.soon{color:var(--ylw)}.na-cd.now{color:var(--red)}
+.na-btn{width:100%;padding:9px;border-radius:6px;border:none;font-size:14px;font-weight:700;cursor:pointer;background:rgba(255,255,255,.08);color:var(--txt);letter-spacing:.5px}
+.na-btn:hover{background:rgba(255,255,255,.14)}
+.na-btn:active{opacity:.7;transform:scale(.98)}
+/* ── PRODUCT BUTTONS ── */
+.prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;flex-shrink:0}
+.pbtn{padding:11px 4px;border-radius:6px;border:1px solid;color:var(--txt);font-size:13px;font-weight:700;cursor:pointer;text-align:center;line-height:1.2}
+.pbtn small{display:block;font-size:10px;font-weight:400;margin-top:3px;opacity:.7}
+.pbtn:hover{filter:brightness(1.3)}.pbtn:active{opacity:.7;transform:scale(.97)}
+.pbtn-w  {border-color:#1e6799;background:#091827}
+.pbtn-i  {border-color:#1f6b1f;background:#091809}
+.pbtn-d  {border-color:#c97a00;background:#2a1a00}
+.pbtn-s  {border-color:#2255cc;background:#0a1433}
+.pbtn-ale{grid-column:span 2;border-color:#7755aa;background:#1a0f2a}
+.pbtn-vit{grid-column:span 2;border-color:#e0186d;background:#2a0520}
+.prod-wrap{display:flex;gap:3px}
+.prod-wrap .pbtn{flex:1}
+.pbtn-minus{width:28px;border-radius:6px;border:1px solid var(--brd);background:rgba(255,255,255,.04);color:var(--mut);font-size:18px;line-height:1;cursor:pointer;flex-shrink:0;transition:background .15s,color .15s}
+.pbtn-minus:hover{background:rgba(248,81,73,.25);color:var(--red);border-color:var(--red)}
+.pbtn-minus:active{opacity:.7}
+.last-times-row{position:sticky;top:24px}
+.last-times-row td{font-size:10px;color:var(--ylw);background:#1a1600;padding:2px 5px!important;font-weight:600}
+.last-times-row td:first-child{color:var(--mut);font-size:9px;font-weight:400;font-style:italic}
+/* ── CENTER ── */
+.col-center{display:flex;flex-direction:column;gap:6px;flex-shrink:0}
+.npcard{background:linear-gradient(135deg,#0a1628,#162840);border:2px solid var(--blu);border-radius:8px;padding:12px 16px;flex:1;display:flex;flex-direction:column;justify-content:space-between;transition:background .5s,border-color .5s}
+.npcard.flash{background:linear-gradient(135deg,#0d2a0d,#1a4a1a)!important;border-color:var(--grn)!important}
+.np-lbl{font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--blu)}
+.np-cd{font-size:140px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1;color:var(--blu)}
+.np-cd.warn{color:var(--ylw)}.np-cd.urgent{color:var(--red)}
+.np-sub{font-size:14px;color:var(--mut)}
+.np-clock{font-size:42px;font-weight:700;color:var(--txt);font-variant-numeric:tabular-nums}
+.np-kółko{font-size:13px;color:var(--mut);margin-top:4px}
+.gel-hint{border-radius:6px;padding:7px 10px;font-size:14px;font-weight:700;text-align:center;margin-top:8px}
+.gel-hint.now  {background:#3a0a0a;color:var(--red);animation:pulse 1s ease-in-out infinite}
+.gel-hint.this {background:#2a1e00;color:var(--ylw)}
+.gel-hint.next {background:#0a1628;color:var(--blu)}
+.gel-hint.later{background:#111;color:var(--mut)}
+.status-card{background:var(--card);border:1px solid var(--brd);border-radius:8px;padding:12px 16px;display:flex;flex-direction:column}
+.stats4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:8px;flex-shrink:0}
+.sbox{background:var(--bg);border-radius:6px;padding:14px 6px;text-align:center}
+.sv{font-size:32px;font-weight:700;line-height:1}
+.sl{font-size:12px;color:var(--mut);margin-top:3px}
+.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.stat-item{display:flex;justify-content:space-between;font-size:12px;padding:2px 0}
+.stat-item span{color:var(--mut)}
+/* ── RIGHT ── */
+.col-right{display:flex;flex-direction:column;justify-content:space-between}
+.forecast{font-size:42px;font-weight:700;line-height:1;text-align:center;padding:3px 0}
+.badge{display:inline-block;padding:4px 12px;border-radius:12px;font-size:13px;font-weight:700}
+.badge.ok{background:#0d2a0d;color:var(--grn)}.badge.warn{background:#2a1e00;color:var(--ylw)}.badge.bad{background:#2a0a0a;color:var(--red)}
+.prow{display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:3px 0}
+.prow span{color:var(--mut)}.prow strong{font-size:14px}
+.prog{height:10px;background:var(--brd);border-radius:5px;margin-top:8px;position:relative;overflow:visible}
+.progfill{height:100%;border-radius:5px;background:linear-gradient(90deg,var(--blu),var(--grn));transition:width .5s}
+.progmark{position:absolute;top:-16px;font-size:10px;color:var(--mut);transform:translateX(-50%)}
+.progline{position:absolute;top:0;width:1px;height:10px;background:rgba(255,255,255,.2);transform:translateX(-50%)}
+/* ── BOTTOM: LAPS ── */
+.laprow{display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid var(--brd)}
+.laprow:last-child{border:none}
+.lapn{font-size:11px;color:var(--mut);min-width:28px;text-align:right}
+.lapt{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;min-width:42px}
+.lapd{flex:1;font-size:12px}
+.lapbar{width:80px;height:4px;background:var(--brd);border-radius:2px;overflow:hidden}
+.lapbarfill{height:100%;background:var(--grn);border-radius:2px}
+.laps-scroll{overflow-y:auto;flex:1;min-height:0}
+/* ── BOTTOM: LOG / BILANS ── */
+.bilans-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;flex-shrink:0;margin-bottom:6px}
+.bs-item{background:var(--bg);border-radius:5px;padding:5px 4px;text-align:center}
+.bs-lbl{font-size:9px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px}
+.bs-val{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.2}
+.bs-rate{font-size:9px;color:var(--mut)}
+.bs-ok{color:var(--grn)}.bs-warn{color:var(--ylw)}.bs-bad{color:var(--red)}
+.log-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-shrink:0}
+.log-btns{display:flex;gap:6px}
+.btn{padding:5px 10px;border-radius:5px;border:1px solid var(--brd);background:var(--brd);color:var(--txt);font-size:12px;font-weight:600;cursor:pointer}
+.btn:hover{border-color:var(--mut)}
+.btn-red{background:#2a0a0a;border-color:var(--red);color:var(--red)}
+.btn-grn{background:#0d2a0d;border-color:var(--grn);color:var(--grn)}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{padding:4px 5px;text-align:center;border-bottom:1px solid var(--brd)}
+th{color:var(--mut);font-size:10px;text-transform:uppercase;position:sticky;top:0;background:var(--card)}
+td:first-child{text-align:left;font-weight:600;font-size:13px}
+.log-scroll{overflow-y:auto;flex:1;min-height:0}
+/* ── COMPETITOR ANALYTICS ── */
+.comp-row{display:grid;grid-template-columns:30px 26px 1fr 38px;align-items:center;gap:2px;padding:2px 1px;border-bottom:1px solid var(--brd);font-size:10px;font-variant-numeric:tabular-nums}
+.comp-row.comp-m{color:var(--blu);font-weight:700;background:#0a1628;border:1px solid var(--blu);border-radius:3px;padding:2px 3px;margin:1px 0}
+/* ── SETTINGS BAR ── */
+.cfg-bar{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--brd);display:flex;align-items:center;gap:10px;padding:5px 12px;font-size:12px;z-index:100}
+.cfg-bar label{color:var(--mut)}
+.cfg-bar input[type=time]{background:var(--bg);border:1px solid var(--brd);color:var(--txt);border-radius:4px;padding:3px 7px;font-size:13px;width:90px}
+.cfg-bar input[type=text]{background:var(--bg);border:1px solid var(--brd);color:var(--txt);border-radius:4px;padding:3px 7px;font-size:13px;width:75px}
+.cfg-bar .sep{color:var(--brd);user-select:none}
+.errmsg{color:var(--red);font-size:11px}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- HEADER -->
+<div class="hdr" style="flex-shrink:0">
+  <h1>🏃 Marcin SZYSZKOWSKI #45 &nbsp;·&nbsp; 24h Pabianice 30.05.2026</h1>
+  <div class="hdr-mid">
+    <div class="upd" id="upd">Inicjalizacja...</div>
+    <div class="pulse" id="pulse-dot"></div>
+  </div>
+  <button class="btn" onclick="fetchAndUpdate()" style="font-size:13px;padding:5px 14px">↻ Odśwież</button>
+</div>
+
+<!-- GÓRNY PASEK: countdown + statystyki obok siebie -->
+<div style="display:flex;gap:6px;flex-shrink:0">
+
+  <!-- Countdown -->
+  <div class="npcard" id="npcard" style="flex:1">
+    <div class="np-lbl">⏱ Następne przejście przez strefę supportu</div>
+    <div style="flex:1;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:24px">
+      <div style="text-align:center">
+        <div class="np-cd" id="np-cd">—</div>
+        <div class="np-sub">pozostało</div>
+      </div>
+      <div style="text-align:center">
+        <div class="np-clock" id="np-time">—:—:—</div>
+        <div class="np-kółko" id="np-lap">szac. przybiegnięcie · kółko <span id="np-lapnum">—</span></div>
+      </div>
+    </div>
+    <div class="gel-hint later" id="gel-hint">🟠 ŻEL — obliczam...</div>
+  </div>
+
+  <!-- Statystyki -->
+  <div class="status-card" style="flex:1">
+    <div class="stats4">
+      <div class="sbox"><div class="sv" id="s-laps">—</div><div class="sl">kółek</div></div>
+      <div class="sbox"><div class="sv" id="s-dist">—</div><div class="sl">km</div></div>
+      <div class="sbox"><div class="sv" id="s-rank">—</div><div class="sl">miejsce</div></div>
+      <div class="sbox"><div class="sv" id="s-el" style="font-size:16px">—</div><div class="sl">czas biegu</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:8px;flex:1">
+      <div style="background:var(--bg);border-radius:6px;padding:14px 8px;text-align:center;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:13px;color:var(--mut);margin-bottom:4px">Ost. kółko</div>
+        <div style="font-size:26px;font-weight:700;font-variant-numeric:tabular-nums" id="s-last">—</div>
+      </div>
+      <div style="background:var(--bg);border-radius:6px;padding:14px 8px;text-align:center;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:13px;color:var(--mut);margin-bottom:4px">Śr. wszystkie</div>
+        <div style="font-size:26px;font-weight:700;font-variant-numeric:tabular-nums" id="ls-avg-all">—</div>
+        <div style="font-size:13px;color:var(--mut)" id="ls-avg-all-pace">—/km</div>
+      </div>
+      <div style="background:var(--bg);border-radius:6px;padding:14px 8px;text-align:center;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:13px;color:var(--mut);margin-bottom:4px">Śr. ost. 5</div>
+        <div style="font-size:26px;font-weight:700;font-variant-numeric:tabular-nums" id="ls-avg-5">—</div>
+        <div style="font-size:13px;color:var(--mut)" id="ls-avg-5-pace">—/km</div>
+      </div>
+      <div style="background:var(--bg);border-radius:6px;padding:14px 8px;text-align:center;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:13px;color:var(--mut);margin-bottom:4px">Prognoza 24h</div>
+        <div style="font-size:26px;font-weight:700" id="ls-proj-all">—</div>
+        <div style="font-size:13px;color:var(--mut)" id="ls-proj-5">—</div>
+      </div>
+      <div style="background:var(--bg);border-radius:6px;padding:14px 8px;text-align:center;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:13px;color:var(--mut);margin-bottom:4px">Pozostało</div>
+        <div style="font-size:26px;font-weight:700" id="p-rem">—</div>
+        <div style="font-size:13px;color:var(--mut)" id="p-rate">— km/h</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- DOLNA SEKCJA: 50% żywienie | 50% kółka -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;flex:1;min-height:0">
+
+  <!-- LEWA 50%: przyciski żywności + tabela żywienia -->
+  <div class="col-left">
+
+    <!-- Alerty ALE + ŻEL obok siebie -->
+    <div style="display:flex;gap:6px;flex-shrink:0">
+      <div class="nalert ok" id="alert-salt" style="flex:1">
+        <div>
+          <div class="na-top"><div class="na-icon">🧂</div><div class="na-title">ALE</div></div>
+          <div class="na-when" id="salt-when">co 60 min</div>
+        </div>
+        <div class="na-cd ok" id="salt-cd">—</div>
+        <button class="na-btn" onclick="give('ale')">✓ PODANO ALE</button>
+      </div>
+      <div class="nalert ok" id="alert-gel" style="flex:1">
+        <div>
+          <div class="na-top"><div class="na-icon">🟠</div><div class="na-title">ŻEL</div></div>
+          <div class="na-when" id="gel-when">co 25 min</div>
+        </div>
+        <div class="na-cd ok" id="gel-cd">—</div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="display:flex;gap:4px">
+            <button class="na-btn" onclick="give('dzik')" style="flex:1;font-size:12px;padding:6px">✓ DZIK 🟠</button>
+            <button class="na-btn" onclick="give('sis')"  style="flex:1;font-size:12px;padding:6px">✓ SiS 🔵</button>
+          </div>
+          <div style="display:flex;gap:4px">
+            <button class="na-btn" onclick="give('dzik',{caf:100})" style="flex:1;font-size:12px;padding:6px;background:rgba(124,92,255,.18);box-shadow:inset 0 0 0 1px #7c5cff">✓ DZIK ☕100</button>
+            <button class="na-btn" onclick="give('sis',{caf:200})"  style="flex:1;font-size:12px;padding:6px;background:rgba(124,92,255,.18);box-shadow:inset 0 0 0 1px #7c5cff">✓ SiS ☕200</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Woda + Izo + Vitargo obok siebie (3 kolumny) -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;flex-shrink:0">
+      <div class="prod-wrap">
+        <button class="pbtn pbtn-w" onclick="give('water')">💧 Woda<small>250 ml</small></button>
+        <button class="pbtn-minus" onclick="removeLastOf('water')" title="Cofnij">−</button>
+      </div>
+      <div class="prod-wrap">
+        <button class="pbtn pbtn-i" onclick="give('iso')">🥤 Izo<small>+10g CHO · +150 Na</small></button>
+        <button class="pbtn-minus" onclick="removeLastOf('iso')" title="Cofnij">−</button>
+      </div>
+      <div class="prod-wrap">
+        <button class="pbtn pbtn-vit" onclick="give('vitargo')">🩷 Vitargo<small>31g + 300ml</small></button>
+        <button class="pbtn-minus" onclick="removeLastOf('vitargo')" title="Cofnij">−</button>
+      </div>
+    </div>
+
+    <!-- Custom posiłek -->
+    <div style="display:flex;gap:4px;flex-shrink:0;align-items:center;background:var(--bg);border-radius:6px;padding:7px 8px;border:1px solid var(--brd)">
+      <span style="font-size:11px;color:var(--mut);flex-shrink:0">🍝 Posiłek:</span>
+      <input id="custom-cho" type="number" min="0" max="300" placeholder="CHO g"
+        style="flex:1;background:var(--card);border:1px solid var(--brd);color:var(--txt);border-radius:4px;padding:5px 6px;font-size:13px;min-width:0">
+      <input id="custom-na" type="number" min="0" max="5000" placeholder="Na mg"
+        style="flex:1;background:var(--card);border:1px solid var(--brd);color:var(--txt);border-radius:4px;padding:5px 6px;font-size:13px;min-width:0">
+      <button class="btn btn-grn" onclick="giveCustomMeal()" style="flex-shrink:0;padding:5px 10px;font-size:13px">+ Dodaj</button>
+    </div>
+
+    <!-- Tabela żywienia -->
+    <div class="card" style="flex:1;min-height:0">
+      <div class="bilans-strip">
+        <div class="bs-item"><div class="bs-lbl">💧 Płyny</div><div class="bs-val bs-warn" id="b-fluid">—</div><div class="bs-rate" id="b-fluid-r">— ml/h</div></div>
+        <div class="bs-item"><div class="bs-lbl">🔥 CHO</div><div class="bs-val bs-ok" id="b-cho">—</div><div class="bs-rate" id="b-cho-r">— g/h</div></div>
+        <div class="bs-item"><div class="bs-lbl">🧂 Sód</div><div class="bs-val bs-ok" id="b-na">—</div><div class="bs-rate" id="b-na-r">— mg/h</div></div>
+        <div class="bs-item"><div class="bs-lbl">☕ Kofeina</div><div class="bs-val bs-ok" id="b-caf">—</div><div class="bs-rate" id="b-caf-r">— mg /24h</div></div>
+      </div>
+      <div class="log-hdr">
+        <div class="clbl" style="margin:0">📋 Bilans godzinowy</div>
+        <div class="log-btns">
+          <button class="btn btn-grn" onclick="exportLog()">💾 Eksport</button>
+          <button class="btn" onclick="importLog()">📂 Import</button>
+          <button class="btn btn-red" onclick="clearLog()">🗑</button>
+        </div>
+      </div>
+      <div class="log-scroll">
+        <table>
+          <thead>
+            <tr><th>Godz.</th><th>💧W</th><th>🥤I</th><th>🟠Dzik</th><th>🔵SiS</th><th>🩷Vit</th><th>🧂ALE</th><th>🍝</th><th>☕Kof</th><th>CHO</th><th>Na</th></tr>
+            <tr class="last-times-row">
+              <td>ostatnie:</td><td id="lt-water">—</td><td id="lt-iso">—</td><td id="lt-dzik">—</td><td id="lt-sis">—</td>
+              <td id="lt-vitargo">—</td><td id="lt-ale">—</td><td id="lt-meal">—</td><td id="lt-caf">—</td><td colspan="2"></td>
+            </tr>
+          </thead>
+          <tbody id="log-tb"><tr><td colspan="11" style="color:var(--mut);padding:10px">Ładowanie historii...</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PRAWA 50%: kółka (góra) + analityka zawodników (dół) -->
+  <div class="card" style="min-height:0;display:flex;flex-direction:column;gap:0;padding:0">
+    <!-- Górna połowa: kółka Marcina -->
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;padding:10px 12px 6px">
+      <div class="clbl" style="flex-shrink:0">🔄 Kółka</div>
+      <div class="laps-scroll" id="laps-list"><div style="color:var(--mut)">Ładowanie...</div></div>
+    </div>
+    <div style="height:1px;background:var(--brd);flex-shrink:0"></div>
+    <!-- Dolna połowa: analityka ±3 zawodników -->
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;padding:6px 12px 8px;gap:4px">
+      <div class="clbl" style="flex-shrink:0;margin-bottom:0">📊 Trend ±3 zawodników <span id="comp-status" style="font-weight:400;color:var(--mut);text-transform:none;letter-spacing:0;font-size:10px"></span></div>
+      <div style="flex:1;min-height:0;display:flex;gap:8px;overflow:hidden">
+        <!-- Mini tabela -->
+        <div id="comp-tbl" style="flex:0 0 122px;overflow-y:auto;font-size:10px"></div>
+        <!-- Gap chart canvas -->
+        <div id="comp-chart-wrap" style="flex:1;min-width:0;min-height:0;overflow:hidden">
+          <canvas id="comp-canvas" style="display:block"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script>
+// ─── CONFIG ──────────────────────────────────────────────
+const C = {
+  BIB: '45', NAME: 'SZYSZKOWSKI',
+  LAP_KM: 1.725,
+  TREND_WIN: 3,  // okno trendu ±3 zawodników: porównanie do N wspólnych kółek wstecz
+  GOAL_MIN: 200, GOAL_SUPER: 220, GOAL_OPT: 230,
+  RACE_H: 24,
+  SALT_S: 3600,  // ALE co 60 min
+  GEL_S:  1500,  // żel co 25 min
+  REFRESH_MS: 10000,
+  URL: 'https://www.protimer.pl/bio/export/results_online/1434/16030',
+  PROXIES: [
+    _u => `/api/results`,
+    u  => `https://corsproxy.io/?${encodeURIComponent(u)}`,
+    u  => `https://api.allorigins.win/get?url=${encodeURIComponent(u)}`,
+  ],
+};
+
+// ─── WARTOŚCI ODŻYWCZE PER JEDNOSTKA ────────────────────
+// ALE_NA: zmień gdy poznasz etykietę. Na razie 300mg/kap (szacunek).
+const ALE_NA = 300;
+
+// caf = kofeina mg. Wersje z kofeiną mają TE SAME węgle/sód co zwykłe —
+// kofeinę logujemy jako override na wpisie: give('dzik',{caf:100}) / give('sis',{caf:200}).
+// DZIK☕ = 100 mg (mikrodawka), SiS☕ = 200 mg (bolus nocny). Patrz docs/30-Żywienie/Kofeina.md.
+const NUTR = {
+  water:   {ml:250, cho:0,  na:0,      caf:0},
+  iso:     {ml:250, cho:10, na:150,    caf:0},   // 250ml
+  dzik:    {ml:0,   cho:40, na:200,    caf:0},   // Dzik saszetka 66g (wersja CAF: +100mg)
+  sis:     {ml:0,   cho:40, na:12,     caf:0},   // SiS gel 60ml (wersja CAF: +200mg)
+  vitargo: {ml:300, cho:28, na:0,      caf:0},   // 31g proszku + 300ml wody (91g CHO/100g)
+  ale:     {ml:0,   cho:0,  na:ALE_NA, caf:0},
+  gel:     {ml:0,   cho:40, na:150,    caf:0},   // generyczny fallback
+  salt:    {ml:0,   cho:0,  na:215,    caf:0},
+  custom:  {ml:0,   cho:0,  na:0,      caf:0},   // wartości brane z wpisu (entry.cho, entry.na, entry.caf)
+};
+const CAF_CAP_LO = 600, CAF_CAP_HI = 650;  // kumulatywny limit 24h (Kofeina.md / DEC-003)
+
+// ─── HISTORIA Z ARKUSZA (H1–H5) ─────────────────────────
+// H1: 1W+1I+2Dzik+1ALE | H2: 1W+1I+2Dzik+1ALE
+// H3: 1W+3Dzik+1ALE    | H4: 2I+2SiS+1ALE | H5: 1SiS
+const RS = new Date('2026-05-30T07:00:00').getTime();
+const HISTORY = [
+  {type:'water',raceS:600,  lap:1, ts:RS+600000},
+  {type:'dzik', raceS:1200, lap:2, ts:RS+1200000},
+  {type:'iso',  raceS:1800, lap:3, ts:RS+1800000},
+  {type:'dzik', raceS:2500, lap:4, ts:RS+2500000},
+  {type:'ale',  raceS:3400, lap:5, ts:RS+3400000},
+  {type:'water',raceS:4200, lap:6, ts:RS+4200000},
+  {type:'dzik', raceS:4800, lap:7, ts:RS+4800000},
+  {type:'iso',  raceS:5400, lap:8, ts:RS+5400000},
+  {type:'dzik', raceS:6600, lap:10,ts:RS+6600000},
+  {type:'ale',  raceS:7100, lap:11,ts:RS+7100000},
+  {type:'water',raceS:7800, lap:12,ts:RS+7800000},
+  {type:'dzik', raceS:8400, lap:13,ts:RS+8400000},
+  {type:'dzik', raceS:9000, lap:13,ts:RS+9000000},
+  {type:'ale',  raceS:9600, lap:14,ts:RS+9600000},
+  {type:'dzik', raceS:10200,lap:15,ts:RS+10200000},
+  {type:'iso',  raceS:11400,lap:17,ts:RS+11400000},
+  {type:'sis',  raceS:12000,lap:18,ts:RS+12000000},
+  {type:'ale',  raceS:12600,lap:19,ts:RS+12600000},
+  {type:'sis',  raceS:13200,lap:20,ts:RS+13200000},
+  {type:'iso',  raceS:13800,lap:21,ts:RS+13800000},
+  {type:'sis',  raceS:15600,lap:23,ts:RS+15600000}, // H5 — brak bidonu!
+];
+
+// ─── STATE ───────────────────────────────────────────────
+const S = {
+  laps:18, lapArr: JSON.parse(localStorage.getItem('manualLapArr') || '[]'), elapsed:10675, dist:31.07, rank:31,
+  manualLapTs: JSON.parse(localStorage.getItem('manualLapTs') || '[]'),
+  // Czasy kółek z protimera — zapisywane trwale
+  timedLaps: JSON.parse(localStorage.getItem('timedLaps') || '[]'),
+  fetchAt: Date.now(),
+  startAt: null,
+  lapCrossedAt: +localStorage.getItem('lapCrossedAt') || null,
+  prevLapCount: +localStorage.getItem('prevLapCount') || 18,
+  saltLast: +localStorage.getItem('saltLast') || 0,
+  gelLast:  +localStorage.getItem('gelLast')  || 0,
+  nlog: JSON.parse(localStorage.getItem('nlog') || '[]'),
+  fetchOk:0, fetchFail:0,
+  competitors: [],   // [{rank,bib,dist,lapArr}] — ±3 od Marcina z wyników
+  compSnapshots:      JSON.parse(localStorage.getItem('compSnapsV4') || '{}'),
+  compTimedLaps:      {},   // bib → [{lap,wallTs,lapSecs}] — z /api/competitor-laps
+  compParticipantIds: {},   // bib → participantId
+  compLapsFetchedAt:  0,    // timestamp ostatniego fetcha danych kółek zawodników
+};
+
+// Startowy S.elapsed i S.laps z timedLaps (localStorage) — nie stara hardcoded wartość
+// elapsed = (wallTs ostatniego kółka - startAt) / 1000
+if (S.timedLaps.length) {
+  const last = S.timedLaps[S.timedLaps.length - 1];
+  const savedSt = localStorage.getItem('startAt');
+  if (last.wallTs && savedSt) {
+    S.elapsed = Math.round((last.wallTs - +savedSt) / 1000);
+  }
+  S.laps   = last.lap || S.laps;
+  S.lapArr = S.timedLaps.map(l => l.lapSecs);
+  S.prevLapCount = Math.max(S.prevLapCount, S.laps);
+}
+
+// Ustaw startAt z localStorage lub domyślnie 07:00 dziś
+const savedStart = localStorage.getItem('startAt');
+if (savedStart) {
+  S.startAt = +savedStart;
+} else {
+  const d = new Date(); d.setHours(7,0,0,0);
+  S.startAt = d.getTime();
+  localStorage.setItem('startAt', S.startAt);
+}
+syncStartInput();
+
+// Wczytaj historię jeśli log pusty
+(function maybePreloadHistory() {
+  if (S.nlog.length > 0) return;
+  S.nlog = [...HISTORY].sort((a,b) => a.raceS - b.raceS);
+  localStorage.setItem('nlog', JSON.stringify(S.nlog));
+  if (!S.gelLast)  { S.gelLast  = 15600; localStorage.setItem('gelLast',  '15600'); }
+  if (!S.saltLast) { S.saltLast = 12600; localStorage.setItem('saltLast', '12600'); }
+})();
+
+// ─── HELPERS ─────────────────────────────────────────────
+function fmt(s) {
+  s = Math.max(0, Math.round(s));
+  const h=Math.floor(s/3600), m=Math.floor((s%3600)/60), sec=s%60;
+  return h>0 ? `${h}:${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}` : `${m}:${String(sec).padStart(2,'0')}`;
+}
+function fmtMin(s) { const m=Math.floor(s/60),sec=Math.floor(s%60); return `${m}:${String(sec).padStart(2,'0')}`; }
+function now() { return Date.now(); }
+function elapsed() { return S.startAt ? (now()-S.startAt)/1000 : S.elapsed; }
+function pct(v,max) { return Math.min(100,Math.max(0,v/max*100)); }
+
+// ─── FETCH ───────────────────────────────────────────────
+async function fetchAndUpdate() {
+  document.getElementById('upd').textContent = 'Pobieranie...';
+  let html = null;
+  for (const proxy of C.PROXIES) {
+    try {
+      const r = await fetch(proxy(C.URL), {cache:'no-store'});
+      if (!r.ok) continue;
+      const j = await r.json().catch(() => null);
+      html = j ? (j.html || j.contents || j.body || null) : await r.text();
+      if (typeof html !== 'string' || html.length < 200) html = null;
+      if (html) break;
+    } catch(e) { continue; }
+  }
+  if (html) {
+    const parsed = parse(html);
+    if (parsed) {
+      applyData(parsed);
+      document.getElementById('upd').textContent = 'Aktu: '+new Date().toLocaleTimeString('pl-PL');
+      document.getElementById('upd').title = `ok:${S.fetchOk} fail:${S.fetchFail}`;
+      const _em=document.getElementById('err-msg');if(_em)_em.textContent = '';
+      setPulse(true);
+    } else {
+      document.getElementById('upd').textContent = '⚠️ Błąd parsowania '+new Date().toLocaleTimeString('pl-PL');
+      const _em=document.getElementById('err-msg');if(_em)_em.textContent = 'Nie znaleziono #45. Wpisz ręcznie →';
+      setPulse(false);
+    }
+  } else {
+    S.fetchFail++;
+    document.getElementById('upd').textContent = '⚠️ Brak połączenia '+new Date().toLocaleTimeString('pl-PL');
+    const _em=document.getElementById('err-msg');if(_em)_em.textContent = 'Fetch nie zadziałał. Wpisz ręcznie →';
+    setPulse(false);
+  }
+}
+
+function setPulse(ok) { document.getElementById('pulse-dot').className = ok ? 'pulse' : 'pulse err'; }
+
+function parse(html) {
+  try {
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    const athletes = [];
+
+    for (const row of doc.querySelectorAll('tr')) {
+      const cells = Array.from(row.querySelectorAll('td'));
+      if (cells.length < 5) continue;
+      const texts = cells.map(c => c.textContent.trim());
+
+      const lapArr = texts.filter(t => /^\d{1,2}:\d{2}$/.test(t))
+        .map(t => { const [m, s] = t.split(':'); return +m * 60 + +s; })
+        .filter(s => s > 300 && s < 2400);
+
+      const totalStr = texts.find(t => /^\d+:\d{2}:\d{2}$/.test(t));
+      let totalSecs = 0;
+      if (totalStr) { const [h, m, s] = totalStr.split(':'); totalSecs = +h*3600 + +m*60 + +s; }
+
+      const distStr = texts.find(t => /^\d+[.,]\d+$/.test(t));
+      const dist = distStr ? parseFloat(distStr.replace(',', '.')) : lapArr.length * C.LAP_KM;
+      if (dist < 2 || dist > 400) continue;
+
+      // texts[0] = rank (może być "13" lub "9 / 2" — category rank po slash), texts[1] = numer startowy
+      const rank = parseInt(texts[0]) || 0;
+      if (!rank) continue;
+      const bib  = parseInt(texts[1]) || 0;
+      const isMarcin = texts.some(t => t === C.BIB || t.includes(C.NAME));
+      // participant ID jest w atrybucie data-participant linku "szczegóły"
+      // (protimer: <a href="#details" ... data-participant="354648">), NIE w href.
+      const participantId = row.querySelector('a[data-participant]')
+        ?.getAttribute('data-participant') || null;
+
+      athletes.push({ rank, bib: String(bib || '?'), lapArr, totalSecs, dist, isMarcin, participantId, texts });
+    }
+
+    if (!athletes.length) return null;
+    const m = athletes.find(a => a.isMarcin);
+    if (!m) return null;
+
+    athletes.sort((a, b) => a.rank - b.rank);
+    const mi = athletes.findIndex(a => a.isMarcin);
+    const competitors = athletes
+      .slice(Math.max(0, mi - 3), Math.min(athletes.length, mi + 4))
+      .filter(a => !a.isMarcin);
+
+    const lapsFromText = m.texts.map(Number).find(n => n >= 1 && n <= 200 && n !== 45 && n !== m.rank) || 0;
+    const laps = m.lapArr.length || lapsFromText || Math.round(m.dist / C.LAP_KM);
+
+    return { laps, lapArr: m.lapArr, elapsed: m.totalSecs, dist: m.dist, rank: m.rank, competitors };
+  } catch (e) { console.error('parse:', e); }
+  return null;
+}
+
+function applyData(d) {
+  const isNewLap = d.laps > S.prevLapCount && S.prevLapCount > 0;
+  if (isNewLap) flashNextPass();
+  S.prevLapCount = d.laps || S.prevLapCount;
+  localStorage.setItem('prevLapCount', S.prevLapCount);
+  S.laps = d.laps || S.laps;
+  // lapArr z HTML parsera tylko jako fallback gdy timedLaps puste
+  if (d.lapArr.length && !S.timedLaps.length) S.lapArr = d.lapArr;
+  if (d.elapsed > 0) S.elapsed = d.elapsed;
+  S.dist = d.dist || S.dist;
+  S.rank = d.rank || S.rank;
+  S.fetchAt = now(); S.fetchOk++;
+  if (d.competitors) {
+    S.competitors = d.competitors;
+    d.competitors.forEach(c => {
+      if (c.participantId) S.compParticipantIds[String(c.bib)] = c.participantId;
+    });
+    updateCompSnapshots(d.competitors);
+    if (Object.keys(S.compParticipantIds).length && Date.now() - S.compLapsFetchedAt > 120000) {
+      S.compLapsFetchedAt = Date.now();
+      fetchCompetitorLapsAll();
+    }
+  }
+  renderLaps();
+  renderCompetitors();
+}
+
+function flashNextPass() {
+  const el=document.getElementById('npcard'); if(!el) return;
+  el.classList.add('flash'); setTimeout(()=>el.classList.remove('flash'),4000);
+}
+
+function logLapCrossing() {
+  const t = now();
+  const prev = S.manualLapTs.length ? S.manualLapTs[S.manualLapTs.length-1] : null;
+
+  if (prev) {
+    const dur = Math.round((t - prev) / 1000);
+    if (dur > 240 && dur < 3600) {   // 4 min – 60 min sanity check
+      S.lapArr.push(dur);
+      localStorage.setItem('manualLapArr', JSON.stringify(S.lapArr));
+    }
+    S.laps++;
+    S.prevLapCount = S.laps;
+    localStorage.setItem('prevLapCount', S.laps);
+    S.dist = S.laps * C.LAP_KM;
+    flashNextPass();
+  }
+
+  S.manualLapTs.push(t);
+  localStorage.setItem('manualLapTs', JSON.stringify(S.manualLapTs));
+  S.elapsed = (t - S.startAt) / 1000;
+  S.lapCrossedAt = t;
+  localStorage.setItem('lapCrossedAt', t);
+  S.fetchAt = t;
+
+  const info = document.getElementById('lap-log-info');
+  if (prev) {
+    const dur = Math.round((t - prev) / 1000);
+    info.textContent = `kółko #${S.laps} · ${fmtMin(dur)}`;
+    info.style.color = 'var(--grn)';
+  } else {
+    info.textContent = `start pomiaru kółek`;
+    info.style.color = 'var(--ylw)';
+  }
+
+  document.getElementById('upd').textContent = `Ręcznie: kółko ${S.laps} · ${new Date().toLocaleTimeString('pl-PL')}`;
+  renderLaps();
+}
+
+// ─── NUTRITION LOGGING ───────────────────────────────────
+function give(type, extra = {}) {
+  const raceS = Math.round(elapsed());
+  S.nlog.push({type, raceS, lap:S.laps, ts:now(), ...extra});
+  localStorage.setItem('nlog', JSON.stringify(S.nlog));
+  if (['gel','dzik','sis','vitargo'].includes(type)) { S.gelLast=raceS; localStorage.setItem('gelLast',raceS); }
+  if (['salt','ale'].includes(type))                 { S.saltLast=raceS; localStorage.setItem('saltLast',raceS); }
+  renderLog();
+  saveLogToServer();
+}
+
+function giveCustomMeal() {
+  const cho = parseFloat(document.getElementById('custom-cho').value) || 0;
+  const na  = parseFloat(document.getElementById('custom-na').value)  || 0;
+  if (cho <= 0 && na <= 0) { alert('Wpisz CHO lub Na'); return; }
+  give('custom', { cho, na, ml: 0 });
+  document.getElementById('custom-cho').value = '';
+  document.getElementById('custom-na').value  = '';
+}
+
+function removeLastOf(type) {
+  // Znajdź indeks ostatniego wpisu danego typu
+  let idx = -1;
+  for (let i = S.nlog.length-1; i >= 0; i--) {
+    if (S.nlog[i].type === type) { idx = i; break; }
+  }
+  if (idx === -1) return; // nic do cofnięcia
+  S.nlog.splice(idx, 1);
+  localStorage.setItem('nlog', JSON.stringify(S.nlog));
+  // Przelicz timery po usunięciu
+  if (['gel','dzik','sis'].includes(type)) {
+    const last = [...S.nlog].filter(e=>['gel','dzik','sis'].includes(e.type)).pop();
+    S.gelLast = last?.raceS || 0; localStorage.setItem('gelLast', S.gelLast);
+  }
+  if (['salt','ale'].includes(type)) {
+    const last = [...S.nlog].filter(e=>['salt','ale'].includes(e.type)).pop();
+    S.saltLast = last?.raceS || 0; localStorage.setItem('saltLast', S.saltLast);
+  }
+  renderLog();
+  saveLogToServer();
+}
+
+async function saveLogToServer() {
+  try {
+    await fetch('/api/log',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        nlog:S.nlog, saltLast:S.saltLast, gelLast:S.gelLast,
+        startAt:S.startAt, lapCrossedAt:S.lapCrossedAt,
+        timedLaps:S.timedLaps,
+      })});
+  } catch(_){}
+}
+
+async function loadLogFromServer() {
+  try {
+    const r=await fetch('/api/log'); if(!r.ok) return;
+    const d=await r.json();
+    if (d.nlog?.length>S.nlog.length){S.nlog=d.nlog;localStorage.setItem('nlog',JSON.stringify(S.nlog));}
+    if (d.saltLast>S.saltLast){S.saltLast=d.saltLast;localStorage.setItem('saltLast',d.saltLast);}
+    if (d.gelLast>S.gelLast) {S.gelLast=d.gelLast; localStorage.setItem('gelLast',d.gelLast);}
+    if (d.startAt&&!localStorage.getItem('startAt')){S.startAt=d.startAt;localStorage.setItem('startAt',d.startAt);syncStartInput();}
+    if (d.timedLaps?.length > S.timedLaps.length) {
+      S.timedLaps = d.timedLaps;
+      localStorage.setItem('timedLaps', JSON.stringify(S.timedLaps));
+    }
+    renderLog();
+    renderLaps();
+  } catch(_){}
+}
+
+// ─── CONFIG UI ───────────────────────────────────────────
+function saveStart() {
+  const _si=document.getElementById('start-input'); if(!_si) return;
+  const v=_si.value; if(!v) return;
+  const[h,m]=v.split(':').map(Number);
+  const d=new Date(); d.setHours(h,m,0,0);
+  S.startAt=d.getTime(); localStorage.setItem('startAt',S.startAt);
+}
+function syncStartInput() {
+  if(!S.startAt) return;
+  const el=document.getElementById('start-input'); if(!el) return;
+  const d=new Date(S.startAt);
+  el.value=`${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+}
+function applyManual() {
+  const _ml=document.getElementById('man-laps'), _mt=document.getElementById('man-time');
+  const _md=document.getElementById('man-dist'), _mr=document.getElementById('man-rank');
+  const laps=_ml?parseInt(_ml.value)||0:0;
+  const timeStr=_mt?_mt.value.trim():'';
+  const dist=_md?parseFloat(_md.value)||0:0;
+  const rank=_mr?parseInt(_mr.value)||0:0;
+  let secs=0;
+  if(timeStr){const p=timeStr.split(':').map(Number);if(p.length===3)secs=p[0]*3600+p[1]*60+p[2];else if(p.length===2)secs=p[0]*3600+p[1]*60;}
+  if(laps>0){S.laps=laps;S.prevLapCount=laps;localStorage.setItem('prevLapCount',laps);}
+  if(secs>0){S.elapsed=secs;S.startAt=now()-secs*1000;localStorage.setItem('startAt',S.startAt);syncStartInput();S.lapCrossedAt=now();localStorage.setItem('lapCrossedAt',S.lapCrossedAt);}
+  if(dist>0) S.dist=dist;
+  if(rank>0) S.rank=rank;
+  S.fetchAt=now();
+  document.getElementById('upd').textContent='Ręcznie: '+new Date().toLocaleTimeString('pl-PL');
+}
+function clearLog() {
+  if(!confirm('Wyczyścić log? Historia 5h zostanie usunięta.')) return;
+  S.nlog=[]; localStorage.removeItem('nlog');
+  S.saltLast=0; localStorage.removeItem('saltLast');
+  S.gelLast=0;  localStorage.removeItem('gelLast');
+  renderLog();
+}
+function exportLog() {
+  const data={v:1,at:new Date().toISOString(),nlog:S.nlog,saltLast:S.saltLast,gelLast:S.gelLast,lapCrossedAt:S.lapCrossedAt,startAt:S.startAt};
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download=`support-marcin-${new Date().toISOString().replace(/[:.]/g,'-').slice(0,16)}.json`;
+  a.click(); URL.revokeObjectURL(a.href);
+}
+function importLog() {
+  const input=document.createElement('input'); input.type='file'; input.accept='.json';
+  input.onchange=e=>{
+    const file=e.target.files[0]; if(!file) return;
+    const reader=new FileReader();
+    reader.onload=ev=>{
+      try {
+        const d=JSON.parse(ev.target.result);
+        if(d.nlog){S.nlog=d.nlog;localStorage.setItem('nlog',JSON.stringify(S.nlog));}
+        if(d.saltLast){S.saltLast=d.saltLast;localStorage.setItem('saltLast',d.saltLast);}
+        if(d.gelLast) {S.gelLast=d.gelLast;  localStorage.setItem('gelLast',d.gelLast);}
+        if(d.startAt) {S.startAt=d.startAt;  localStorage.setItem('startAt',d.startAt);syncStartInput();}
+        if(d.lapCrossedAt){S.lapCrossedAt=d.lapCrossedAt;localStorage.setItem('lapCrossedAt',d.lapCrossedAt);}
+        renderLog(); alert('✓ Log wczytany ('+S.nlog.length+' wpisów)');
+      } catch(e){alert('Błąd: nieprawidłowy plik JSON');}
+    };
+    reader.readAsText(file);
+  };
+  input.click();
+}
+setInterval(()=>{localStorage.setItem('autoBackup',JSON.stringify({at:new Date().toISOString(),nlog:S.nlog,saltLast:S.saltLast,gelLast:S.gelLast}));},300000);
+
+// ─── PREDICTION ──────────────────────────────────────────
+function predict() {
+  const el=elapsed(); if(el<600||S.dist<1) return null;
+  const rate=S.dist/(el/3600);
+  const k=0.025, elH=el/3600;
+  const avgFactor=(1-Math.exp(-k*elH))/(k*elH);
+  const p0=rate/avgFactor;
+  return {rate, total:Math.round(p0/k*(1-Math.exp(-k*C.RACE_H)))};
+}
+
+// ─── RENDER: BILANS STRIP ────────────────────────────────
+// Zwraca wartości odżywcze wpisu — custom entry ma własne cho/na
+function nutrOf(e) {
+  if (e.cho !== undefined || e.na !== undefined) return {ml: e.ml||0, cho: e.cho||0, na: e.na||0, caf: e.caf||0};
+  const base = NUTR[e.type] || NUTR.gel;
+  // kofeina: override z wpisu (np. dzik/sis CAF) ma pierwszeństwo nad domyślnym 0
+  return {...base, caf: e.caf !== undefined ? e.caf : (base.caf || 0)};
+}
+
+function renderBilans() {
+  const el=elapsed(), elH=el/3600;
+  if(elH<0.05) return;
+  let totFluid=0,totCho=0,totNa=0,totCaf=0;
+  S.nlog.forEach(e=>{const n=nutrOf(e);totFluid+=n.ml;totCho+=n.cho;totNa+=n.na;totCaf+=n.caf;});
+  const fH=totFluid/elH, cH=totCho/elH, nH=totNa/elH;
+
+  // Plan z docs — cele godzinowe (Fueling w biegu.md + Nawodnienie i sód.md)
+  // CHO: 80–100g/h średnio, szczyt 100–110 przez pierwsze 8h
+  // Płyny: 400–600 ml/h
+  // Sód: 500–700 mg/h do 22°C; 700–1000 mg/h przy ≥22°C
+  const PLAN = {
+    fluidLo: 400, fluidHi: 600,
+    choLo: 80, choHi: 100, choPeak: 110,   // peak przez pierwsze 8h
+    naLo: 500, naHi: 700,
+  };
+  const choPlanHi = elH <= 8 ? PLAN.choPeak : PLAN.choHi; // wyższe CHO w pierwszych 8h
+
+  const fc=(v,lo,hi)=>v>=lo&&v<=hi?'bs-ok':v>=lo*.80?'bs-warn':'bs-bad';
+
+  // Płyny
+  const bF=document.getElementById('b-fluid');
+  bF.textContent=Math.round(totFluid)+'ml'; bF.className='bs-val '+fc(fH,PLAN.fluidLo,PLAN.fluidHi);
+  document.getElementById('b-fluid-r').innerHTML=
+    `${Math.round(fH)}<span style="color:var(--mut)">/${PLAN.fluidLo}–${PLAN.fluidHi}</span> ml/h`;
+
+  // CHO
+  const bC=document.getElementById('b-cho');
+  bC.textContent=Math.round(totCho)+'g'; bC.className='bs-val '+fc(cH,PLAN.choLo,choPlanHi);
+  document.getElementById('b-cho-r').innerHTML=
+    `${Math.round(cH)}<span style="color:var(--mut)">/${PLAN.choLo}–${choPlanHi}</span> g/h`;
+
+  // Sód
+  const bN=document.getElementById('b-na');
+  bN.textContent=Math.round(totNa)+'mg'; bN.className='bs-val '+fc(nH,PLAN.naLo,PLAN.naHi);
+  const aleN=S.nlog.filter(e=>e.type==='ale').length;
+  document.getElementById('b-na-r').innerHTML=
+    `${Math.round(nH)}<span style="color:var(--mut)">/${PLAN.naLo}–${PLAN.naHi}</span> mg/h`
+    +(aleN>0?'<span style="color:var(--ylw)"> ▲est</span>':'');
+
+  // Kofeina — kumulatywnie do limitu 600–650 mg/24h (nie rate, lecz suma).
+  // OK gdy ≤ górnego limitu; warn w strefie 80–100% capu; bad gdy przekroczony.
+  const bK=document.getElementById('b-caf');
+  const cafCls = totCaf>CAF_CAP_HI ? 'bs-bad' : (totCaf>=CAF_CAP_LO*.8 ? 'bs-warn' : 'bs-ok');
+  bK.textContent=Math.round(totCaf)+'mg'; bK.className='bs-val '+cafCls;
+  document.getElementById('b-caf-r').innerHTML=
+    `<span style="color:var(--mut)">limit ${CAF_CAP_LO}–${CAF_CAP_HI}</span> mg/24h`;
+}
+
+// ─── RENDER: OSTATNIE CZASY PER KOLUMNA ─────────────────
+function renderLastTimes() {
+  const map = {water:'lt-water', iso:'lt-iso', dzik:'lt-dzik', sis:'lt-sis', vitargo:'lt-vitargo', ale:'lt-ale', meal:'lt-meal', caf:'lt-caf'};
+  // dla dzik traktuj też generyczne 'gel' jako Dzik
+  const resolve = type => type === 'gel' ? 'dzik' : type;
+  const lastTs = {};
+  S.nlog.forEach(e => {
+    const t = resolve(e.type);
+    if (map[t] && (!lastTs[t] || e.ts > lastTs[t])) lastTs[t] = e.ts;
+    // kofeina: ostatni wpis z dawką caf>0 (niezależnie od typu żelu)
+    if (nutrOf(e).caf > 0 && (!lastTs.caf || e.ts > lastTs.caf)) lastTs.caf = e.ts;
+  });
+  Object.entries(map).forEach(([type, id]) => {
+    const el = document.getElementById(id); if (!el) return;
+    if (lastTs[type]) {
+      const d = new Date(lastTs[type]);
+      el.textContent = `${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+    } else {
+      el.textContent = '—';
+    }
+  });
+}
+
+// ─── RENDER: LOG (grupowanie per godzina biegu) ──────────
+function renderLog() {
+  const tb=document.getElementById('log-tb');
+  if(!S.nlog.length){tb.innerHTML='<tr><td colspan="11" style="color:var(--mut);padding:10px">Brak wpisów</td></tr>';return;}
+
+  // Sumy całkowite
+  const tot={water:0,iso:0,dzik:0,sis:0,vitargo:0,ale:0,meal:0,custom:0,gel:0,cho:0,na:0,caf:0,fluid:0};
+  S.nlog.forEach(e=>{
+    const n=nutrOf(e);
+    const k=e.type==='gel'?'dzik':e.type;
+    if(tot[k]!==undefined) tot[k]++; else tot.gel++;
+    tot.cho+=n.cho; tot.na+=n.na; tot.caf+=n.caf; tot.fluid+=n.ml;
+  });
+  const totDz=(tot.dzik||0)+(tot.gel||0);
+  const totM=(tot.meal||0)+(tot.custom||0);
+  const sumRow=`<tr class="sum-row" style="position:sticky;top:0;background:#0d1a10;font-weight:700">
+    <td style="color:var(--mut);font-size:10px;font-weight:400">SUMA</td>
+    <td>${tot.water||'·'}</td><td>${tot.iso||'·'}</td>
+    <td>${totDz||'·'}</td><td>${tot.sis||'·'}</td>
+    <td>${tot.vitargo||'·'}</td>
+    <td>${tot.ale||'·'}</td><td>${totM||'·'}</td>
+    <td style="color:#a78bff">${tot.caf?tot.caf+'mg':'·'}</td>
+    <td style="color:var(--grn)">${tot.cho}g</td>
+    <td style="color:var(--grn)">${tot.na}mg</td>
+  </tr>`;
+
+  // Per godzina
+  const byH={};
+  S.nlog.forEach(e=>{
+    const h=Math.max(1,Math.ceil(e.raceS/3600));
+    if(!byH[h]) byH[h]={h,water:0,iso:0,dzik:0,sis:0,vitargo:0,ale:0,meal:0,custom:0,gel:0,cho:0,na:0,caf:0,fluid:0};
+    const n=nutrOf(e);
+    if(byH[h][e.type]!==undefined) byH[h][e.type]++;
+    else byH[h].gel++;
+    byH[h].cho+=n.cho; byH[h].na+=n.na; byH[h].caf+=n.caf; byH[h].fluid+=n.ml;
+  });
+  const rows=Object.values(byH).sort((a,b)=>b.h-a.h);
+  tb.innerHTML=sumRow+rows.map(r=>{
+    const cC=r.cho>=80?'color:var(--grn)':r.cho>=55?'color:var(--ylw)':'color:var(--red)';
+    const nC=r.na>=500?'color:var(--grn)':r.na>=350?'color:var(--ylw)':'color:var(--red)';
+    const fC=r.fluid>=400?'color:var(--grn)':r.fluid>=250?'color:var(--ylw)':'color:var(--red)';
+    const dz=(r.dzik||0)+(r.gel||0);
+    const m=(r.meal||0)+(r.custom||0);
+    return `<tr>
+      <td>H${r.h}</td>
+      <td style="${fC}">${r.water||'·'}</td><td style="${fC}">${r.iso||'·'}</td>
+      <td>${dz||'·'}</td><td>${r.sis||'·'}</td>
+      <td style="color:#e0186d">${r.vitargo||'·'}</td>
+      <td>${r.ale||'·'}</td><td>${m||'·'}</td>
+      <td style="color:#a78bff">${r.caf?r.caf+'mg':'·'}</td>
+      <td style="${cC}">${r.cho}g</td><td style="${nC}">${r.na}mg</td>
+    </tr>`;
+  }).join('');
+  renderLastTimes();
+}
+
+// ─── RENDER: LAPS ────────────────────────────────────────
+function renderLaps() {
+  const el = document.getElementById('laps-list');
+
+  // Scal timedLaps (z protimera) z manualLapArr (ręczne) i lapArr (z HTML parsera)
+  // timedLaps ma pierwszeństwo — zawiera nr kółka i czas
+  let laps = [];
+
+  if (S.timedLaps.length) {
+    laps = S.timedLaps.map(l => ({ n: l.lap, t: l.lapSecs, src: l.source, wallTs: l.wallTs || null }));
+  }
+  // Uzupełnij lapArr z parsera dla kółek których nie mamy w timedLaps
+  if (S.lapArr.length) {
+    S.lapArr.forEach((t, i) => {
+      const lapNum = i + 1;
+      if (!laps.find(l => l.n === lapNum)) laps.push({ n: lapNum, t, src: 'html' });
+    });
+  }
+  // Dodaj ręczne kółka (manualLapArr) — bez numerów, dołącz na końcu jeśli brak timedLaps
+  if (!laps.length && S.lapArr.length === 0) {
+    S.lapArr.forEach((t, i) => laps.push({ n: S.laps - S.lapArr.length + i + 1, t, src: 'manual' }));
+  }
+
+  laps.sort((a, b) => a.n - b.n);
+
+  if (!laps.length) { el.innerHTML='<div style="color:var(--mut)">Brak danych kółek</div>'; return; }
+
+  const recent = [...laps].reverse();
+  const allTimes = laps.map(l => l.t);
+  const last5Times = laps.slice(-5).map(l => l.t);
+
+  const avgAll = allTimes.reduce((a,b)=>a+b,0) / allTimes.length;
+  const avg5   = last5Times.reduce((a,b)=>a+b,0) / last5Times.length;
+  const avg    = avg5; // do porównania w wierszach używaj ostatnich 5
+
+  // Prognoza: już przebiegnięte + (pozostały czas / śr_kółko) × 1.725 km
+  const elapsedNow   = elapsed();                            // sekundy od startu
+  const remainingSec = Math.max(0, C.RACE_H * 3600 - elapsedNow);
+  const projAll = Math.round((S.dist + (remainingSec / avgAll) * C.LAP_KM) * 10) / 10;
+  const proj5   = Math.round((S.dist + (remainingSec / avg5)   * C.LAP_KM) * 10) / 10;
+
+  // Tempo (sek/km) → min:sek/km
+  const paceAll = avgAll / C.LAP_KM;
+  const pace5   = avg5   / C.LAP_KM;
+
+  // Wyświetl statystyki
+  document.getElementById('ls-avg-all').textContent      = fmtMin(avgAll);
+  document.getElementById('ls-avg-all-pace').textContent = fmtMin(paceAll) + '/km';
+  document.getElementById('ls-avg-5').textContent        = fmtMin(avg5);
+  document.getElementById('ls-avg-5-pace').textContent   = fmtMin(pace5) + '/km';
+  document.getElementById('ls-proj-all').textContent     = projAll + ' km';
+  document.getElementById('ls-proj-5').textContent       = proj5 + ' km (ost.5)';
+
+  el.innerHTML = recent.map(l => {
+    const diff = l.t - avg;
+    const col = Math.abs(diff) < 20 ? 'var(--txt)' : (diff > 0 ? 'var(--red)' : 'var(--grn)');
+    const barPct = Math.min(100, Math.max(0, (avg - l.t + 60) / 120 * 100));
+    const srcDot = l.src === 'protimer' ? '' : '<span style="opacity:.4;font-size:9px"> ✎</span>';
+    const paceStr = fmtMin(l.t / C.LAP_KM) + '/km';
+    const wallStr = l.wallTs
+      ? new Date(l.wallTs).toLocaleTimeString('pl-PL', {hour:'2-digit', minute:'2-digit', second:'2-digit'})
+      : '';
+    return `<div class="laprow">
+      <div class="lapn">#${l.n}</div>
+      <div class="lapt">${fmtMin(l.t)}${srcDot}</div>
+      <div style="font-size:11px;color:var(--mut);min-width:44px;flex-shrink:0">${paceStr}</div>
+      <div class="lapd" style="color:${col}">${diff >= 0 ? '+' : ''}${Math.round(diff)}s vs śr.</div>
+      <div style="font-size:10px;color:var(--mut);min-width:58px;text-align:right;flex-shrink:0">${wallStr}</div>
+      <div class="lapbar" style="margin-left:6px"><div class="lapbarfill" style="width:${barPct}%"></div></div>
+    </div>`;
+  }).join('');
+}
+
+// ─── SNAPSHOT: gap okrążeniowy ───────────────────────────
+// lapGap = marcinLaps - comp.laps
+//   > 0 → Marcin ma więcej kółek = Marcin jest przed zawodnikiem (dotyczy tych z tyłu)
+//   < 0 → zawodnik ma więcej kółek = jest przed Marcinem (dotyczy tych z przodu)
+// Źródło: comp.dist z wyników (zawsze pewne, bez comp.totalSecs)
+function updateCompSnapshots(competitors) {
+  const ML = S.timedLaps.length ? S.timedLaps.map(l => l.lapSecs) : S.lapArr;
+  const marcinLaps = ML.length;
+  if (!marcinLaps) return;
+  const raceMin = S.startAt
+    ? Math.round((Date.now() - S.startAt) / 60000)
+    : Math.round((S.elapsed || 0) / 60);
+  competitors.forEach(comp => {
+    if (!comp.bib || comp.bib === '?') return;
+    const key = String(comp.bib);
+    if (!S.compSnapshots[key]) S.compSnapshots[key] = [];
+    const compLaps = Math.round((comp.dist || 0) / C.LAP_KM);
+    if (!compLaps) return;
+    const lapGap = marcinLaps - compLaps;
+    const snaps = S.compSnapshots[key];
+    const last = snaps[snaps.length - 1];
+    if (last && last.t === raceMin) { last.gap = lapGap; }
+    else { snaps.push({ t: raceMin, gap: lapGap }); }
+    if (snaps.length > 300) snaps.splice(0, 100);
+  });
+  localStorage.setItem('compSnapsV4', JSON.stringify(S.compSnapshots));
+}
+
+// ─── TREND ±3: seria gap czasowego na WSPÓLNYCH kółkach ──
+// gap(n) = (rywal.wallTs[n] − marcin.wallTs[n]) / 1000  [s]
+//   > 0 → rywal przeciął matę PÓŹNIEJ na kółku n = Marcin był szybszy = przewaga Marcina
+// Zwraca [{lap, gap}] dla wszystkich wspólnych kółek (rosnąco po nr kółka).
+function compGapSeries(bib, mByLap) {
+  const cd = S.compTimedLaps[String(bib)] || [];
+  if (!cd.length || !mByLap || !mByLap.size) return [];
+  const pts = [];
+  for (const cL of cd) {
+    const mL = mByLap.get(cL.lap);
+    if (mL?.wallTs && cL.wallTs) pts.push({ lap: cL.lap, gap: (cL.wallTs - mL.wallTs) / 1000 });
+  }
+  return pts;
+}
+
+// Zmiana gap w oknie WIN kółek: gap(ostatnie wspólne) − gap(WIN kółek wstecz).
+//   > 0 → przez ostatnie kółka Marcin ZYSKAŁ czas (nadrabia do rywala z przodu / ucieka rywalowi z tyłu)
+//   < 0 → Marcin STRACIŁ. Zwraca {delta, fromLap, toLap, win} albo null.
+function compWindowTrend(pts, win) {
+  if (pts.length < 2) return null;
+  const last = pts[pts.length - 1];
+  const gapByLap = new Map(pts.map(p => [p.lap, p.gap]));
+  let fromLap = last.lap - win, base = gapByLap.get(fromLap);
+  if (base === undefined) { const f = pts[Math.max(0, pts.length - 1 - win)]; base = f.gap; fromLap = f.lap; }
+  return { delta: last.gap - base, fromLap, toLap: last.lap, win: last.lap - fromLap };
+}
+
+// ─── RENDER: COMPETITOR ANALYTICS ────────────────────────
+function renderCompetitors() {
+  const ct = document.getElementById('comp-tbl');
+  const canvas = document.getElementById('comp-canvas');
+  const status = document.getElementById('comp-status');
+  if (!ct || !canvas) return;
+
+  if (!S.competitors.length) {
+    ct.innerHTML = '<div style="color:var(--mut);padding:6px 2px;font-size:10px">Czekam na dane z wyników…</div>';
+    if (status) status.textContent = '';
+    return;
+  }
+
+  const ML = S.timedLaps.length ? S.timedLaps.map(l => l.lapSecs) : S.lapArr;
+  const marcinLaps = ML.length;
+  const avgLapSec = marcinLaps > 0 ? (S.elapsed || 0) / marcinLaps : 600;
+  const marcinRank = S.rank;
+
+  const marcinCurrentLap = S.timedLaps.length ? S.timedLaps[S.timedLaps.length-1].lap : marcinLaps;
+
+  // Dla każdego zawodnika: seria gap czasowego na wspólnych kółkach (gdy mamy dane z maty)
+  // + headline gap (ostatnie wspólne kółko) + trend w oknie C.TREND_WIN kółek.
+  // Fallback gdy brak danych z maty: gap okrążeniowy (z dystansu).
+  const mByLap = new Map(S.timedLaps.map(l => [l.lap, l]));
+  const compCur = S.competitors.map(comp => {
+    const compLapData = S.compTimedLaps[String(comp.bib)] || [];
+    const compLaps    = compLapData.length
+      ? compLapData[compLapData.length-1].lap
+      : Math.round((comp.dist || 0) / C.LAP_KM);
+    const lapGap = marcinCurrentLap - compLaps; // >0 = Marcin ahead, <0 = comp ahead
+
+    // Porównanie na WSPÓLNYCH okrążeniach (właściwe podejście gdy mamy dane z maty)
+    const series   = compGapSeries(comp.bib, mByLap);
+    const timeGap  = series.length ? series[series.length-1].gap : null; // ostatnie wspólne kółko
+    const commonLap = series.length ? series[series.length-1].lap : 0;
+    const winTrend = compWindowTrend(series, C.TREND_WIN);
+    return { ...comp, compLaps, lapGap, timeGap, commonLap, series, winTrend };
+  });
+
+  const snapCount = Object.values(S.compSnapshots).reduce((a, v) => Math.max(a, v.length), 0);
+  if (status) status.textContent = `(${compCur.length} zaw. · ${snapCount} pkt)`;
+
+  // ── Mini tabela ──────────────────────────────────────
+  const timeFmt = s => {
+    const sec = Math.abs(Math.round(s)), sign = s >= 0 ? '+' : '-';
+    if (sec >= 3600) return `${sign}${Math.floor(sec/3600)}h${String(Math.floor((sec%3600)/60)).padStart(2,'0')}m`;
+    if (sec >= 60)   return `${sign}${Math.floor(sec/60)}m${String(sec%60).padStart(2,'0')}s`;
+    return `${sign}${sec}s`;
+  };
+  const lapFmt = (lapGap, avg) => {
+    const kr = Math.abs(lapGap), sign = lapGap >= 0 ? '+' : '-';
+    const min = Math.round(kr * avg / 60);
+    return `${sign}${kr}kr${min>0?` ~${sign}${min}m`:''}`;
+  };
+  const gapColor = g => g > 0 ? 'var(--grn)' : g < 0 ? 'var(--red)' : 'var(--mut)';
+  // Fallback trend (gdy brak danych z maty): zmiana lapGap w czasie (całe kółka)
+  const snapTrend = bib => {
+    const snaps = S.compSnapshots[String(bib)] || [];
+    if (snaps.length < 3) return 0;
+    const recent = snaps.slice(-Math.min(snaps.length, 12));
+    return recent[recent.length-1].gap - recent[0].gap;
+  };
+  const coarseIcon  = t => Math.abs(t) < 0.4 ? '→' : t > 0 ? '↗' : '↘';
+  const coarseColor = t => Math.abs(t) < 0.4 ? 'var(--mut)' : t > 0 ? 'var(--grn)' : 'var(--red)';
+  // Trend właściwy: zmiana gap w oknie kółek (sekundy). Próg „płasko" = 3 s.
+  const secIcon  = d => Math.abs(d) < 3 ? '→' : d > 0 ? '↗' : '↘';
+  const secColor = d => Math.abs(d) < 3 ? 'var(--mut)' : d > 0 ? 'var(--grn)' : 'var(--red)';
+
+  const mkRow = comp => {
+    const isAhead = comp.rank < marcinRank;
+    // Kolumna trendu: zmiana gap w oknie C.TREND_WIN kółek (s) gdy mamy dane z maty;
+    // inaczej orientacyjny trend z lapGap (całe kółka).
+    let trIc, trCol, trStr, trTitle;
+    const wt = comp.winTrend;
+    if (wt) {
+      const dr = Math.round(wt.delta);
+      trIc = secIcon(wt.delta); trCol = secColor(wt.delta);
+      trStr = timeFmt(wt.delta);
+      trTitle = `Ostatnie ${wt.win} kr (kr ${wt.fromLap}→${wt.toLap}): Marcin ${dr>=0?'zyskał':'stracił'} ${Math.abs(dr)} s`;
+    } else {
+      const t = snapTrend(comp.bib);
+      trIc = coarseIcon(t); trCol = coarseColor(t); trStr = '';
+      trTitle = 'Trend orientacyjny (z dystansu — brak danych z maty)';
+    }
+    // Headline gap: STANDING. Precyzyjny czas tylko gdy ten SAM nr kółka (lapGap=0 → rywalizacja „na okrążeniu");
+    // inaczej różnica całych kółek (intuicyjniej niż skumulowane minuty przy różnej liczbie kółek).
+    let gapStr, gapCol, gapTitle;
+    if (comp.timeGap !== null && comp.lapGap === 0) {
+      gapStr   = `${timeFmt(comp.timeGap)} @${comp.commonLap}kr`;
+      gapCol   = gapColor(comp.timeGap);
+      gapTitle = `Rzeczywista różnica czasu na kółku ${comp.commonLap} (ten sam nr kółka)`;
+    } else {
+      gapStr   = lapFmt(comp.lapGap, avgLapSec);
+      gapCol   = gapColor(comp.lapGap);
+      gapTitle = comp.timeGap !== null
+        ? `Różnica ${Math.abs(comp.lapGap)} kółek (rywal na innym nr kółka); trend liczony z maty`
+        : 'Brak danych z maty — szacunek z dystansu';
+    }
+    return `<div class="comp-row" title="${gapTitle}">
+      <span style="color:${isAhead?'var(--org)':'var(--mut)'}">${isAhead?'▲':'▼'}${comp.rank}</span>
+      <span style="color:var(--mut)">#${comp.bib}</span>
+      <span style="color:${trCol};font-size:9px;white-space:nowrap" title="${trTitle}">${trIc}${trStr?' '+trStr:''}</span>
+      <span style="color:${gapCol};text-align:right;font-size:9px">${gapStr}</span>
+    </div>`;
+  };
+  const rows = [];
+  compCur.filter(c=>c.rank<marcinRank).sort((a,b)=>a.rank-b.rank).forEach(c=>rows.push(mkRow(c)));
+  rows.push(`<div class="comp-row comp-m">
+    <span>#${marcinRank}</span><span>#${C.BIB}</span>
+    <span style="font-size:11px">★</span><span style="font-size:9px">MARCIN</span>
+  </div>`);
+  compCur.filter(c=>c.rank>marcinRank).sort((a,b)=>a.rank-b.rank).forEach(c=>rows.push(mkRow(c)));
+  ct.innerHTML = rows.join('');
+
+  // ── Canvas ───────────────────────────────────────────
+  const wrap = document.getElementById('comp-chart-wrap');
+  if (!wrap) return;
+  const W = wrap.clientWidth, H = wrap.clientHeight;
+  if (!W || !H) { setTimeout(renderCompetitors, 300); return; }
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width  = Math.round(W * dpr);
+  canvas.height = Math.round(H * dpr);
+  canvas.style.width  = W + 'px';
+  canvas.style.height = H + 'px';
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+
+  const hasRealData = compCur.some(c => (S.compTimedLaps[String(c.bib)]||[]).length > 0);
+  const hasTrend    = compCur.some(c => (S.compSnapshots[String(c.bib)]||[]).length >= 3);
+  if (hasRealData) {
+    _drawLapCompChart(ctx, W, H, compCur, marcinRank);
+  } else if (hasTrend) {
+    _drawTrendChart(ctx, W, H, compCur, marcinRank, avgLapSec);
+  } else {
+    _drawBarChart(ctx, W, H, compCur, marcinRank, avgLapSec);
+  }
+}
+
+// ─── WYKRES: porównanie na tym samym okrążeniu (wallTs z maty) ───
+// X = numer okrążenia. DWIE linie per rywal:
+//   • CIENKA (lewa oś, s) = skumulowany gap czasowy gap(n) = (rywal − Marcin) na kółku n.
+//       > 0 → Marcin szybszy/przed; linia w górę → Marcin zyskuje narastająco.
+//   • GRUBA (prawa oś, s) = TREND w oknie C.TREND_WIN kółek: gap(n) − gap(n−WIN).
+//       > 0 → przez ostatnie WIN kółek Marcin ZYSKAŁ (różnica rośnie na korzyść Marcina),
+//       < 0 → różnica topnieje. To bezpośrednio pokazuje „czy ucieka/dogania właśnie teraz".
+function _drawLapCompChart(ctx, W, H, compCur, marcinRank) {
+  const PAD = { t: 10, r: 46, b: 22, l: 50 };
+  const cW = W - PAD.l - PAD.r, cH = H - PAD.t - PAD.b;
+  const WIN = C.TREND_WIN;
+
+  // Serie: cumulative (pts) z compCur.series + rolling delta (dpts) w oknie WIN
+  const series = compCur.map(comp => {
+    const pts = comp.series || [];
+    if (pts.length < 2) return null;
+    const gapByLap = new Map(pts.map(p => [p.lap, p.gap]));
+    const dpts = [];
+    for (const p of pts) {
+      if (gapByLap.has(p.lap - WIN)) dpts.push({ lap: p.lap, d: p.gap - gapByLap.get(p.lap - WIN) });
+    }
+    return { ...comp, pts, dpts };
+  }).filter(Boolean);
+
+  if (!series.length) {
+    ctx.fillStyle = '#8b949e'; ctx.font = '11px sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('Ładowanie danych kółek zawodników…', W/2, H/2);
+    return;
+  }
+
+  const allGaps = series.flatMap(s => s.pts.map(p => p.gap));
+  const allLaps = series.flatMap(s => s.pts.map(p => p.lap));
+  const allDelt = series.flatMap(s => s.dpts.map(p => p.d));
+  const rawMin = Math.min(0, ...allGaps), rawMax = Math.max(0, ...allGaps);
+  const lapMin = Math.min(...allLaps), lapMax = Math.max(...allLaps);
+  const span = Math.max(60, rawMax - rawMin);
+  const minY = rawMin - span*0.1, maxY = rawMax + span*0.1;
+
+  const xOf = l => PAD.l + ((l - lapMin) / Math.max(1, lapMax - lapMin)) * cW;
+  const yOf = g => PAD.t + ((maxY - g) / (maxY - minY)) * cH;   // lewa oś (skumulowany gap)
+
+  // Prawa oś (trend Δ): zero w pionowym środku, skala symetryczna
+  const yC = PAD.t + cH/2;
+  const dMaxAbs = Math.max(15, ...allDelt.map(Math.abs));
+  const kR = (cH/2 * 0.86) / dMaxAbs;
+  const yR = d => yC - d * kR;
+
+  // Lewa oś — grid (sekundy → etykiety minuty)
+  const step = span <= 120 ? 30 : span <= 300 ? 60 : span <= 600 ? 120 : 300;
+  for (let g = Math.ceil(minY/step)*step; g <= maxY + step*0.01; g += step) {
+    if (g < minY || g > maxY) continue;
+    const isZ = Math.abs(g) < step*0.05;
+    ctx.strokeStyle = isZ ? '#58a6ff55' : '#30363d'; ctx.lineWidth = isZ ? 1.5 : 0.5;
+    ctx.beginPath(); ctx.moveTo(PAD.l, yOf(g)); ctx.lineTo(W-PAD.r, yOf(g)); ctx.stroke();
+    ctx.fillStyle = isZ ? '#58a6ff' : '#6e7681';
+    ctx.font = '9px -apple-system,sans-serif'; ctx.textAlign = 'right';
+    const sec = Math.abs(Math.round(g)), sign = g >= 0 ? '+' : '-';
+    ctx.fillText(isZ ? '0' : sec>=60 ? `${sign}${Math.floor(sec/60)}m` : `${sign}${sec}s`, PAD.l-3, yOf(g)+3);
+  }
+
+  // Linia 0 lewej osi = Marcin (skumulowany)
+  ctx.strokeStyle='#58a6ff44'; ctx.lineWidth=1.5; ctx.setLineDash([5,4]);
+  ctx.beginPath(); ctx.moveTo(PAD.l,yOf(0)); ctx.lineTo(W-PAD.r,yOf(0)); ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Prawa oś — zero trendu (Δ0) + etykiety ±Δ
+  ctx.strokeStyle='#6e768166'; ctx.lineWidth=1; ctx.setLineDash([2,3]);
+  ctx.beginPath(); ctx.moveTo(PAD.l,yC); ctx.lineTo(W-PAD.r,yC); ctx.stroke();
+  ctx.setLineDash([]);
+  const dStep = dMaxAbs <= 30 ? 10 : dMaxAbs <= 60 ? 20 : dMaxAbs <= 150 ? 50 : 100;
+  ctx.font='8px sans-serif'; ctx.textAlign='left';
+  for (let d = -Math.floor(dMaxAbs/dStep)*dStep; d <= dMaxAbs; d += dStep) {
+    ctx.fillStyle = Math.abs(d) < 0.5 ? '#8b949e' : '#6e7681';
+    ctx.fillText(Math.abs(d)<0.5 ? 'Δ0' : `${d>0?'+':''}${d}`, W-PAD.r+3, yR(d)+3);
+  }
+
+  // Linie zawodników: cienka skumulowana + gruba trend (okno WIN)
+  series.forEach(comp => {
+    const isAhead = comp.rank < marcinRank;
+    const col = isAhead ? '#f0883e' : '#f85149';
+    // cienka — skumulowany gap (lewa oś), wyblakła
+    ctx.strokeStyle = col + '55'; ctx.lineWidth = 1;
+    ctx.beginPath();
+    comp.pts.forEach((p,i) => { i===0?ctx.moveTo(xOf(p.lap),yOf(p.gap)):ctx.lineTo(xOf(p.lap),yOf(p.gap)); });
+    ctx.stroke();
+    // gruba — trend w oknie (prawa oś)
+    if (comp.dpts.length) {
+      ctx.strokeStyle = col; ctx.lineWidth = 2.4;
+      ctx.beginPath();
+      comp.dpts.forEach((p,i) => { i===0?ctx.moveTo(xOf(p.lap),yR(p.d)):ctx.lineTo(xOf(p.lap),yR(p.d)); });
+      ctx.stroke();
+      const last = comp.dpts[comp.dpts.length-1];
+      ctx.fillStyle = col; ctx.font = 'bold 9px sans-serif'; ctx.textAlign = 'left';
+      ctx.fillText('#'+comp.bib, xOf(last.lap)+4, yR(last.d)+3);
+    }
+  });
+
+  // X-axis (numery okrążeń)
+  ctx.fillStyle='#8b949e'; ctx.font='9px sans-serif'; ctx.textAlign='center';
+  const lStep = Math.max(1, Math.round((lapMax-lapMin)/8));
+  for (let l=lapMin; l<=lapMax; l+=lStep) ctx.fillText(l, xOf(l), H-4);
+
+  // Osie — legendy
+  ctx.fillStyle='#8b949e'; ctx.font='8px sans-serif'; ctx.textAlign='center';
+  ctx.save(); ctx.translate(8,H/2); ctx.rotate(-Math.PI/2);
+  ctx.fillText('skum. gap (cienka)', 0, 0); ctx.restore();
+  ctx.save(); ctx.translate(W-7,H/2); ctx.rotate(-Math.PI/2);
+  ctx.fillText(`trend ${WIN}kr, s (gruba ↑Marcin zysk.)`, 0, 0); ctx.restore();
+}
+
+function _drawBarChart(ctx, W, H, compCur, marcinRank, avgLapSec) {
+  const items = [];
+  compCur.filter(c=>c.rank<marcinRank).sort((a,b)=>a.rank-b.rank).forEach(c=>items.push(c));
+  items.push(null);
+  compCur.filter(c=>c.rank>marcinRank).sort((a,b)=>a.rank-b.rank).forEach(c=>items.push(c));
+
+  const PAD = { t: 8, r: 8, b: 18, l: 82 };
+  const n   = items.length;
+  const rowH = Math.min(22, (H - PAD.t - PAD.b) / n);
+  const midX = PAD.l + (W - PAD.l - PAD.r) / 2;
+  const maxG = Math.max(1, ...compCur.map(c => Math.abs(c.lapGap)));
+  const scale = v => (v / maxG) * ((W - PAD.l - PAD.r) / 2);
+
+  ctx.font = '9px -apple-system,sans-serif';
+  items.forEach((comp, i) => {
+    const y = PAD.t + i * rowH + rowH / 2;
+    if (!comp) {
+      ctx.fillStyle = '#58a6ff'; ctx.textAlign = 'right';
+      ctx.fillText(`#${C.BIB} MARCIN`, midX - 5, y + 3);
+      ctx.fillStyle = '#58a6ff33';
+      ctx.fillRect(midX - 1, PAD.t, 2, H - PAD.t - PAD.b);
+      return;
+    }
+    const isAhead = comp.rank < marcinRank;
+    ctx.fillStyle = '#8b949e'; ctx.textAlign = 'right';
+    ctx.fillText(`${isAhead?'▲':'▼'}${comp.rank} #${comp.bib}`, midX - 5, y + 3);
+    const bw = Math.max(2, scale(Math.abs(comp.lapGap)));
+    // lapGap > 0 = Marcin ahead (bar to the right, green)
+    // lapGap < 0 = comp ahead (bar to the left, orange/red)
+    ctx.fillStyle = comp.lapGap > 0 ? '#3fb95088' : comp.lapGap < 0 ? '#f0883e88' : '#8b949e33';
+    if (comp.lapGap >= 0) ctx.fillRect(midX, y-rowH/2+2, bw, rowH-4);
+    else                  ctx.fillRect(midX-bw, y-rowH/2+2, bw, rowH-4);
+    const kr = Math.abs(comp.lapGap);
+    const min = Math.round(kr * avgLapSec / 60);
+    const lbl = `${comp.lapGap>=0?'+':'-'}${kr}kr (~${min}m)`;
+    ctx.fillStyle = comp.lapGap > 0 ? '#3fb950' : comp.lapGap < 0 ? '#f0883e' : '#8b949e';
+    ctx.textAlign = 'left';
+    const lx = comp.lapGap >= 0 ? midX + bw + 3 : midX - bw - 3 - ctx.measureText(lbl).width;
+    ctx.fillText(lbl, lx, y + 3);
+  });
+  ctx.fillStyle='#8b949e'; ctx.font='8px sans-serif'; ctx.textAlign='center';
+  ctx.fillText('← zawodnik przed Marcinem | Marcin przed zawodnikiem →', midX, H-3);
+}
+
+function _drawTrendChart(ctx, W, H, compCur, marcinRank, avgLapSec) {
+  const PAD = { t: 10, r: 38, b: 22, l: 46 };
+  const cW = W - PAD.l - PAD.r, cH = H - PAD.t - PAD.b;
+
+  const series = compCur.map(c => ({
+    ...c, snaps: S.compSnapshots[String(c.bib)] || []
+  })).filter(c => c.snaps.length >= 2);
+  if (!series.length) return;
+
+  const allGaps  = series.flatMap(c => c.snaps.map(s => s.gap));
+  const allTimes = series.flatMap(c => c.snaps.map(s => s.t));
+  const rawMin = Math.min(0, ...allGaps), rawMax = Math.max(0, ...allGaps);
+  const tMin = Math.min(...allTimes), tMax = Math.max(...allTimes);
+  const span = Math.max(1, rawMax - rawMin), tSpan = Math.max(5, tMax - tMin);
+  const minY = rawMin - span*0.12, maxY = rawMax + span*0.12;
+
+  const xOf = t => PAD.l + ((t - tMin) / tSpan) * cW;
+  const yOf = g => PAD.t + ((maxY - g) / (maxY - minY)) * cH;
+
+  // Y grid — wartości w kółkach (całkowite)
+  const step = Math.max(1, Math.round(span / 6));
+  for (let g = Math.ceil(minY/step)*step; g <= maxY + step*0.01; g += step) {
+    if (g < minY || g > maxY) continue;
+    const isZero = Math.abs(g) < step*0.05;
+    ctx.strokeStyle = isZero ? '#58a6ff55' : '#30363d';
+    ctx.lineWidth   = isZero ? 1.5 : 0.5;
+    ctx.beginPath(); ctx.moveTo(PAD.l, yOf(g)); ctx.lineTo(W - PAD.r, yOf(g)); ctx.stroke();
+    ctx.fillStyle   = isZero ? '#58a6ff' : '#8b949e';
+    ctx.font = '9px -apple-system,sans-serif'; ctx.textAlign = 'right';
+    const sign = g >= 0 ? '+' : '';
+    const min = Math.round(Math.abs(g) * avgLapSec / 60);
+    const lbl = isZero ? '0' : `${sign}${Math.round(g)}kr${min?` ~${sign}${min}m`:''}`;
+    ctx.fillText(lbl, PAD.l - 3, yOf(g) + 3);
+  }
+
+  // Linia zerowa = Marcin
+  ctx.strokeStyle = '#58a6ff44'; ctx.lineWidth = 1.5;
+  ctx.setLineDash([5, 4]);
+  ctx.beginPath(); ctx.moveTo(PAD.l, yOf(0)); ctx.lineTo(W - PAD.r, yOf(0)); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = '#58a6ff88'; ctx.font = '8px sans-serif'; ctx.textAlign = 'left';
+  ctx.fillText('MARCIN', W - PAD.r + 2, yOf(0) + 3);
+
+  // Linie zawodników
+  series.forEach(comp => {
+    const isAhead = comp.rank < marcinRank;
+    // Zawodnicy PRZED Marcinem: ich linia jest poniżej 0 (lapGap ujemny)
+    // Zawodnicy ZA Marcinem:    ich linia jest powyżej 0 (lapGap dodatni)
+    ctx.strokeStyle = isAhead ? '#f0883ecc' : '#f85149cc';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    comp.snaps.forEach((s, i) => { i===0 ? ctx.moveTo(xOf(s.t),yOf(s.gap)) : ctx.lineTo(xOf(s.t),yOf(s.gap)); });
+    ctx.stroke();
+    const last = comp.snaps[comp.snaps.length-1];
+    ctx.fillStyle = isAhead ? '#f0883e' : '#f85149';
+    ctx.font = 'bold 9px sans-serif'; ctx.textAlign = 'left';
+    ctx.fillText('#'+comp.bib, xOf(last.t)+4, yOf(last.gap)+3);
+  });
+
+  // X-axis minuty
+  ctx.fillStyle = '#8b949e'; ctx.font = '9px sans-serif'; ctx.textAlign = 'center';
+  const tStep = tSpan <= 30 ? 5 : tSpan <= 120 ? 15 : tSpan <= 300 ? 30 : 60;
+  for (let t = Math.ceil(tMin/tStep)*tStep; t <= tMax; t += tStep) {
+    ctx.fillText(t+'m', xOf(t), H - 4);
+  }
+
+  // Y-axis legend
+  ctx.fillStyle = '#8b949e'; ctx.font = '8px sans-serif'; ctx.textAlign = 'center';
+  ctx.save(); ctx.translate(9, H/2); ctx.rotate(-Math.PI/2);
+  ctx.fillText('kółka (↑ Marcin zysk.)', 0, 0);
+  ctx.restore();
+}
+
+window.addEventListener('resize', () => { if (S.competitors.length) renderCompetitors(); });
+
+// ─── TICK (co 1s) ────────────────────────────────────────
+function tick() {
+  const el=elapsed(), elRemain=Math.max(0,C.RACE_H*3600-el);
+
+  document.getElementById('s-laps').textContent=S.laps;
+  document.getElementById('s-dist').textContent=S.dist.toFixed(1);
+  document.getElementById('s-rank').textContent=S.rank||'—';
+  document.getElementById('s-el').textContent=fmt(el);
+  const lastLap=S.lapArr[S.lapArr.length-1];
+  document.getElementById('s-last').textContent=lastLap?fmtMin(lastLap):'—';
+  const pace=el>0?(el/60)/S.dist:0;
+  const _sp=document.getElementById('s-pace');if(_sp)_sp.textContent=pace>0?fmt(pace*60)+'/km':'—';
+  const avgLap3=S.lapArr.length?S.lapArr.slice(-3).reduce((a,b)=>a+b,0)/Math.min(3,S.lapArr.length):590;
+  const _sal=document.getElementById('s-avg-lap');if(_sal)_sal.textContent=fmtMin(avgLap3);
+  document.getElementById('p-rem').textContent=fmt(elRemain);
+
+  // Ile kółek zostało tempem z ostatnich 5
+  {
+    const _sl = S.lapArr.slice(-Math.min(5, S.lapArr.length));
+    const _a5 = _sl.length ? _sl.reduce((a,b)=>a+b,0)/_sl.length : 0;
+    const _rl = (_a5 > 0 && elRemain > 0) ? Math.floor(elRemain / _a5) : null;
+    document.getElementById('p-rate').textContent = _rl !== null ? `~${_rl} kółek` : '—';
+  }
+
+  const pred=predict();
+  if(pred){
+    const fc=pred.total;
+    const _pfc=document.getElementById('p-fc');if(_pfc)_pfc.textContent=fc+' km';
+    const _pa=document.getElementById('p-a');if(_pa)_pa.textContent=S.dist>=C.GOAL_MIN?'✅ OSIĄGNIĘTY!':`${(C.GOAL_MIN-S.dist).toFixed(0)} km`;
+    const _pb=document.getElementById('p-b');if(_pb)_pb.textContent=S.dist>=C.GOAL_SUPER?'✅ OSIĄGNIĘTY!':`${(C.GOAL_SUPER-S.dist).toFixed(0)} km`;
+    const _popt=document.getElementById('p-opt');if(_popt)_popt.textContent=S.dist>=C.GOAL_OPT?'✅ OSIĄGNIĘTY!':`${(C.GOAL_OPT-S.dist).toFixed(0)} km`;
+    const badge=document.getElementById('p-badge');
+    if(badge){
+      if(fc>=C.GOAL_OPT){badge.textContent='🔥 NA KURSIE — 230 KM!';badge.className='badge ok';}
+      else if(fc>=C.GOAL_SUPER){badge.textContent='🌟 NA KURSIE — 220 KM';badge.className='badge ok';}
+      else if(fc>=C.GOAL_MIN){badge.textContent='🟡 NA KURSIE — 200 KM';badge.className='badge warn';}
+      else{badge.textContent='⚠️ PONIŻEJ MINIMUM';badge.className='badge bad';}
+    }
+    const _pb2=document.getElementById('p-bar');if(_pb2)_pb2.style.width=pct(S.dist,C.GOAL_OPT)+'%';
+  }
+
+  const npCd=document.getElementById('np-cd');
+  if(!S.startAt){
+    npCd.textContent='—'; npCd.className='np-cd';
+    document.getElementById('np-time').textContent='Ustaw start ↓';
+    document.getElementById('err-msg').textContent='⚠️ Ustaw godzinę startu wyścigu → kliknij OK';
+  } else {
+    // mat → strefa supportu: 50% ostatniego zmierzonego kółka
+    // (strefa jest ~w połowie pętli za matą; offset skaluje się z aktualnym tempem)
+    // fallback na avgLap3 dopóki nie ma jeszcze żadnego zmierzonego kółka
+    const ZONE_OFFSET_S = (lastLap || avgLap3) * 0.5;
+    const lastMatWall  = S.startAt + S.elapsed * 1000;   // kiedy był na macie (z protimera)
+    const lastZoneWall = lastMatWall + ZONE_OFFSET_S * 1000; // kiedy był w strefie
+
+    // Czas od ostatniej wizyty w strefie
+    const sinceZone = (now() - lastZoneWall) / 1000;
+    // Ile pełnych kółek minęło od tej wizyty (gdy protimer jest opóźniony, > 0)
+    const lapsAhead = sinceZone < 0 ? 0 : Math.floor(sinceZone / avgLap3);
+    const nextTs = sinceZone < 0
+      ? lastZoneWall                                       // jeszcze nie dotarł w tym kółku
+      : lastZoneWall + (lapsAhead + 1) * avgLap3 * 1000;  // kolejna wizyta
+    const untilNext = (nextTs - now()) / 1000;
+
+    if (untilNext > 120) { npCd.textContent=fmt(untilNext); npCd.className='np-cd'; }
+    else if (untilNext > 0) { npCd.textContent=fmt(untilNext); npCd.className='np-cd warn'; }
+    else { npCd.textContent='⚡ WKRÓTCE!'; npCd.className='np-cd urgent'; }
+    checkBeep(untilNext);
+
+    document.getElementById('np-time').textContent =
+      new Date(nextTs).toLocaleTimeString('pl-PL',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+
+    // Mata i strefa info
+    const npLast = document.getElementById('np-last');
+    if (npLast) {
+      const matTime = new Date(lastMatWall).toLocaleTimeString('pl-PL',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+      const zoneTime = new Date(lastZoneWall).toLocaleTimeString('pl-PL',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+      if (lapsAhead === 0) {
+        npLast.textContent = `mata: ${matTime} → strefa: ${zoneTime} · kółko ${S.laps}`;
+        npLast.style.color = 'var(--mut)';
+      } else {
+        npLast.textContent = `⏳ protimer opóźniony o ~${lapsAhead} kółko — ekstrapolacja`;
+        npLast.style.color = 'var(--ylw)';
+      }
+    }
+
+    // Podpowiedź żelowa — stały harmonogram co 25 min od startu
+    const { rem: gelRem, wallTs: gelWallTs } = nextGelSchedule(el);
+    const gelTimeStr = S.startAt ? new Date(gelWallTs).toLocaleTimeString('pl-PL',{hour:'2-digit',minute:'2-digit'}) : '';
+    const hint = document.getElementById('gel-hint');
+    if (gelRem<=0) { hint.textContent='⚠️ ŻEL TERAZ!'; hint.className='gel-hint now'; }
+    else if (gelRem<=untilNext+60) { hint.textContent=`🟠 ŻEL NA TEJ WIZYCIE (#${S.laps+lapsAhead+1}) · ${gelTimeStr}`; hint.className='gel-hint this'; }
+    else if (gelRem<=untilNext+avgLap3+60) { hint.textContent=`🟠 ŻEL NA NASTĘPNEJ (#${S.laps+lapsAhead+2}) · ${gelTimeStr}`; hint.className='gel-hint next'; }
+    else { hint.textContent=`✅ ŻEL za ${fmt(gelRem)} · ${gelTimeStr}`; hint.className='gel-hint later'; }
+
+    document.getElementById('np-lapnum').textContent = S.laps + lapsAhead + 1;
+  }
+
+  updateNut('ale', 'alert-salt','salt-cd','salt-when',S.saltLast,el,C.SALT_S);
+  updateGel(el);
+  renderBilans();
+  renderLastTimes();
+}
+
+function updateNut(type,alertId,cdId,whenId,last,el,interval) {
+  const rem=interval-(el-last);
+  const cd=document.getElementById(cdId), alrt=document.getElementById(alertId);
+  document.getElementById(whenId).textContent=last>0?`ostatnie: ${fmt(last)} od startu`:'jeszcze nie podano';
+  const thr=type==='dzik'?300:600;
+  if(rem<=0){cd.textContent='⚠️ TERAZ!';cd.className='na-cd now';alrt.className='nalert now';}
+  else if(rem<thr){cd.textContent=fmt(rem);cd.className='na-cd soon';alrt.className='nalert soon';}
+  else{cd.textContent=fmt(rem);cd.className='na-cd ok';alrt.className='nalert ok';}
+}
+
+// Stały harmonogram żelu: co 25 min od startu (7:25, 7:50, 8:15, ...)
+function nextGelSchedule(el) {
+  const idx = Math.floor(el / C.GEL_S) + 1;   // numer następnej dawki
+  const raceS = idx * C.GEL_S;                  // czas od startu (sekundy)
+  const rem = raceS - el;                        // zostało sekund
+  const wallTs = S.startAt ? S.startAt + raceS * 1000 : null;
+  return { idx, raceS, rem, wallTs };
+}
+
+function updateGel(el) {
+  const { rem, wallTs, idx } = nextGelSchedule(el);
+  const cd = document.getElementById('gel-cd');
+  const alrt = document.getElementById('alert-gel');
+  const whenEl = document.getElementById('gel-when');
+
+  // Pokaż konkretną godzinę następnego żelu
+  const timeStr = wallTs
+    ? new Date(wallTs).toLocaleTimeString('pl-PL',{hour:'2-digit',minute:'2-digit'})
+    : '—';
+  whenEl.textContent = `#${idx} · ${timeStr}`;
+
+  // Countdown + kolor
+  if (rem <= 0) {
+    cd.textContent = '⚠️ TERAZ!'; cd.className = 'na-cd now'; alrt.className = 'nalert now';
+  } else if (rem < 300) {
+    cd.textContent = fmt(rem); cd.className = 'na-cd soon'; alrt.className = 'nalert soon';
+  } else {
+    cd.textContent = fmt(rem); cd.className = 'na-cd ok'; alrt.className = 'nalert ok';
+  }
+}
+
+// ─── LAPS ENDPOINT ───────────────────────────────────────
+// Parsuje HTML z /api/laps (protimer details endpoint)
+function parseHMS(s) {
+  const clean = s.split('.')[0].trim();
+  const p = clean.split(':').map(Number);
+  if (p.length === 3) return p[0]*3600 + p[1]*60 + p[2];
+  if (p.length === 2) return p[0]*60 + p[1];
+  return 0;
+}
+
+function parseWallTs(s) {
+  // "07:10:04.929" → JS timestamp (dzisiaj)
+  const clean = s.split('.')[0].trim();
+  const p = clean.split(':');
+  if (p.length !== 3) return null;
+  const d = new Date();
+  d.setHours(+p[0], +p[1], +p[2], 0);
+  return d.getTime();
+}
+
+function parseLapsHtml(html) {
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const rows = Array.from(doc.querySelectorAll('tr'));
+  const laps = [];
+  let gunshot = null;
+  let totalElapsed = 0;
+  let totalDist = 0;
+  let rank = 0;
+
+  for (const row of rows) {
+    const th = row.querySelector('th');
+    const tds = Array.from(row.querySelectorAll('td'));
+    if (!th) continue;
+    const label = th.textContent.trim();
+
+    if (label === 'Gunshot') {
+      // tds[1] = "06:59:59.750"
+      if (tds[1]) gunshot = parseWallTs(tds[1].textContent.trim());
+
+    } else if (/^Okrążenie\s+\d+/.test(label)) {
+      const lapNum = parseInt(label.replace('Okrążenie','').trim());
+      if (!tds[0] || !tds[1]) continue;
+      // tds[0] = "00:09:51 / 32 …" → weź tylko czas przed "/"
+      const lapTimeRaw = tds[0].textContent.split('/')[0].trim();
+      const lapSecs = parseHMS(lapTimeRaw);
+      const wallTs  = parseWallTs(tds[1].textContent.trim());
+      if (lapSecs > 60 && lapSecs < 7200) {
+        laps.push({ lap: lapNum, lapSecs, wallTs, source: 'protimer' });
+      }
+
+    } else if (label === 'Czas sumaryczny' && tds[0]) {
+      totalElapsed = parseHMS(tds[0].textContent.trim());
+
+    } else if (label === 'Dystans' && tds[0]) {
+      const m = tds[0].textContent.match(/[\d.,]+/);
+      if (m) totalDist = parseFloat(m[0].replace(',','.'));
+
+    } else if (label === 'Miejsce' && tds[0]) {
+      rank = parseInt(tds[0].textContent.trim()) || 0;
+    }
+  }
+  laps.sort((a,b) => a.lap - b.lap);
+  return { laps, gunshot, totalElapsed, totalDist, rank };
+}
+
+async function fetchLaps() {
+  try {
+    const r = await fetch('/api/laps', {cache:'no-store'});
+    if (!r.ok) return;
+    const j = await r.json();
+    if (j.error || !j.content) return;
+
+    const parsed = parseLapsHtml(j.content);
+    if (!parsed.laps.length) return;
+
+    const prevCount = S.laps;
+
+    // Zaktualizuj timedLaps i lapArr — pełny zestaw z protimera
+    S.timedLaps = parsed.laps;
+    S.lapArr = parsed.laps.map(l => l.lapSecs);
+    localStorage.setItem('timedLaps', JSON.stringify(S.timedLaps));
+    localStorage.setItem('manualLapArr', JSON.stringify(S.lapArr));
+
+    // Zaktualizuj stan z podsumowania
+    const lapCount = parsed.laps.length;
+    if (lapCount > S.laps) {
+      S.laps = lapCount;
+      if (lapCount > prevCount && prevCount > 0) flashNextPass();
+    }
+    S.prevLapCount = Math.max(S.prevLapCount, lapCount);
+    localStorage.setItem('prevLapCount', S.prevLapCount);
+
+    if (parsed.totalElapsed > 0) S.elapsed = parsed.totalElapsed;
+    if (parsed.totalDist > 0) S.dist = parsed.totalDist;
+    if (parsed.rank > 0) S.rank = parsed.rank;
+
+    // Auto-ustaw startAt z Gunshot jeśli jeszcze nie ustawiony ręcznie
+    if (parsed.gunshot && !localStorage.getItem('startAt')) {
+      S.startAt = parsed.gunshot;
+      localStorage.setItem('startAt', S.startAt);
+      syncStartInput();
+    }
+
+    S.fetchAt = now();
+    renderLaps();
+    renderCompetitors();
+    if (lapCount > prevCount) saveLogToServer();
+
+  } catch(e) { console.error('fetchLaps:', e); }
+}
+
+// ─── COMPETITOR LAPS FETCH ───────────────────────────────
+// Pobiera dane kółek zawodnika z /api/competitor-laps?id=PARTICIPANT_ID
+// Reużywa istniejącego parseLapsHtml() — ten sam format HTML co /api/laps Marcina
+async function fetchCompetitorLapsAll() {
+  const entries = Object.entries(S.compParticipantIds);
+  if (!entries.length) return;
+  for (const [bib, pid] of entries) await fetchOneCompetitorLaps(bib, pid);
+  renderCompetitors();
+}
+
+async function fetchOneCompetitorLaps(bib, participantId) {
+  try {
+    const r = await fetch(`/api/competitor-laps?id=${participantId}`, {cache:'no-store'});
+    if (!r.ok) return;
+    const j = await r.json();
+    if (j.error || !j.content) return;
+    const parsed = parseLapsHtml(j.content);   // ten sam parser co dla Marcina
+    if (parsed && parsed.laps.length) {
+      S.compTimedLaps[bib] = parsed.laps;       // [{lap, lapSecs, wallTs}]
+    }
+  } catch(e) { console.warn('fetchOneCompetitorLaps', bib, e); }
+}
+
+// ─── DŹWIĘK ALERTU ───────────────────────────────────────
+let _beepArmed = true;
+let _audioCtx = null;  // współdzielony kontekst — tworzony raz, odnawiany po suspend
+
+function _getCtx() {
+  if (!_audioCtx) {
+    try { _audioCtx = new (window.AudioContext || window.webkitAudioContext)(); }
+    catch(e) { return null; }
+  }
+  if (_audioCtx.state === 'suspended') _audioCtx.resume();
+  return _audioCtx;
+}
+
+// Odblokuj audio przy KAŻDYM kliknięciu — obowiązek przeglądarkowy
+document.addEventListener('click', () => _getCtx(), { passive: true });
+document.addEventListener('touchstart', () => _getCtx(), { passive: true });
+
+function playBeep(times = 3, freq = 880) {
+  const ctx = _getCtx();
+  if (!ctx) return;
+  // Jeśli kontekst wciąż nie uruchomiony — poczekaj na resume i zaplanuj beep
+  const schedule = () => {
+    for (let i = 0; i < times; i++) {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain); gain.connect(ctx.destination);
+      osc.frequency.value = freq;
+      const t0 = ctx.currentTime + i * 0.45;
+      gain.gain.setValueAtTime(0.4, t0);
+      gain.gain.exponentialRampToValueAtTime(0.001, t0 + 0.35);
+      osc.start(t0); osc.stop(t0 + 0.4);
+    }
+  };
+  if (ctx.state === 'running') {
+    schedule();
+  } else {
+    ctx.resume().then(schedule).catch(() => {});
+  }
+}
+
+function checkBeep(untilNext) {
+  if (untilNext <= 30 && untilNext > 0 && _beepArmed) {
+    playBeep(3, 880);
+    _beepArmed = false;
+  }
+  if (untilNext > 45) _beepArmed = true;  // reset wcześniej żeby zdążyć
+}
+
+// ─── INIT ────────────────────────────────────────────────
+loadLogFromServer();
+renderLog();
+renderLaps();
+renderBilans();
+renderCompetitors();
+tick();
+setInterval(tick, 1000);
+setInterval(() => { fetchAndUpdate(); fetchLaps(); }, C.REFRESH_MS);
+fetchAndUpdate();
+fetchLaps();
+</script>
+</body>
+</html>

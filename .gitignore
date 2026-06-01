@@ -1,0 +1,15 @@
+.mcp.json
+.env
+*.secret
+node_modules/
+
+# Pliki debugowania scraperów (duże HTML, tymczasowe)
+wyniki/**/_debug_*.html
+
+# Artefakty narzędzi MCP i IDE
+.playwright-mcp/
+.claude/
+
+# Screenshoty testowe
+*.png
+*.jpg

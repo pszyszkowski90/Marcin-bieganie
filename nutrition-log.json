@@ -1,0 +1,1257 @@
+{
+  "nlog": [
+    {
+      "type": "water",
+      "raceS": 600,
+      "lap": 1,
+      "ts": 1780117800000
+    },
+    {
+      "type": "dzik",
+      "raceS": 1200,
+      "lap": 2,
+      "ts": 1780118400000
+    },
+    {
+      "type": "iso",
+      "raceS": 1800,
+      "lap": 3,
+      "ts": 1780119000000
+    },
+    {
+      "type": "dzik",
+      "raceS": 2500,
+      "lap": 4,
+      "ts": 1780119700000
+    },
+    {
+      "type": "ale",
+      "raceS": 3400,
+      "lap": 5,
+      "ts": 1780120600000
+    },
+    {
+      "type": "water",
+      "raceS": 4200,
+      "lap": 6,
+      "ts": 1780121400000
+    },
+    {
+      "type": "dzik",
+      "raceS": 4800,
+      "lap": 7,
+      "ts": 1780122000000
+    },
+    {
+      "type": "iso",
+      "raceS": 5400,
+      "lap": 8,
+      "ts": 1780122600000
+    },
+    {
+      "type": "dzik",
+      "raceS": 6600,
+      "lap": 10,
+      "ts": 1780123800000
+    },
+    {
+      "type": "ale",
+      "raceS": 7100,
+      "lap": 11,
+      "ts": 1780124300000
+    },
+    {
+      "type": "water",
+      "raceS": 7800,
+      "lap": 12,
+      "ts": 1780125000000
+    },
+    {
+      "type": "dzik",
+      "raceS": 8400,
+      "lap": 13,
+      "ts": 1780125600000
+    },
+    {
+      "type": "dzik",
+      "raceS": 9000,
+      "lap": 13,
+      "ts": 1780126200000
+    },
+    {
+      "type": "ale",
+      "raceS": 9600,
+      "lap": 14,
+      "ts": 1780126800000
+    },
+    {
+      "type": "dzik",
+      "raceS": 10200,
+      "lap": 15,
+      "ts": 1780127400000
+    },
+    {
+      "type": "iso",
+      "raceS": 11400,
+      "lap": 17,
+      "ts": 1780128600000
+    },
+    {
+      "type": "sis",
+      "raceS": 12000,
+      "lap": 18,
+      "ts": 1780129200000
+    },
+    {
+      "type": "ale",
+      "raceS": 12600,
+      "lap": 19,
+      "ts": 1780129800000
+    },
+    {
+      "type": "sis",
+      "raceS": 13200,
+      "lap": 20,
+      "ts": 1780130400000
+    },
+    {
+      "type": "iso",
+      "raceS": 13800,
+      "lap": 21,
+      "ts": 1780131000000
+    },
+    {
+      "type": "sis",
+      "raceS": 15600,
+      "lap": 23,
+      "ts": 1780132800000
+    },
+    {
+      "type": "dzik",
+      "raceS": 16432,
+      "lap": 27,
+      "ts": 1780133641119
+    },
+    {
+      "type": "iso",
+      "raceS": 17084,
+      "lap": 28,
+      "ts": 1780134292994
+    },
+    {
+      "type": "sis",
+      "raceS": 17638,
+      "lap": 29,
+      "ts": 1780134846832
+    },
+    {
+      "type": "meal",
+      "raceS": 18800,
+      "lap": 31,
+      "ts": 1780136002569
+    },
+    {
+      "type": "ale",
+      "raceS": 19350,
+      "lap": 32,
+      "ts": 1780136552990
+    },
+    {
+      "type": "water",
+      "raceS": 19384,
+      "lap": 32,
+      "ts": 1780136586854
+    },
+    {
+      "type": "iso",
+      "raceS": 20140,
+      "lap": 33,
+      "ts": 1780137349057
+    },
+    {
+      "type": "dzik",
+      "raceS": 21370,
+      "lap": 35,
+      "ts": 1780138579352
+    },
+    {
+      "type": "iso",
+      "raceS": 24700,
+      "lap": 45,
+      "ts": 1780141909637
+    },
+    {
+      "type": "water",
+      "raceS": 24727,
+      "lap": 45,
+      "ts": 1780141936562
+    },
+    {
+      "type": "sis",
+      "raceS": 25035,
+      "lap": 27,
+      "ts": 1780142244294
+    },
+    {
+      "type": "ale",
+      "raceS": 25673,
+      "lap": 45,
+      "ts": 1780142882020
+    },
+    {
+      "type": "iso",
+      "raceS": 26208,
+      "lap": 73,
+      "ts": 1780143417252
+    },
+    {
+      "type": "dzik",
+      "raceS": 26937,
+      "lap": 45,
+      "ts": 1780144145962
+    },
+    {
+      "type": "water",
+      "raceS": 28141,
+      "lap": 46,
+      "ts": 1780145350373
+    },
+    {
+      "type": "dzik",
+      "raceS": 28553,
+      "lap": 47,
+      "ts": 1780145761990
+    },
+    {
+      "type": "iso",
+      "raceS": 29230,
+      "lap": 48,
+      "ts": 1780146439450
+    },
+    {
+      "type": "dzik",
+      "raceS": 29839,
+      "lap": 18,
+      "ts": 1780147048255
+    },
+    {
+      "type": "ale",
+      "raceS": 29852,
+      "lap": 18,
+      "ts": 1780147060878
+    },
+    {
+      "type": "dzik",
+      "raceS": 31973,
+      "lap": 53,
+      "ts": 1780149181852
+    },
+    {
+      "type": "dzik",
+      "raceS": 33793,
+      "lap": 54,
+      "ts": 1780151002461
+    },
+    {
+      "type": "iso",
+      "raceS": 33797,
+      "lap": 54,
+      "ts": 1780151005975
+    },
+    {
+      "type": "ale",
+      "raceS": 34862,
+      "lap": 57,
+      "ts": 1780152071203
+    },
+    {
+      "type": "vitargo",
+      "raceS": 37371,
+      "lap": 61,
+      "ts": 1780154580663
+    },
+    {
+      "type": "dzik",
+      "raceS": 37676,
+      "lap": 61,
+      "ts": 1780154885249
+    },
+    {
+      "type": "ale",
+      "raceS": 37678,
+      "lap": 61,
+      "ts": 1780154887386
+    },
+    {
+      "type": "ale",
+      "raceS": 39447,
+      "lap": 64,
+      "ts": 1780156656067
+    },
+    {
+      "type": "custom",
+      "raceS": 41171,
+      "lap": 66,
+      "ts": 1780158380005,
+      "cho": 30,
+      "na": 0,
+      "ml": 0
+    },
+    {
+      "type": "water",
+      "raceS": 41179,
+      "lap": 66,
+      "ts": 1780158388735
+    },
+    {
+      "type": "ale",
+      "raceS": 42457,
+      "lap": 68,
+      "ts": 1780159665794
+    },
+    {
+      "type": "iso",
+      "raceS": 43127,
+      "lap": 69,
+      "ts": 1780160336133
+    },
+    {
+      "type": "sis",
+      "raceS": 43714,
+      "lap": 70,
+      "ts": 1780160923295
+    },
+    {
+      "type": "water",
+      "raceS": 45585,
+      "lap": 73,
+      "ts": 1780162794418
+    },
+    {
+      "type": "iso",
+      "raceS": 45606,
+      "lap": 73,
+      "ts": 1780162814989
+    },
+    {
+      "type": "ale",
+      "raceS": 45891,
+      "lap": 73,
+      "ts": 1780163100060
+    },
+    {
+      "type": "water",
+      "raceS": 47965,
+      "lap": 76,
+      "ts": 1780165174728
+    },
+    {
+      "type": "ale",
+      "raceS": 49175,
+      "lap": 77,
+      "ts": 1780166384212
+    },
+    {
+      "type": "iso",
+      "raceS": 49179,
+      "lap": 77,
+      "ts": 1780166388471
+    },
+    {
+      "type": "dzik",
+      "raceS": 49742,
+      "lap": 78,
+      "ts": 1780166951537
+    },
+    {
+      "type": "water",
+      "raceS": 50661,
+      "lap": 79,
+      "ts": 1780167870246
+    },
+    {
+      "type": "dzik",
+      "raceS": 52306,
+      "lap": 81,
+      "ts": 1780169515525
+    },
+    {
+      "type": "ale",
+      "raceS": 52964,
+      "lap": 82,
+      "ts": 1780170173469
+    },
+    {
+      "type": "iso",
+      "raceS": 52967,
+      "lap": 82,
+      "ts": 1780170176304
+    },
+    {
+      "type": "vitargo",
+      "raceS": 53690,
+      "lap": 83,
+      "ts": 1780170899402
+    },
+    {
+      "type": "water",
+      "raceS": 57050,
+      "lap": 87,
+      "ts": 1780174259275
+    },
+    {
+      "type": "ale",
+      "raceS": 57992,
+      "lap": 88,
+      "ts": 1780175201689
+    },
+    {
+      "type": "sis",
+      "raceS": 58017,
+      "lap": 88,
+      "ts": 1780175225823,
+      "caf": 200
+    },
+    {
+      "type": "iso",
+      "raceS": 59439,
+      "lap": 90,
+      "ts": 1780176648335
+    },
+    {
+      "type": "ale",
+      "raceS": 59448,
+      "lap": 90,
+      "ts": 1780176657454
+    },
+    {
+      "type": "dzik",
+      "raceS": 60094,
+      "lap": 91,
+      "ts": 1780177303168
+    },
+    {
+      "type": "dzik",
+      "raceS": 62467,
+      "lap": 94,
+      "ts": 1780179676435,
+      "caf": 100
+    },
+    {
+      "type": "ale",
+      "raceS": 63352,
+      "lap": 95,
+      "ts": 1780180560829
+    },
+    {
+      "type": "water",
+      "raceS": 64666,
+      "lap": 97,
+      "ts": 1780181875731
+    },
+    {
+      "type": "ale",
+      "raceS": 66254,
+      "lap": 99,
+      "ts": 1780183463528
+    },
+    {
+      "type": "water",
+      "raceS": 67726,
+      "lap": 101,
+      "ts": 1780184935464
+    },
+    {
+      "type": "ale",
+      "raceS": 68750,
+      "lap": 102,
+      "ts": 1780185959073
+    },
+    {
+      "type": "iso",
+      "raceS": 69462,
+      "lap": 103,
+      "ts": 1780186671241
+    },
+    {
+      "type": "ale",
+      "raceS": 72125,
+      "lap": 106,
+      "ts": 1780189334021
+    },
+    {
+      "type": "ale",
+      "raceS": 75453,
+      "lap": 110,
+      "ts": 1780192662711
+    },
+    {
+      "type": "ale",
+      "raceS": 77155,
+      "lap": 112,
+      "ts": 1780194364588
+    },
+    {
+      "type": "water",
+      "raceS": 77591,
+      "lap": 113,
+      "ts": 1780194800340
+    },
+    {
+      "type": "ale",
+      "raceS": 78840,
+      "lap": 114,
+      "ts": 1780196049343
+    },
+    {
+      "type": "ale",
+      "raceS": 80750,
+      "lap": 116,
+      "ts": 1780197959057
+    },
+    {
+      "type": "ale",
+      "raceS": 84688,
+      "lap": 121,
+      "ts": 1780201896863
+    }
+  ],
+  "saltLast": 84688,
+  "gelLast": 62467,
+  "startAt": 1780117209246,
+  "lapCrossedAt": 1780130846002,
+  "timedLaps": [
+    {
+      "lap": 2,
+      "lapSecs": 591,
+      "wallTs": 1780291196000,
+      "source": "protimer"
+    },
+    {
+      "lap": 3,
+      "lapSecs": 587,
+      "wallTs": 1780291784000,
+      "source": "protimer"
+    },
+    {
+      "lap": 4,
+      "lapSecs": 589,
+      "wallTs": 1780292374000,
+      "source": "protimer"
+    },
+    {
+      "lap": 5,
+      "lapSecs": 596,
+      "wallTs": 1780292970000,
+      "source": "protimer"
+    },
+    {
+      "lap": 6,
+      "lapSecs": 591,
+      "wallTs": 1780293561000,
+      "source": "protimer"
+    },
+    {
+      "lap": 7,
+      "lapSecs": 596,
+      "wallTs": 1780294158000,
+      "source": "protimer"
+    },
+    {
+      "lap": 8,
+      "lapSecs": 585,
+      "wallTs": 1780294743000,
+      "source": "protimer"
+    },
+    {
+      "lap": 9,
+      "lapSecs": 593,
+      "wallTs": 1780295337000,
+      "source": "protimer"
+    },
+    {
+      "lap": 10,
+      "lapSecs": 605,
+      "wallTs": 1780295943000,
+      "source": "protimer"
+    },
+    {
+      "lap": 11,
+      "lapSecs": 564,
+      "wallTs": 1780296508000,
+      "source": "protimer"
+    },
+    {
+      "lap": 12,
+      "lapSecs": 604,
+      "wallTs": 1780297113000,
+      "source": "protimer"
+    },
+    {
+      "lap": 13,
+      "lapSecs": 593,
+      "wallTs": 1780297707000,
+      "source": "protimer"
+    },
+    {
+      "lap": 14,
+      "lapSecs": 587,
+      "wallTs": 1780298294000,
+      "source": "protimer"
+    },
+    {
+      "lap": 15,
+      "lapSecs": 600,
+      "wallTs": 1780298894000,
+      "source": "protimer"
+    },
+    {
+      "lap": 16,
+      "lapSecs": 590,
+      "wallTs": 1780299485000,
+      "source": "protimer"
+    },
+    {
+      "lap": 17,
+      "lapSecs": 591,
+      "wallTs": 1780300077000,
+      "source": "protimer"
+    },
+    {
+      "lap": 18,
+      "lapSecs": 597,
+      "wallTs": 1780300674000,
+      "source": "protimer"
+    },
+    {
+      "lap": 19,
+      "lapSecs": 586,
+      "wallTs": 1780301261000,
+      "source": "protimer"
+    },
+    {
+      "lap": 20,
+      "lapSecs": 581,
+      "wallTs": 1780301842000,
+      "source": "protimer"
+    },
+    {
+      "lap": 21,
+      "lapSecs": 590,
+      "wallTs": 1780302433000,
+      "source": "protimer"
+    },
+    {
+      "lap": 22,
+      "lapSecs": 597,
+      "wallTs": 1780303030000,
+      "source": "protimer"
+    },
+    {
+      "lap": 23,
+      "lapSecs": 603,
+      "wallTs": 1780303634000,
+      "source": "protimer"
+    },
+    {
+      "lap": 24,
+      "lapSecs": 688,
+      "wallTs": 1780304322000,
+      "source": "protimer"
+    },
+    {
+      "lap": 25,
+      "lapSecs": 597,
+      "wallTs": 1780304919000,
+      "source": "protimer"
+    },
+    {
+      "lap": 26,
+      "lapSecs": 588,
+      "wallTs": 1780305508000,
+      "source": "protimer"
+    },
+    {
+      "lap": 27,
+      "lapSecs": 600,
+      "wallTs": 1780306108000,
+      "source": "protimer"
+    },
+    {
+      "lap": 28,
+      "lapSecs": 587,
+      "wallTs": 1780306695000,
+      "source": "protimer"
+    },
+    {
+      "lap": 29,
+      "lapSecs": 587,
+      "wallTs": 1780307283000,
+      "source": "protimer"
+    },
+    {
+      "lap": 30,
+      "lapSecs": 603,
+      "wallTs": 1780307886000,
+      "source": "protimer"
+    },
+    {
+      "lap": 31,
+      "lapSecs": 686,
+      "wallTs": 1780308573000,
+      "source": "protimer"
+    },
+    {
+      "lap": 32,
+      "lapSecs": 608,
+      "wallTs": 1780309182000,
+      "source": "protimer"
+    },
+    {
+      "lap": 33,
+      "lapSecs": 605,
+      "wallTs": 1780309787000,
+      "source": "protimer"
+    },
+    {
+      "lap": 34,
+      "lapSecs": 598,
+      "wallTs": 1780310386000,
+      "source": "protimer"
+    },
+    {
+      "lap": 35,
+      "lapSecs": 590,
+      "wallTs": 1780310976000,
+      "source": "protimer"
+    },
+    {
+      "lap": 36,
+      "lapSecs": 594,
+      "wallTs": 1780311571000,
+      "source": "protimer"
+    },
+    {
+      "lap": 37,
+      "lapSecs": 606,
+      "wallTs": 1780312177000,
+      "source": "protimer"
+    },
+    {
+      "lap": 38,
+      "lapSecs": 606,
+      "wallTs": 1780312784000,
+      "source": "protimer"
+    },
+    {
+      "lap": 39,
+      "lapSecs": 597,
+      "wallTs": 1780313381000,
+      "source": "protimer"
+    },
+    {
+      "lap": 40,
+      "lapSecs": 602,
+      "wallTs": 1780313984000,
+      "source": "protimer"
+    },
+    {
+      "lap": 41,
+      "lapSecs": 688,
+      "wallTs": 1780314672000,
+      "source": "protimer"
+    },
+    {
+      "lap": 42,
+      "lapSecs": 603,
+      "wallTs": 1780315275000,
+      "source": "protimer"
+    },
+    {
+      "lap": 43,
+      "lapSecs": 602,
+      "wallTs": 1780315877000,
+      "source": "protimer"
+    },
+    {
+      "lap": 44,
+      "lapSecs": 597,
+      "wallTs": 1780316475000,
+      "source": "protimer"
+    },
+    {
+      "lap": 45,
+      "lapSecs": 602,
+      "wallTs": 1780317077000,
+      "source": "protimer"
+    },
+    {
+      "lap": 46,
+      "lapSecs": 612,
+      "wallTs": 1780317689000,
+      "source": "protimer"
+    },
+    {
+      "lap": 47,
+      "lapSecs": 605,
+      "wallTs": 1780318294000,
+      "source": "protimer"
+    },
+    {
+      "lap": 48,
+      "lapSecs": 598,
+      "wallTs": 1780318893000,
+      "source": "protimer"
+    },
+    {
+      "lap": 49,
+      "lapSecs": 610,
+      "wallTs": 1780319503000,
+      "source": "protimer"
+    },
+    {
+      "lap": 50,
+      "lapSecs": 610,
+      "wallTs": 1780320114000,
+      "source": "protimer"
+    },
+    {
+      "lap": 51,
+      "lapSecs": 594,
+      "wallTs": 1780320708000,
+      "source": "protimer"
+    },
+    {
+      "lap": 52,
+      "lapSecs": 624,
+      "wallTs": 1780321333000,
+      "source": "protimer"
+    },
+    {
+      "lap": 53,
+      "lapSecs": 623,
+      "wallTs": 1780321956000,
+      "source": "protimer"
+    },
+    {
+      "lap": 54,
+      "lapSecs": 723,
+      "wallTs": 1780322679000,
+      "source": "protimer"
+    },
+    {
+      "lap": 55,
+      "lapSecs": 627,
+      "wallTs": 1780323306000,
+      "source": "protimer"
+    },
+    {
+      "lap": 56,
+      "lapSecs": 638,
+      "wallTs": 1780323945000,
+      "source": "protimer"
+    },
+    {
+      "lap": 57,
+      "lapSecs": 631,
+      "wallTs": 1780324577000,
+      "source": "protimer"
+    },
+    {
+      "lap": 58,
+      "lapSecs": 687,
+      "wallTs": 1780325264000,
+      "source": "protimer"
+    },
+    {
+      "lap": 59,
+      "lapSecs": 660,
+      "wallTs": 1780325925000,
+      "source": "protimer"
+    },
+    {
+      "lap": 60,
+      "lapSecs": 716,
+      "wallTs": 1780326642000,
+      "source": "protimer"
+    },
+    {
+      "lap": 61,
+      "lapSecs": 690,
+      "wallTs": 1780327333000,
+      "source": "protimer"
+    },
+    {
+      "lap": 62,
+      "lapSecs": 692,
+      "wallTs": 1780328025000,
+      "source": "protimer"
+    },
+    {
+      "lap": 63,
+      "lapSecs": 640,
+      "wallTs": 1780328666000,
+      "source": "protimer"
+    },
+    {
+      "lap": 64,
+      "lapSecs": 595,
+      "wallTs": 1780329261000,
+      "source": "protimer"
+    },
+    {
+      "lap": 65,
+      "lapSecs": 605,
+      "wallTs": 1780329866000,
+      "source": "protimer"
+    },
+    {
+      "lap": 66,
+      "lapSecs": 736,
+      "wallTs": 1780330603000,
+      "source": "protimer"
+    },
+    {
+      "lap": 67,
+      "lapSecs": 717,
+      "wallTs": 1780331321000,
+      "source": "protimer"
+    },
+    {
+      "lap": 68,
+      "lapSecs": 713,
+      "wallTs": 1780332035000,
+      "source": "protimer"
+    },
+    {
+      "lap": 69,
+      "lapSecs": 677,
+      "wallTs": 1780332712000,
+      "source": "protimer"
+    },
+    {
+      "lap": 70,
+      "lapSecs": 647,
+      "wallTs": 1780333360000,
+      "source": "protimer"
+    },
+    {
+      "lap": 71,
+      "lapSecs": 687,
+      "wallTs": 1780334047000,
+      "source": "protimer"
+    },
+    {
+      "lap": 72,
+      "lapSecs": 664,
+      "wallTs": 1780334712000,
+      "source": "protimer"
+    },
+    {
+      "lap": 73,
+      "lapSecs": 695,
+      "wallTs": 1780335408000,
+      "source": "protimer"
+    },
+    {
+      "lap": 74,
+      "lapSecs": 881,
+      "wallTs": 1780336289000,
+      "source": "protimer"
+    },
+    {
+      "lap": 75,
+      "lapSecs": 713,
+      "wallTs": 1780337003000,
+      "source": "protimer"
+    },
+    {
+      "lap": 76,
+      "lapSecs": 768,
+      "wallTs": 1780337772000,
+      "source": "protimer"
+    },
+    {
+      "lap": 77,
+      "lapSecs": 768,
+      "wallTs": 1780338540000,
+      "source": "protimer"
+    },
+    {
+      "lap": 78,
+      "lapSecs": 764,
+      "wallTs": 1780339304000,
+      "source": "protimer"
+    },
+    {
+      "lap": 79,
+      "lapSecs": 799,
+      "wallTs": 1780340103000,
+      "source": "protimer"
+    },
+    {
+      "lap": 80,
+      "lapSecs": 757,
+      "wallTs": 1780340860000,
+      "source": "protimer"
+    },
+    {
+      "lap": 81,
+      "lapSecs": 1011,
+      "wallTs": 1780341872000,
+      "source": "protimer"
+    },
+    {
+      "lap": 82,
+      "lapSecs": 672,
+      "wallTs": 1780342544000,
+      "source": "protimer"
+    },
+    {
+      "lap": 83,
+      "lapSecs": 739,
+      "wallTs": 1780343284000,
+      "source": "protimer"
+    },
+    {
+      "lap": 84,
+      "lapSecs": 755,
+      "wallTs": 1780344040000,
+      "source": "protimer"
+    },
+    {
+      "lap": 85,
+      "lapSecs": 837,
+      "wallTs": 1780344878000,
+      "source": "protimer"
+    },
+    {
+      "lap": 86,
+      "lapSecs": 798,
+      "wallTs": 1780345676000,
+      "source": "protimer"
+    },
+    {
+      "lap": 87,
+      "lapSecs": 894,
+      "wallTs": 1780346571000,
+      "source": "protimer"
+    },
+    {
+      "lap": 88,
+      "lapSecs": 917,
+      "wallTs": 1780347488000,
+      "source": "protimer"
+    },
+    {
+      "lap": 89,
+      "lapSecs": 837,
+      "wallTs": 1780348326000,
+      "source": "protimer"
+    },
+    {
+      "lap": 90,
+      "lapSecs": 681,
+      "wallTs": 1780349007000,
+      "source": "protimer"
+    },
+    {
+      "lap": 91,
+      "lapSecs": 691,
+      "wallTs": 1780349699000,
+      "source": "protimer"
+    },
+    {
+      "lap": 92,
+      "lapSecs": 729,
+      "wallTs": 1780350428000,
+      "source": "protimer"
+    },
+    {
+      "lap": 93,
+      "lapSecs": 709,
+      "wallTs": 1780351137000,
+      "source": "protimer"
+    },
+    {
+      "lap": 94,
+      "lapSecs": 916,
+      "wallTs": 1780265653000,
+      "source": "protimer"
+    },
+    {
+      "lap": 95,
+      "lapSecs": 780,
+      "wallTs": 1780266434000,
+      "source": "protimer"
+    },
+    {
+      "lap": 96,
+      "lapSecs": 820,
+      "wallTs": 1780267254000,
+      "source": "protimer"
+    },
+    {
+      "lap": 97,
+      "lapSecs": 890,
+      "wallTs": 1780268144000,
+      "source": "protimer"
+    },
+    {
+      "lap": 98,
+      "lapSecs": 661,
+      "wallTs": 1780268806000,
+      "source": "protimer"
+    },
+    {
+      "lap": 99,
+      "lapSecs": 676,
+      "wallTs": 1780269483000,
+      "source": "protimer"
+    },
+    {
+      "lap": 100,
+      "lapSecs": 796,
+      "wallTs": 1780270279000,
+      "source": "protimer"
+    },
+    {
+      "lap": 101,
+      "lapSecs": 800,
+      "wallTs": 1780271080000,
+      "source": "protimer"
+    },
+    {
+      "lap": 102,
+      "lapSecs": 776,
+      "wallTs": 1780271856000,
+      "source": "protimer"
+    },
+    {
+      "lap": 103,
+      "lapSecs": 796,
+      "wallTs": 1780272653000,
+      "source": "protimer"
+    },
+    {
+      "lap": 104,
+      "lapSecs": 798,
+      "wallTs": 1780273452000,
+      "source": "protimer"
+    },
+    {
+      "lap": 105,
+      "lapSecs": 831,
+      "wallTs": 1780274283000,
+      "source": "protimer"
+    },
+    {
+      "lap": 106,
+      "lapSecs": 819,
+      "wallTs": 1780275103000,
+      "source": "protimer"
+    },
+    {
+      "lap": 107,
+      "lapSecs": 869,
+      "wallTs": 1780275973000,
+      "source": "protimer"
+    },
+    {
+      "lap": 108,
+      "lapSecs": 835,
+      "wallTs": 1780276808000,
+      "source": "protimer"
+    },
+    {
+      "lap": 109,
+      "lapSecs": 820,
+      "wallTs": 1780277629000,
+      "source": "protimer"
+    },
+    {
+      "lap": 110,
+      "lapSecs": 859,
+      "wallTs": 1780278489000,
+      "source": "protimer"
+    },
+    {
+      "lap": 111,
+      "lapSecs": 845,
+      "wallTs": 1780279334000,
+      "source": "protimer"
+    },
+    {
+      "lap": 112,
+      "lapSecs": 864,
+      "wallTs": 1780280199000,
+      "source": "protimer"
+    },
+    {
+      "lap": 113,
+      "lapSecs": 863,
+      "wallTs": 1780281063000,
+      "source": "protimer"
+    },
+    {
+      "lap": 114,
+      "lapSecs": 865,
+      "wallTs": 1780281928000,
+      "source": "protimer"
+    },
+    {
+      "lap": 115,
+      "lapSecs": 927,
+      "wallTs": 1780282856000,
+      "source": "protimer"
+    },
+    {
+      "lap": 116,
+      "lapSecs": 886,
+      "wallTs": 1780283743000,
+      "source": "protimer"
+    },
+    {
+      "lap": 117,
+      "lapSecs": 863,
+      "wallTs": 1780284606000,
+      "source": "protimer"
+    },
+    {
+      "lap": 118,
+      "lapSecs": 920,
+      "wallTs": 1780285527000,
+      "source": "protimer"
+    },
+    {
+      "lap": 119,
+      "lapSecs": 874,
+      "wallTs": 1780286402000,
+      "source": "protimer"
+    },
+    {
+      "lap": 120,
+      "lapSecs": 902,
+      "wallTs": 1780287304000,
+      "source": "protimer"
+    },
+    {
+      "lap": 121,
+      "lapSecs": 887,
+      "wallTs": 1780288191000,
+      "source": "protimer"
+    },
+    {
+      "lap": 122,
+      "lapSecs": 833,
+      "wallTs": 1780289025000,
+      "source": "protimer"
+    },
+    {
+      "lap": 123,
+      "lapSecs": 785,
+      "wallTs": 1780289810000,
+      "source": "protimer"
+    }
+  ]
+}

@@ -1,0 +1,739 @@
+Zanim odpowiem, zrobię kilka ukierunkowanych wyszukiwań, żeby potwierdzić aktualne cytowania — szczególnie dla kluczowych rekomendacji liczbowych (węglowodany, ładowanie, NLPZ, nitrany, trening jelit). Nie chcę zmyślać publikacji.Dobra, mam solidny materiał źródłowy. Odpowiem w strukturze 1–10, z inline cytatami i tagami dowodowymi. Odpowiedź jest długa świadomie — prosiłeś o plan, który daje się od razu przełożyć na harmonogram tygodniowy.
+
+---
+
+## Założenia przed planem
+
+**Cel liczbowy dla Marcina (64 kg, M49, 38 dni do startu, 5 tyg. 3 dni):**
+- 200 km w 24 h = średnie tempo **7:12 min/km** łącznie ze stopami (eating, toaleta, zmiana butów).
+- Zakładając ~8% czasu na stopy/chód, tempo biegowe musi być ~**6:30–6:40/km**. To około 70% tempa jego świeżego PB z Gdańska (4:12/km) — czyli realnie jest to jego komfortowy E1 pace.
+- Po 160 km w Rumi 2021 (8:31/km w terenie) na płaskim asfalcie z supportem 200 km jest w zasięgu, **ale jedyną realną barierą jest żywienie + zarządzanie tempem w pierwszych 6 h** (najczęstszy punkt, w którym topi się cel 200+).
+
+**Korekta terminów w planie**: T-6 = 28.04–04.05, T-5 = 05–11.05, T-4 = 12–18.05, T-3 = 19–25.05, T-2 = 26.05–01.06 *(uwaga: start 30.05 sob. wypada w T-2)*. Plan rozpisuję jako **T-6 → T-3 + tydzień startowy**, bo po maratonie 19.04 przez pierwsze 9 dni (22–30.04) idzie regeneracja pomaratońska, nie budujący tydzień.
+
+---
+
+## 1. Plan treningowy — 5 tyg. 3 dni do startu
+
+### Logika periodyzacji
+
+Na 38 dni po świeżym PB maratonu **nie zbudujesz dodatkowej bazy** — baza już jest. Robisz trzy rzeczy:
+
+1. **Regenerację pomaratońską** (9–14 dni, Barnes & Kilding, 2014, *Sports Medicine*, pokazują że markery uszkodzeń mięśni CK/LDH wracają do baseline po 7–10 dniach; subiektywna gotowość biegowa po ~14). [EBM]
+2. **Specyficzną adaptację do 24 h na płaskiej pętli** (monotonia kroku, rotacja obuwia, bieg w nocy z deprywacją snu, bieg z pełnym protokołem żywienia). [PRAKTYKA + EKSTRAPOLACJA z ISSN Tiller et al., 2019, *JISSN*]
+3. **Gut training** — patrz sekcja 2. To jest największa dźwignia w 38-dniowym oknie.
+
+Klasyczna "ostatnia naprawdę długa jednostka" w planach 100-milowych wypada 3–4 tyg. przed startem (Koop, 2021, *Training Essentials for Ultrarunning*, 2nd ed. [PRAKTYKA]). Przy jego świeżej regeneracji maratońskiej realnie mamy jedno okno na długi kluczowy bieg: **weekend 10–11.05 (T-3)**, ~3 tyg. przed startem.
+
+### Tygodniowa rozpiska
+
+**Regeneracja pomaratońska (22–27.04, "T-6a"):** Zero presji. W sumie 30–40 km w tygodniu.
+- Pn 22.04: off lub 30 min spacer.
+- Wt: 30–40 min bardzo lekko (6:00/km+), tylko jak nogi chcą.
+- Śr: off lub 45 min Z1 (puls <135).
+- Czw: 45–60 min Z1.
+- Pt: off.
+- So: 60–75 min Z1 swobodnie.
+- Nd: 90 min Z1 (~14 km), koniec to początek „wprowadzenia jelit" — 1 żel + 500 ml isotoniku w trakcie, tylko po to, żeby ruszyć temat (nie test, nie dawka docelowa).
+
+**Rekomendacja jednostki na czas (min), nie kilometry** dla pierwszych 10 dni — inaczej pokusa na „dobicie" km jest ogromna. [PRAKTYKA, Koop 2021]
+
+---
+
+**T-5 (28.04–04.05) — Re-entry. Objętość: ~65–75 km**
+- Pn: off / siłownia 30–40 min (core, łydki, glute med; żadnych ciężarów na max).
+- Wt: 14 km Z2 (~4:55/km) + 6×100 m strides.
+- Śr: 10 km regeneracyjnie (5:15/km+).
+- Czw: **Trening specyficzny #1**: 20 km w docelowym tempie 24h (6:30/km). Biegniesz z butelką + **1 żelem co 30 min** = 60 g CHO/h.
+- Pt: off / 45 min siłownia.
+- So: 10 km luźno.
+- Nd: **Long run 25–28 km @ 5:30/km**, pierwsze realne testowanie żywienia: 80 g CHO/h (bez ściemniania, 2 żele/h LUB 1 żel + 500 ml 8% isotoniku). Jeżeli to pierwszy raz — przygotuj się na lekki dyskomfort.
+
+**T-4 (05–11.05) — Specyficzny blok. Objętość: ~80–90 km** *(szczyt objętości w cyklu)*
+- Pn: off.
+- Wt: 12 km Z2 + 6×200 m @ tempo maratońskie (4:15/km), odp. 200 m trucht.
+- Śr: 10 km regeneracyjnie.
+- Czw: **Trening specyficzny #2**: 25 km z podziałem — pierwsze 15 km @ 6:30/km (docelowe 24h), ostatnie 10 km @ 5:30/km. Żywienie: 80 g CHO/h + 500 ml płynu/h.
+- Pt: off / siłownia.
+- So: **Nocny bieg treningowy**: start 22:00–23:00, 10–12 km @ 6:30/km z czołówką, w ubraniu startowym. Cel: przetestowanie czołówki, ubrania, psychiki, żołądka w porze nocnej. 1 żel w trakcie.
+- Nd: **KLUCZOWY LONG #1: 3 godziny ciągłego biegu @ 6:30/km** (~28 km). Pełny protokół startowy: 90 g CHO/h, 600 ml płynu/h, 500 mg sodu/h. To jest Twoja symulacja pierwszych 3 h startu.
+
+---
+
+**T-3 (12–18.05) — Najdłuższa jednostka. Objętość: ~85–95 km**
+- Pn: off.
+- Wt: 14 km Z2 + 5×1 km @ 4:00/km, odp. 400 m trucht. *(utrzymanie prędkości neuralnej)*
+- Śr: 10 km regeneracyjnie.
+- Czw: 12 km Z2 swobodnie.
+- Pt: off / bardzo lekka siłownia (mobility tylko).
+- So: **NAJDŁUŻSZY I NAJWAŻNIEJSZY TRENING CAŁEGO CYKLU — back-to-back z Nd**. 18–20 km wieczorem o 18:00 @ 6:30/km, pełny protokół żywienia.
+- Nd: **Następnego dnia rano po So**: **4–5 godzin ciągłego biegu @ 6:40/km** (~38–45 km). Start o 6:00–7:00, żeby symulować godzinę startu MP (07:00). Protokół startowy 1:1: 90–100 g CHO/h, kofeina po 3. godzinie (100 mg), przebranie skarpet po 3. godzinie, **pętla 1,7 km jeśli możesz** (np. Park Oliwski lub Reagana) — po to, żeby przetestować monotonię.
+
+**Logika**: Back-to-back So 20 km + Nd 40–45 km daje ~60 km w 18 h. To łączny stres aerobowy ~5–6 h na nogach w 24 h — najlepsza dostępna aproksymacja 24 h bez zniszczenia się (Koop, 2021; pragmatyka ultra, [PRAKTYKA]).
+
+**Nie rób 8-godzinnego długiego biegu 3 tyg. przed startem** — na 24 h to albo nie buduje, albo tylko okalecza. Fitzgerald 2020+ [PRAKTYKA] i logika progresji obciążenia: dawka ≈ 50–60% czasu startowego jest optymalna, powyżej tego ryzyko przekracza benefit.
+
+---
+
+**T-2 (19–25.05) — Pierwszy taper. Objętość: ~55–60 km**
+- Pn: off lub 30 min spacer.
+- Wt: 10 km Z2.
+- Śr: 8 km + 4×1 km @ 3:55/km (ostre, krótkie, utrzymanie neuralnych wzorców).
+- Czw: 12 km Z2 z pełnym protokołem żywienia (90 g CHO/h) — **ostatni test jelit**. Jak coś nie działa, modyfikujesz produkt, nie dawkę.
+- Pt: off.
+- So: 10 km swobodnie.
+- Nd: 15–18 km @ 6:30/km, żywienie light (60 g CHO/h — redukujesz, bo ostatnie wejście jelit na wysoką dawkę już było).
+
+**T-1 (26–29.05) — ostatni taper, 3 dni przed startem**
+- Pn 26.05: 8 km luźno @ 5:00/km + 4×100 m strides.
+- Wt 27.05: off albo 30 min spacer.
+- Śr 28.05: 5 km luźno + 4×100 m strides (tzw. "opener" — utrzymuje wzorzec ruchu, Barnes & Kilding, 2014, *Sports Medicine* [EBM]).
+- Czw 29.05: off, podróż do Pabianic, organizacja logistyki.
+- Pt 30.05 rano: start 07:00.
+
+**Objętość w tygodniu startu ~20–25 km** (nie 40, nie 50). Taper zmniejsza objętość o 40–60% przy zachowaniu intensywności — przegląd Mujika i Padilla, 2003, *Med Sci Sports Exerc* [EBM].
+
+### Konkretne elementy specyficzne pod 24 h
+
+- **Bieg w nocy z czołówką** (T-4 So i element długiego biegu T-3 Nd) — test sprzętu i świadomość torów rytmu okołodobowego. [PRAKTYKA]
+- **Bieg na pętli** w T-3 Nd — jeżeli jest dostępna pętla ~1,5–2 km (np. Park Reagana/Park Oliwski), zrób 40 km tam. Monotonia mentalna to inny stres niż bieg po różnych trasach. [PRAKTYKA]
+- **Bieg z żywieniem** — każdy długi i każdy średni od T-5 w górę z żywieniem realnym w tempie docelowym. To najważniejsze.
+- **Symulacja deprywacji snu**: **nie rób** kompletnej nieprzespanej nocy w cyklu. Ryzyko > korzyść. Zamiast tego: w T-4 So krótszy sen (kładziesz się 00:30, wstajesz 6:30 — 6 h), w T-3 So analogicznie. To uczy psychikę "skraconej nocy". [PRAKTYKA, brak solidnych badań na runners]
+- **Praca siłowa / mobility** — 2×/tyg. 30 min do T-3, potem tylko mobility. Gehring et al., 2023, *J Strength Cond Res* — siła u masters biegaczy redukuje ryzyko kontuzji i poprawia ekonomię ~2–4% [EBM]. Priorytet: core, glute med, łydki, T-spine mobility.
+
+### Ostatni „naprawdę długi" trening
+
+**Niedziela 10.05 (T-3 Nd, 3 tyg. przed startem): 4–5 godzin @ 6:40/km (~38–45 km)**. Po tym już tylko testy 2,5–3 h max. To jest złoty standard ultra coachingu przy 6-tygodniowym oknie: ostatni długi 21 dni przed, potem progresywny taper (Koop, 2021 [PRAKTYKA]; Millet G.Y., 2012, *BMC Med* dla load balance [OBSERWACJA]).
+
+---
+
+## 2. Trening żywienia ("gut training") — najważniejszy pojedynczy punkt tego planu
+
+### Dlaczego to jest priorytet #1
+
+Marcin ma 10 lat ultra i w MP 24 h idzie **po pierwsze życiówkowe 200 km, a fuelował historycznie za słabo**. To klasyczna sylwetka „fat-adapted ultra", która wygrywa na trailu trzymając 50–60 g/h, ale na płaskiej pętli, gdzie tempo nie spada per definicja i zapotrzebowanie węglowodanowe jest LIN wyższe, ta strategia się załamuje po 12–14 h.
+
+Dane obserwacyjne: **finiszerzy 161 km mieli średnie spożycie ~333 kcal/h, a DNF-erzy poniżej 200 kcal/h** (Tiller et al., 2019, JISSN, position stand). Na 24 h ta różnica jest decydująca.
+
+Najlepsze aktualne dane: **120 g CHO/h w proporcji 1:0,8 glukoza:fruktoza zredukowało uszkodzenie mięśni i przyspieszyło regenerację u elite mountain marathon runners** w porównaniu z 60 i 90 g/h (Viribay et al., 2020, Nutrients 12:1367; Urdampilleta et al., 2020, Nutrients 12:2094) [EBM dla grupy elite marathon, [EKSTRAPOLACJA] dla 24 h — żadne badanie nie potwierdziło tego w 24-godzinnym formacie].
+
+### Czy trenować jelita na 80–120 g/h? TAK
+
+Protokół Costa et al. to 2 tygodnie, 10 jednostek 1 h z 30 g CHO co 20 min (= 90 g/h) — po 2 tygodniach redukuje objawy GI i zwiększa wchłanianie mierzoną testem wodoru wydychanego (Costa et al., 2017, Appl Physiol Nutr Metab 42:547–557) i (Miall et al., 2018, Scand J Med Sci Sports 28:630–640) [EBM]. To dokładnie pasuje nam w okno 14–28 dni przed startem.
+
+**Dodatkowa wartość**: King et al. 2022 pokazują, że protokół gut-trainingu + carb loading 12 g/kg dziennie w 3 dni przed startem u maratończyków elite NIE pogarszał GI i był dobrze tolerowany (King et al., 2022, Nutrients 14:1929) [EBM, ale ostrożność: u race walkerów były problemy].
+
+### Schemat progresywny 38 dni
+
+| Tydzień | Dawka CHO/h na długim | Proporcja | Źródła |
+|---|---|---|---|
+| T-6a (regeneracja) | 30–40 g/h (tylko symboliczne) | — | 1 żel + isotonik |
+| T-5 | **60 g/h** na long 25 km | glukoza | 2 żele 30 g/h lub 1 żel + 500 ml 8% isotoniku |
+| T-4 Nd (long 3 h) | **90 g/h** | **1:0,8 glu:fru** lub 2:1 | 2 żele (30 g) + 500 ml 8% drinku z fruktozą |
+| T-3 Nd (long 4–5 h) | **100–110 g/h** | 1:0,8 glu:fru | test docelowego protokołu startowego |
+| T-2 Czw (12 km fuelowania) | **90 g/h** | 1:0,8 | ostatni test |
+| T-1 | redukcja do 60 g/h w jedynym średnim | — | — |
+
+**Progresywna zasada**: zwiększasz o 20 g/h na kolejną długą jednostkę, nie szybciej. Jeśli na T-5 60 g/h nie przeszło bez mdłości — **nie podbijaj w T-4 do 90 g/h**, zostań na 60 g/h i pracuj nad źródłem (żel → hydrożel → płyn).
+
+### Co testować (progresywnie, w tej kolejności)
+
+1. **Żele z jednym rodzajem węgli** (np. SIS Go Isotonic 22 g, GU Original 21 g) — bazowy test.
+2. **Żele multi-transportable (1:0,8 lub 2:1 glu:fru)** — Maurten Gel 100 (25 g, 1:0,8 hydrożel), SiS Beta Fuel Gel 40 g (1:0,8), Precision Fuel 30 Gel. To jest nowoczesny standard dla >60 g/h (dual-transport pathways).
+3. **Napoje izotoniczne 6–8%**: Maurten 320 Drink Mix, SiS Beta Fuel 80, Tailwind Endurance. W PL: Go on Sport (taniej), Isostar.
+4. **Realna żywność** (po 6–8 h, kiedy żele już obrzydły): bułka z miodem + banan, pierogi z serem, kanapka z szynką i serem (cienko!), gotowany ryż biały z łyżką soli i odrobiną cukru, zupa rosół (płyn + sód + węgle), coca-cola (~10 g CHO/100 ml, odgazowana).
+5. **Kapsułki solne**: SaltStick Fastchews (100 mg Na/kaps), Precision Hydration PH 1500 tabs (760 mg Na/tabs) lub po prostu paczka chipsów słonych na stole supportera.
+
+### Czego NIE wprowadzać, jeżeli nieprzetestowane
+
+- **Absolutnie żadnych nowych produktów od T-3 w górę**. Reguła dla ultra: „nothing new on race day" (Tiller et al., 2019, JISSN).
+- Żadnych keto-adaptacji, MCT, ketonów egzogennych — nic z tego nie ma dowodów na poprawę w ultra i sporo na pogorszenie GI [Tiller 2019].
+- Żadnych probiotyków nowych od T-3 (jeśli nie bierze regularnie).
+- Żadnego BCAA w dawce, której nie testował.
+
+---
+
+## 3. Ostatni tydzień (T-1) i doba startu
+
+### Taper
+
+- Objętość: **−50% względem T-3, utrzymanie intensywności** (Mujika & Padilla, 2003, *Med Sci Sports Exerc* [EBM]).
+- 4 jednostki biegowe w tygodniu, max 10 km.
+- **Strides 4×100 m w Pn i Śr** — utrzymanie neuralnego patternu (Mujika 2003 [EBM]).
+- Zero siłowni z obciążeniem od Pn 26.05. Tylko mobility/foam roll.
+
+### Ładowanie węglowodanów
+
+**Aktualne wytyczne**: 10–12 g CHO/kg m.c./dzień przez 24–48 h dla imprez >90 min (Sampson, Morton, Areta, 2024, Eur J Sport Sci) [EBM]. Klasyczny 6-dniowy protokół Astranda z deplecją jest **obalony** — równie skuteczne są 36-48 h wysokiego ładowania bez fazy deplecji (Bussau et al., 2002, *Eur J Appl Physiol* — 36 h 10 g/kg z niskim intensywnym bieganiem osiąga glikogenową supercompensation [EBM, [FOLKLOR — NIE ZALECAM]: stary protokół z deplecją].
+
+**Dla Marcina (64 kg): 640–768 g CHO/dzień przez 2 dni (Śr 28.05 + Czw 29.05)**.
+
+#### Makro w T-1 dzień po dniu:
+
+**Pn 26.05 – Wt 27.05 (T-5 do -4 dni):**
+- CHO: 6–7 g/kg = 385–450 g/dzień (baseline wysoki)
+- Białko: 1,4–1,8 g/kg = 90–115 g
+- Tłuszcz: 0,8–1,0 g/kg = 50–65 g
+- **Błonnik: od Wt 27.05 zmniejsz do <15 g/dzień** — rice, white bread, banana, boiled potato, chicken, white fish, pulp-free juice. Full-fiber low-residue diet before endurance events (Tiller 2019, [EBM dla low-FODMAP w ultra]).
+
+**Śr 28.05 + Czw 29.05 (ładowanie):**
+- CHO: **10–12 g/kg = 640–768 g/dzień** [EBM, Sampson 2024]
+- Przykładowe 700 g CHO: 500 g gotowanego ryżu (125 g CHO) + 4 bułki białe (200 g CHO) + 2 banany (60 g CHO) + 300 g makaronu ugotowanego (90 g CHO) + 400 ml soku pomarańczowego (40 g CHO) + 3 żele (90 g CHO) + łyżka miodu i marmolada (~100 g CHO). Plus 100 g białka i 50 g tłuszczu z chudego mięsa i łyżki oliwy.
+- Białko: 1,2 g/kg = 77 g (ograniczyć, żeby zrobić miejsce na CHO)
+- Tłuszcz: 0,5–0,7 g/kg = 30–45 g (ograniczyć)
+- **Nie wprowadzaj nowych produktów** — wszystko, co jadłeś w T-3 Nd.
+
+**Nawodnienie T-1:**
+- Baseline 35 ml/kg/dzień = ~2,2 l + dodatkowa sól w posiłkach (nie spartaczkowa, po prostu dosalaj).
+- Wt-Pt: dodatkowo 500 ml elektrolitów z wysokim sodem (1000 mg/l) wieczorem (Precision PH 1500, SiS Hydro, elektrolit w wodzie). Cel: lekka hiperwolemia, która chroni przed EAH wczesnym (Hew-Butler 3rd International EAH Consensus, 2015). [EBM dla orientacyjnego mechanizmu, [EKSTRAPOLACJA] na 24 h].
+- **Unikać alkoholu od Pn 26.05**. Alkohol zaburza syntezę glikogenu (Burke et al., 2003, *J Appl Physiol* [EBM]).
+- **Unikać dużych dawek kofeiny w T-1**, jeżeli planujesz użyć jej w trakcie biegu — 5–7 dni redukcji do 1 kawy/dzień zwiększa wrażliwość (Guest et al., 2021, JISSN) [EBM, kontrowersyjne — niektóre dane pokazują brak tolerancji].
+
+### Sen
+
+- Pn-Wt: 8 h.
+- Śr: 8 h.
+- **Czw 29.05 noc: kluczowa, 8–9 h**. Noc z Pt/So przed startem często gorsza (stres) — nie przejmować się, "sleep banking" w Czw działa (Fullagar et al., 2015, Sports Med) [EBM, sleep extension].
+
+### Posiłek przedstartowy
+
+**3–4 h przed startem (3:00–4:00 rano w So 30.05):**
+- 2 g CHO/kg = **128 g CHO**, niska zawartość błonnika i tłuszczu (Viribay 2020 protokół: rice, corn cereals with oat drink, cooked fruit, biscuits with jam) [EBM, pre-race]
+- Konkretnie: 200 g gotowanego białego ryżu + 2 łyżki miodu + 2 bułki białe z marmoladą + banan + 200 ml wody z elektrolitami. Razem ~130 g CHO.
+- Kawa: 1 filiżanka (~80 mg kofeiny) — jeżeli jest habitualna, po to żeby ruszyć perystaltykę i wypróżnić się przed startem.
+
+**30–60 min przed startem:**
+- 1 żel (25 g CHO) + 300 ml wody z 500 mg sodu (1 tab Precision 1500 lub 1 SaltStick Plus).
+- Jedna kapsułka kofeiny 100 mg (razem z kawą rano = 180 mg, podprogowo dla Marcina 64 kg = 2,8 mg/kg, poniżej ergogennego progu 3–6 mg/kg (Guest et al., 2021, JISSN) — zachowujesz „zapas" kofeinowy na noc).
+
+### Rozgrzewka
+
+**Nie rób rozgrzewki jak na maraton** — 5 min marszu + 2 min luźnego truchtu wystarczy. Pętla 1,72 km o tempie 7:00/km pierwsze okrążenie jest Twoją rozgrzewką. [PRAKTYKA]
+
+### Pierwsze kilometry — jak nie spalić się na starcie
+
+- Start 07:00. Pierwsze 3 km w peletonu: zmusić się do **7:15–7:30/km** (nie 5:30–6:00 jak wszyscy).
+- **Reguła**: jeżeli czujesz się lekko i luźno w pierwszej godzinie — jedziesz ZA SZYBKO. Ma być „za wolno i za łatwo". To jest psychologicznie najtrudniejsze — wszyscy znikają w przodzie.
+- Dane z Bossi et al. 2017, 24-h pacing w IAAF: zwycięzcy zaczynali wolniej i trzymali bardziej stabilne tempo niż finiszerzy środka stawki (Bossi et al., 2017, Int J Sports Physiol Perform 12:590–596) [OBSERWACJA — mocne dla 24 h specyficznie].
+
+---
+
+## 4. Taktyka biegu — tempo i strategia
+
+### Strategia pacowa
+
+**Dla 24 h na płaskiej pętli: lekko pozytywny split (zwolnienie ~5–8% w drugiej połowie) lub równe tempo są optymalne** (Bossi et al., 2017, IJSPP) [OBSERWACJA]. Negative split w 24 h jest nierealny — absolutnie nikt go nie robi. Run/walk od startu (Galloway 9/1) również ma swoje miejsce dla mniej doświadczonych, ale dla sub-3 maratończyka z 10-letnim stażem ultra bardziej sensowne są **bloki biegowo-marszowe wymuszone przez logistykę** (okno jedzenia, stop w strefie supportu), niż sztywne 9 min bieg / 1 min marsz.
+
+### Konkretne tempo docelowe (M, 64 kg, świeży PB 2:57)
+
+| Cel km | Średnie tempo łączne | Tempo biegowe (excl. 8% stopów) | Komentarz |
+|---|---|---|---|
+| 140 km (cel MP M) | 10:17/km | 9:30/km | "safety target" — nie dopuszczajmy |
+| 160 km | 9:00/km | 8:15/km | gwarantowane przy zdrowiu |
+| 180 km | 8:00/km | 7:20/km | realny main target |
+| **200 km** | **7:12/km** | **6:35/km** | **cel stretched, wymaga dyscypliny w 1. połowie** |
+| 220 km | 6:33/km | 6:00/km | stretch — poziom krajowej czołówki M40 |
+
+**Moje rekomendowane tempo startowe**: **7:25/km przez pierwsze 6 h** (do godz. 13:00) = ~49 km po 6 h. To po maratonie zrobi 3:05–3:15 (przy 4:12 PB) — czuje się luźno. Potem **trzymanie 7:10–7:20/km do godziny 18** (~80 km po 12 h). **Po 12 h godz. 19:00 – ocena**: jak żołądek, jak nogi. Wtedy decyzja o chłodnej nocy.
+
+### Bloki marszu
+
+[PRAKTYKA, Koop 2021] Każda godzina: **2–3 minuty marszu** pod koniec okrążenia, w strefie supportu (właśnie wtedy mija Cię support — zatrzymujesz się, coś zjadasz, idziesz 50 m marszem). To naturalny 4–5% czasu na chód, idealna higiena bio-mechaniczna — odciążasz zginacze bioder przed narastającym mikro-urazem monotonii ruchu.
+
+**Dodatkowo: po każdych 4 h — 1 okrążenie w całości marszem** (~15 min). Nie dyskusyjne, w planie. Odblokowuje mentalnie na kolejny blok.
+
+### Reagowanie na ściany
+
+**Ściana #1 — godz. 4–6 startu (późne rano, 11:00–13:00)**: zmęczenie dopaminergiczne, euforia startowa opada. **Interwencja**: nic szczególnego, po prostu trzymać tempo i jeść. [PRAKTYKA]
+
+**Ściana #2 — godz. 8–10 (15:00–17:00)**: cieplejsza pora dnia, możliwy przegrzew + spadek zainteresowania jedzeniem. **Interwencja**: zmień smak (słone zamiast słodkiego — rosół, chipsy), chłodzenie (mokra szmatka na kark, woda na głowę), pierwszy 100 mg kofeiny w okolicach godz. 8–9.
+
+**Ściana #3 — noc 2:00–5:00**: cyrkadyjny dołek, spadek temperatury, senność. **Interwencja** — kluczowa:
+- **Kofeina 100 mg co 3 h od 23:00** (23:00, 2:00, 5:00 = 3 dawki x 100 mg = 300 mg). Marcin 64 kg = 4,7 mg/kg łącznie rozłożone — bezpiecznie w zakresie ergogennym (Guest et al., 2021, JISSN: 3–6 mg/kg) [EBM].
+- **Dodatkowa warstwa ubrania** — temperatura o 3:00 może spaść do <10°C nawet w końcówce maja.
+- **Jedzenie gorące**: rosół, kasza manna z miodem, kluski na maśle (małe porcje).
+- **Muzyka na słuchawkach** (sprawdź regulamin — może być ograniczenie).
+- **Short-burst**: 30-sekundowe przyspieszenie co 15 min = pompa sympatyka, budzi OUN. [PRAKTYKA]
+
+**Ściana #4 — godz. 20–22 biegu (3:00–5:00 rano)**: najcięższa. Kryzys psychiczny + ból ścięgien. Zadanie supportera: **nie pytaj „jak się czujesz?"**, tylko podajesz konkrety: „za okrążenie kubek rosołu, na następnym pęcherz sprawdzamy". Reframing celu — nie „zostało 4 h", tylko „tylko 3 okrążenia do posiłku".
+
+### Pit-stopy
+
+- **Pełne zatrzymanie >2 min**: tylko 2–3 razy w całym biegu. Zmiana butów (godz. 8, 16), ew. zmiana koszulki (godz. 13 — zdjęcie pocoonej), ew. masaż/krem na stopy.
+- **Toaleta**: wlicz ~5 min/dobę sumarycznie — próbuj planować po posiłku, nie "kiedy muszę".
+- **Jedzenie przy stole**: **nie więcej niż 90 sekund na pełne zatrzymanie**. Reszta — jedzenie w ruchu (marsz). Koop 2021: „każda minuta na stole to 150 m, których nie zrobisz" [PRAKTYKA].
+
+---
+
+## 5. Żywienie podczas biegu — konkretne liczby
+
+### Węglowodany
+
+- **Cel**: **90–110 g CHO/h przez pierwsze 8 h**, potem dopuszczalne 70–90 g/h (spadek apetytu).
+- **Proporcja**: **1:0,8 glukoza:fruktoza** (nowoczesny standard) lub 2:1 glu:fru (Viribay 2020; dual transport, glu via SGLT1, fru via GLUT5) [EBM].
+- **Unikać soji (syrop agawowy >50% fruktozy)** — nadmiar fruktozy = biegunka.
+
+### Płyny
+
+- **450–750 ml/h** (Tiller et al., 2019, JISSN) [EBM, pozycja ISSN]. Przy temperaturze 15–18°C (prognoza dla Pabianic koniec maja) bliżej 500–600 ml/h.
+- **Pić wg pragnienia, nie na siłę** — ad libitum (Hew-Butler, 3rd International EAH Consensus 2015, Clin J Sport Med) [EBM]. Przepijanie = hiponatremia, nie odwodnienie.
+- **Znak „pić więcej"**: brak oddawania moczu >3 h, ciemny mocz.
+- **Znak „przestań pić"**: mocz jak czysta woda co godzinę + obrzęk palców/rąk + uczucie „wzdęcia" → podejrzenie EAH.
+
+### Sód
+
+- **500–700 mg Na/h w temperaturze umiarkowanej**, do **1000 mg/h** przy cieple (Tiller 2019: >575 mg/l w napoju) [EBM pozycja ISSN; ale uwaga:  Hoffman & Stuempfle, 2015, Med Sci Sports Exerc, pokazują, że sód per se nie zapobiega EAH — kluczowe jest kontrolowane picie] [EBM].
+- Konkretnie: 1 kaps SaltStick Plus (215 mg Na) co h + sól z isotoniku (~300–500 mg/l × 500 ml = 150–250 mg) = ~400–500 mg/h. Zupa rosołowa co 3 h dodaje 800–1000 mg na porcję.
+
+### Białko
+
+- **5–10 g/h od godziny 6** biegu (Tiller 2019, JISSN — protein 0,5 g/kg przy bardzo długich; brak solidnych RCT dla 24 h specyficznie) [EKSTRAPOLACJA]. Mechanizm: zmniejszenie proteolizy mięśniowej w bardzo długim wysiłku — Koopman et al. 2004 [EBM].
+- Źródła: szynka chuda w kanapce, serek wiejski, jogurt grecki (małe porcje), mleko UHT (200 ml = 7 g białka + ~10 g CHO).
+
+### Tłuszcze
+
+- **Nie włączać celowo** w pierwszych 12 h. Po 12 h, gdy apetyt na słodkie zanika, małe ilości są ok (oliwka na kanapce, awokado). [PRAKTYKA]
+- Tłuszcze spowalniają opróżnianie żołądka — kontrproduktywne dla utrzymania 90 g CHO/h.
+
+### Rotacja źródeł — 15 sprawdzonych produktów
+
+1. **Maurten Gel 100** (1:0,8, hydrożel) — bazowy żel
+2. **Maurten Gel 160** (1:0,8 + CAF 100 mg) — żel z kofeiną, od godz. 8
+3. **SiS Beta Fuel Gel 40** (40 g CHO 1:0,8) — "duży żel" w 1. połowie
+4. **Maurten 320 Drink Mix** (80 g CHO/500 ml 1:0,8) — bazowy napój
+5. **Coca-cola** odgazowana — kultowa końcówka ultra (szybkie węgle + kofeina ~32 mg/330 ml) [PRAKTYKA]
+6. **Bułka pszenna + miód + banan** — 60 g CHO
+7. **Pierogi ruskie** (5 szt. ~60 g CHO + sól) — na godz. 6, 12, 18
+8. **Gotowany biały ryż z solą** (100 g = 28 g CHO) w małym pudełku
+9. **Rosół domowy w termosie** — najlepsza rzecz na 2 w nocy (sól + płyn + ciepło)
+10. **Kasza manna na mleku z miodem** — nocna alternatywa
+11. **Kanapka z szynką drobiową i serem żółtym** — białko + węgle (cienkie kromki!)
+12. **Banany dojrzałe** — 25 g CHO, łatwo strawne
+13. **Daktyle** (2 szt. = 30 g CHO) — słodycz alternatywna dla żeli
+14. **Chipsy solone** (garść ~5 g Na) — kiedy chce się czegoś chrupiącego
+15. **SaltStick Plus** kapsułki (215 mg Na + 63 mg K + 22 mg Mg/kaps)
+
+### Przykładowy plan godzinowy
+
+**Blok 0–6 h (7:00–13:00) — „agresywny fueling", 100 g CHO/h**
+- Co 30 min: żel 25 g CHO (SIS Beta Fuel 40 na zmianę z Maurten 100)
+- Sączenie Maurten 320 lub SiS Beta Fuel 80 (80 g/500 ml)
+- 500–600 ml płynu/h, 1 SaltStick/h
+- Godz. 4: pierwszy kompletny posiłek — pierogi (5 szt.) lub kanapka
+
+**Blok 6–12 h (13:00–19:00) — „switch na food", 90 g CHO/h**
+- Pierwsza kofeina godz. 8 (Maurten CAF100 lub 1 kaps 100 mg)
+- Zamień 1 żel/h na realny posiłek: bułka z miodem, gotowany ryż, zupa
+- Drugie zejście pierogów godz. 10
+- Kontynuuj isotonik i sól
+
+**Blok 12–18 h (19:00–01:00) — „comfort + kofeina", 80 g CHO/h**
+- Rosół w termosie — kubek co 2 h
+- Coca-cola rozpocznij po 14 h (~22:00)
+- Kofeina godz. 16 i 19 (100 mg każda)
+- Przebranie butów godz. 14 (21:00)
+- Dodatkowa warstwa ubioru godz. 16
+
+**Blok 18–24 h (01:00–07:00) — „surwiwal", 60–80 g CHO/h**
+- Cocacola + bułka z miodem w rotacji
+- Kasza manna ciepła godz. 21 i 23 biegu (4:00 i 6:00)
+- Kofeina godz. 20 i 23 (2:00 i 5:00)
+- Kanapki zimne nie — tylko ciepłe jedzenie
+
+### Interwencje na problemy
+
+| Objaw | Interwencja | Dowód |
+|---|---|---|
+| **Nudności lekkie** | Zmienić słodkie → słone (rosół, chipsy), schłodzone płyny | [PRAKTYKA] |
+| **Nudności silne + wymioty** | STOP żele/isotonik na 1 h. Tylko małe łyki woda + sól (0,9% NaCl jak IV-roztwór). Mięta, kostka lodu. Po 30 min test: 30 g CHO w płynie. | [OBSERWACJA, Costa 2020 GI symptoms in ultra] |
+| **Biegunka** | Redukcja fruktozy (przesunięcie na glukozę czystą), 1 Smecta/Imodium (jeśli bardzo ciężka) — uwaga, Imodium maskuje objawy | [PRAKTYKA, kontrowersyjne] |
+| **Odmowa jedzenia** | 15 min przerwy, zmiana smaku, wznawiać od 30 g CHO/h i progresywnie w górę | [PRAKTYKA, Koop 2021] |
+| **Skurcze** | Nie sól (dowody słabe), lecz dopasowanie tempa + pikle/vinegar shot (odruch nerwowy — Miller et al., 2010, Med Sci Sports Exerc) | [EBM dla pickle juice mechanism] |
+
+### Kofeina — timing
+
+- **Start**: 180 mg (kawa 80 + kaps 100) — "obudzenie", nie ergogenny boost. [PRAKTYKA]
+- **Godz. 8 (15:00)**: 100 mg — pierwszy realny ergogen.
+- **Godz. 14, 16, 19** (21:00, 23:00, 02:00): 100 mg każda.
+- **Godz. 21, 23** (4:00, 6:00): 100 mg każda.
+- **Łącznie**: ~800–900 mg przez 24 h. Przy 64 kg = **12–14 mg/kg**, rozłożone na ~8 dawek 1,5 mg/kg. Pojedyncze dawki w zakresie ergogennym 1,5–2 mg/kg, łączna dawka bezpieczna (FDA upper safe ≈ 10 mg/kg jednorazowo; 900 mg w 24 h to norma europejska — europejska EFSA za bezpieczne uznaje 400 mg/dzień w populacji, ale u sportowców ultra dawki są rutynowo wyższe i dobrze tolerowane (Guest et al., 2021, JISSN)) [EBM, ale granica dla 24 h jest [EKSTRAPOLACJA]].
+- **Unikaj kofeiny w ciągu 48 h PRZED startem** (1 kawa/dzień max) — zwiększa ergogenny efekt w dniu startu [PRAKTYKA, kontrowersyjne, niektóre meta-analizy pokazują brak różnicy].
+
+---
+
+## 6. Suplementacja — 6 tyg. przygotowań
+
+### W 38 dniach przed startem:
+
+| Suplement | Dawka | Okno | Dowód | Czy warto dla 24 h? |
+|---|---|---|---|---|
+| **Kofeina** | wg plan powyżej | start | **mocny [EBM]** (Guest 2021) | **TAK** |
+| **Kreatyna monohydrat** | 3–5 g/dzień, codziennie | od T-6 ciągle | mocny dla sprintu, [EKSTRAPOLACJA] dla ultra — może pomagać w końcówce w utrzymaniu mocy + redukcji uszkodzeń mięśni (Kreider 2017, JISSN) | **Warto, niski koszt/ryzyko** |
+| **Azotany (sok z buraka/Beet It Sport 400)** | **6–8 mmol (400–500 mg NO₃⁻) = 1 shot 70 ml/dzień** | **3–6 dni przed startem + 2–3 h przed startem** (Gatorade SSI, Jones), (Wylie et al., 2013, J Appl Physiol) | [EBM] dla VO2 submaximal economy, ale [OBSERWACJA]: **u elite trained athletes korzyść mniejsza** (effect in low-fit nie high-fit runners, Kent 2017) | **Warto spróbować, ale nie fundament** |
+| **Sód/elektrolity** | w diecie | ciągle | [EBM] dla EAH prewencji | **TAK** |
+| **Witamina D3** | 2000 IU/dzień, **tylko jeśli niski poziom 25(OH)D** (sprawdź badanie!) | codziennie | [EBM] dla deficytu, [OBSERWACJA] dla wydolności (Owens 2018, *Nutrients*) | warto sprawdzić u M49 wiosną |
+| **Żelazo/ferrytyna** | **TYLKO przy niskiej ferrytynie <30 ng/ml** | jeśli konieczne | [EBM] dla deficytu (Clénin et al. 2015) | **SPRAWDŹ przed planowaniem** |
+| **Magnez cytrynian** | 300–400 mg wieczór | codziennie | słabe dowody, ale bezpieczne, pomaga w skurczach i śnie | Tak, niski koszt |
+| **Omega-3 EPA/DHA** | 2 g/dzień | codziennie | [EBM] dla redukcji inflammation w ultra (Thielecke 2021) | Warto |
+| **Beta-alanina** | — | — | [EBM] dla <4 min wysiłków, **brak benefitu >10 min** (Saunders 2017, Br J Sports Med) | **NIE** |
+| **BCAA** | — | — | brak dowodów dla wydolności w ultra, Tiller 2019 | **NIE** |
+
+### W ostatnim tygodniu (T-1):
+- Kreatyna: kontynuuj.
+- Azotany (buraki): **rozpocznij loading w Nd 25.05 — 1 shot/dzień przez 5 dni + 1 shot 2,5 h przed startem**.
+- Magnez: kontynuuj.
+- Omega-3: kontynuuj.
+- **Dodaj cynk 15 mg/dzień i wit. C 500 mg/dzień w T-1** (obniża cortisol post-race, niski koszt/ryzyko) [PRAKTYKA].
+
+### Podczas biegu:
+- **Kofeina**: tak, wg planu.
+- **Sól/elektrolity**: tak.
+- **BCAA**: **NIE** — brak dowodów (Tiller 2019) [EBM pozycja].
+- **Glutamina podczas biegu**: kontrowersyjna, w ultra trenerzy używają 5 g/h w końcówce twierdząc że chroni bariery jelitową (Pugh 2017, [OBSERWACJA]) — **opcjonalnie** po godz. 12 biegu, 5 g w napoju.
+
+### **Czego NIE brać**:
+
+🚫 **NLPZ / Ibuprofen / Ketonal**: **absolutnie nie, ani przed, ani w trakcie**. Lipman et al. RCT: ibuprofen 400 mg co 4 h przez 80 km podwoił ryzyko AKI vs placebo (52% vs 34%, number needed to harm 5.5) (Lipman et al., 2017, Emerg Med J 34:637–642) [EBM]. Dodatkowo NLPZ zwiększają ryzyko EAH przez wpływ na retencję wody (Wharam 2006, Speedy et al.) [EBM]. **To jest #1 FOLKLOR — NIE ZALECAM**.
+
+🚫 **Nowe suplementy wprowadzone <4 tyg. przed startem** — ogólna zasada.
+
+---
+
+## 7. Sprzęt i obuwie
+
+### Buty
+
+**3 pary, różna amortyzacja, rotacja wg czasu i odczuć**:
+
+1. **Para "pierwsza" (godz. 0–8, ~60–70 km)**: coś z dobrą amortyzacją, responsywnym midsole. **Hoka Clifton 9/10** lub **Asics Novablast 4/5** lub **Saucony Endorphin Speed 4** — Twoje buty tempo-maratońskie, ale z wyższym stack. Nie Vaporfly ani inne super-shoes z carbonem — one są projektowane pod maksymalnie 3 h, nie 8 (Muñoz-López et al., 2023, *Sports Med* — zmęczenie mięśniowe przy dłuższym wysiłku w butach z płytą) [EBM dla marathon].
+2. **Para "druga" (godz. 8–16)**: max cushion. **Hoka Bondi 9** lub **Asics Gel-Nimbus 26** lub **New Balance Fresh Foam More v5** — najgrubsza amortyzacja, wyższy stack.
+3. **Para "nocna/końcowa" (godz. 16–24)**: jeszcze bardziej miękka, **o 0,5 rozmiaru większa** — stopy puchną 3–8% w 24 h (Maughan, 2010) [OBSERWACJA]. Może być ta sama para #2 w większym rozmiarze, albo Hoka Skyward X / New Balance 1080.
+
+**Zmiana butów**: co 8 h (godz. 8 i 16 = 15:00 i 23:00). Każda zmiana = **zmiana skarpet + krem na stopy + kontrola pęcherzy**.
+
+### Skarpety
+
+- **4–5 par**: wełna merino lub syntetyk z anty-pęcherzową warstwą (Injinji toe socks albo Wrightsock double-layer — ta druga ma **dowody RCT na redukcję pęcherzy o 85%** vs. standard (Knapik et al., 1996, Mil Med; Herring & Richie 2003)) [EBM stare, ale solidne].
+- Zmiana: co 6–8 h lub wcześniej jak mokre.
+
+### Ubiór
+
+**Prognoza Pabianice koniec maja: dzień ~18–22°C, noc ~8–12°C, możliwy deszcz** (sprawdź na 3 dni przed startem).
+
+- **Start (07:00)**: koszulka techniczna krótki rękaw + szorty biegowe. Opaska/czapka zapas.
+- **Dzień (12:00–18:00)**: tylko koszulka + szorty + kapelusz lub daszek.
+- **Wieczór (18:00–22:00)**: koszulka długa techniczna (zapas sucha).
+- **Noc (22:00–05:00)**: koszulka długa + kamizelka/wiatrówka, rękawki, buff na szyję.
+- **Rano (05:00–07:00)**: zostaje warstwa nocna + rękawki (najzimniejsza pora!).
+
+**Zapasy**: 2× koszulka krótki rękaw, 2× długi rękaw, 1× kamizelka, 1× kurtka przeciwdeszczowa (Gore-Tex Paclite lub Arc'teryx Norvan), 2× szorty, 6 par skarpet, 2× bielizna kompresyjna (2 warstwy, bo odparzenia).
+
+### Anty-odparzenia
+
+- **Sudocrem** (gruba warstwa) na pachwiny, między uda, pod pachy, **przed startem i przy każdej zmianie butów**. Koszt 15 zł, działa.
+- **Body Glide lub Squirrel's Nut Butter** na sutki (mężczyźni!), palce stóp, miejsca stykania się z paskami/szwami.
+- **Wazelina**: rezerwa w plecaku na wszelki wypadek.
+
+### Czołówka i elektronika
+
+- **Czołówka #1 główna**: **Petzl Nao RL** (750 lm, reactive lighting, akumulator wymienny ~2,5 h na max). Alternatywa tańsza: **Petzl Iko Core** (500 lm, pasek zamiast paska na czole, ~6 h na średnim).
+- **Czołówka #2 zapasowa**: **Nitecore NU25 UL** (400 lm, 700 mg — na głowie ledwo czujesz). Obowiązkowo.
+- **Zegarek GPS**: **Garmin Enduro 3/Fenix 8 Solar**: deklarowana bateria **do 60 h w Auto GPS Mode** — rozwiąże sprawę 24 h na jednym ładowaniu. Jeżeli masz Fenix 6/7 — GPS every 60 sec mode + powerbank (ładowanie w biegu, kabel USB-C przy sobie w kieszonce w szortach lub pasie). Jeżeli Garmin Forerunner 265: **ok. 20 h, nie wystarczy na 24 h** — albo powerbank + ładowanie po 18 h, albo drugi zegarek. Pabianice mają pomiar chipowy (atestowany), więc własny zegarek to tylko Twoja nawigacja — nie jest krytyczny, ale fajnie mieć zapis.
+- **Powerbank**: Anker 10000 mAh, 2× kabel USB-C, kieszonka pasa biodrowego.
+
+### Dodatki
+
+- **Kijki?** **NIE** na płaskiej pętli asfaltowej. Na traill tak, na 24 h płaskie NIE — marnują energię w barkach niepotrzebnie. [PRAKTYKA]
+- **Opaska biodrowa (running belt)** — Naked Running Band lub FlipBelt — na żele, kluczyki, małą rolkę papieru.
+- **Folia NRC** w plecaku.
+- **Plastry na pęcherze (Compeed)**, **igła (sterylna)** do przekłuwania pęcherzy, **nożyczki**, **taśma K-tape**.
+- **Czapka z daszkiem + czapka cieplejsza** (noc).
+
+---
+
+## 8. Support — najdłuższy punkt, bo najważniejszy dla Ciebie
+
+### Pytania do organizatora (wyślij mailem w T-3)
+
+1. **Strefa supportu** — gdzie dokładnie, jaka szerokość, czy można mieć własny stolik/namiot? Czy miejsca są przydzielane per zawodnik?
+2. **Zasilanie 230V** — dostępne w strefie? (dla czajnika / ładowania).
+3. **Toalety** — liczba, lokalizacja na trasie, ciepła woda, prysznic? Dostęp 24/7?
+4. **Bufet organizatora** — co dokładnie serwują i co godzina? Czy zawodnik może z niego korzystać bez strat czasu (np. tray na trasie)?
+5. **Pomiar okrążeń** — chipowy, ręczny, wyświetlacz na żywo? Dostęp do live lapki dla supportera (apka, strona)?
+6. **Regulamin pacerów** — wyraźnie zapisane, że nie mogą towarzyszyć. Czy jest strefa, w której support może iść obok zawodnika 10 m?
+7. **Nocne oświetlenie pętli** — pełne czy tylko punktowe?
+8. **Protesty** — procedura, czas na złożenie.
+9. **Obsługa medyczna** — lekarz dyżurny 24/7, karetka na miejscu, AED?
+10. **Parking i miejsce dla pojazdu supportera** — czy mogę parkować przy strefie?
+11. **Namiot/zadaszenie dla zawodników** — czy organizator zapewnia?
+12. **Ekipa sędziowska** — kto liczy metraż "po minięciu 24 h" (ostatnia niepełna pętla liczy się wg kwalifikatorów IAAF).
+
+### Ustalenia z bratem PRZED startem (zapisz to na kartce)
+
+**System znaków (mów na głos):**
+- „**Zielony**" = idę dalej, wszystko w normie, podaj plan A.
+- „**Żółty**" = zwalniam, podaj coś słonego, daj ibuprofen (nie!), krem, skarpety.
+- „**Czerwony**" = muszę usiąść 5 min. Zatrzymuję się w strefie.
+- „**Czarny**" = nie dam rady, podejmujemy decyzję o DNF.
+
+**Decyzje delegowane do Ciebie jako supportera:**
+- Zmuszam do jedzenia jeżeli 2 okrążenia z rzędu odmówi. (Ty decydujesz.)
+- Zmuszam do zmiany butów jeżeli pęcherz widoczny albo skarga 2 razy pod rząd. (Ty decydujesz.)
+- Zmuszam do zmiany ubioru jeżeli temp. <12°C a on w krótkim rękawie. (Ty.)
+- **Nie zmuszam do spania podczas biegu** — to on decyduje (mikro-drzemki 10 min na krześle są w ultra dopuszczalne, ale rzadko pomagają po 18 h, częściej psują rytm).
+
+**Kod "stop i przerywamy"**:
+- Dezorientacja, niespójna mowa, zaburzenia widzenia → **natychmiast medyk** (możliwa hiponatremia lub hipoglikemia).
+- Krwiomocz (sprawdź mocz w toalecie z godziny 10 i dalej co 4 h).
+- Silny ból jednej nogi (podejrzenie stress fracture / Achilles tear).
+- Klatka piersiowa — natychmiast stop.
+- **Brat zdecyduje "nie dam rady"** — **uszanuj**. Nie przekonuj po 18 h. 
+
+### Checklist rzeczy dla supportera
+
+**Stół i strefa (pakuj w przeddzień):**
+- Stolik składany (Decathlon, ~90 zł)
+- 2 krzesła składane (1 dla zawodnika na pit-stopach, 1 Twoje)
+- Koc polarowy + koc NRC
+- Parasol/namiocik typu pop-up (jeżeli deszcz)
+- Plandeka pod stolik (błoto!)
+
+**Kuchnia:**
+- Czajnik elektryczny (jeżeli jest 230V) lub butla gazowa + kuchenka turystyczna
+- Termos 1,5 l ×2 (na rosół i kawę)
+- Garnek 2 l, miska dla zawodnika, kubki termiczne 2 szt., łyżki
+- 20 butelek wody 1,5 l gazowanej i niegazowanej
+- Lodówka turystyczna + wkłady chłodzące (na Coca-colę, banany)
+
+**Jedzenie** (kup w piątek, nie wcześniej):
+- 40 żeli mix (Maurten, SiS, inne — testowane wcześniej!)
+- 4 tuby drink mix (Maurten 320, SiS Beta Fuel 80)
+- 30 kapsułek solnych (SaltStick Plus, Precision PH 1500)
+- Świeży rosół domowy 3 l (zrób w piątek wieczór, zamroź w butelkach, rozmrażaj stopniowo)
+- 20 bułek pszennych białych
+- 2 słoiki miodu, 1 słoik marmolady
+- 2 kg białego ryżu gotowanego na parze (ugotuj w piątek)
+- 60 pierogów ruskich (mrożone, podgrzewaj w termosie)
+- 10 banana
+- 500 g daktyli bez pestek
+- 6 paczek chipsów solonych (cienkie)
+- 6 Coca-col 0,33 l (odgazuj z czasem)
+- 2 l mleka UHT 2%
+- 10 kostek kaszy manny (z zamrażarki) lub surowa
+- 30 batoników owsianych (bazowe)
+- Sól kuchenna + papier toaletowy (serio, zabrakne)
+
+**Ubrania (posegregowane w oznaczonych workach):**
+- Worek „6 h" (13:00): koszulka sucha, krem, skarpety
+- Worek „12 h" (19:00): koszulka długa, buty #2, skarpety, krem
+- Worek „16 h" (23:00): kamizelka, rękawki, czapka cieplejsza, buty #3, skarpety, czołówka Nao RL naładowana
+- Worek „20 h" (03:00): druga warstwa, zapas czołówki (Nitecore NU25), skarpety
+- Worek "24 h" (07:00): dres treningowy na po mecie, ręcznik, ciepłe picie
+
+**Apteczka:**
+- Plastry Compeed na pęcherze (4 rozmiary)
+- Igła sterylna + alkohol
+- Taśma K-tape 2 rolki, taśma hipoalergiczna
+- Sudocrem 125 g ×2, Body Glide, wazelina
+- **Bez NLPZ (Ibuprom, Ketonal, Advil) — NIE DAJE SIĘ BRATU**
+- Paracetamol max 2× 500 mg za całą dobę (jeżeli absolutnie ból nie do wytrzymania — paracetamol nie jest nefrotoksyczny jak NLPZ, (Lipman 2017), jednak nadal po 24 h wysiłku obciąża wątrobę) [PRAKTYKA, umiarkowane ryzyko]
+- Elektrolity Smecta (na biegunkę, max 1 dawka)
+- Gaza, bandaże
+- Plastry opatrunkowe
+- Nożyczki, pinceta
+- Termometr
+
+**Elektronika:**
+- 2× powerbank 20 000 mAh
+- 3× kabel USB-C
+- Przedłużacz 5 m (jeżeli 230V dostępne)
+- Latarka warsztatowa (do grzebania w workach nocą)
+- Zapasowa czołówka dla Ciebie
+
+**Dokumentacja:**
+- Notes A5 + 2 długopisy
+- Karteczki samoprzylepne
+- Telefon z naładowaną baterią + dane do apki z wynikami
+
+### Dziennik supportera — szablon
+
+Co **każde okrążenie** (lub co 3–5 okrążeń po 12 h, w nocy):
+
+| Godz. biegu | Czas biegu | Okr. # | Tempo | Co zjadł | Co wypił | Sól | Kofeina | Nastrój (1–10) | Uwagi |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 7:00 | 1-5 | 7:20 | żel×1 | 300 ml isotonik | — | 100 mg @ start | 9 | start OK |
+| 4 | 11:00 | 16 | 7:30 | bułka+miód+banan | 500 ml | 1 kaps | — | 8 | trochę wzdęcie |
+| ... | | | | | | | | | |
+
+**Dlaczego to ratuje skórę po 12. godzinie**: o 3:00 rano brat powie "nie zjadłem nic od godziny" — Ty masz dane czarno na białym że zjadł 90 min temu. Pamięć w ultra się rozsypuje. Notes jest prawdą. [PRAKTYKA, solidnie potwierdzone w każdej książce o supporcie ultra — Koop 2021, Roche „The Happy Runner" 2018].
+
+### Plan rotacji supportera — czy sam 24 h?
+
+**Szczerze: sam przez 24 h non-stop jest bardzo ciężko**. Podstawowa rekomendacja:
+- **Znajdź zmiennika na 4–6 h w środku nocy** (2:00–6:00). Nawet jeżeli zna tylko podstawy — Ty wyśpisz się w namiocie/aucie, po 3 h snu będziesz 100% lepszy w fazie krytycznej 5:00–7:00 (ostatnie godziny biegu, gdzie liczy się każda pętla).
+- Jeżeli absolutnie nie masz zmiennika: **planuj 2 × 20 min drzemki** (godz. biegu 14 i 20, czyli 21:00 i 3:00), ustaw budzik. Przewiduj pit-stop brata w tych oknach (zmiana butów, posiłek ciepły) — będzie 10–15 min stał, masz okno.
+- **Kawa + jedzenie** też dla Ciebie (dokładnie tak samo jak dla niego: Nocna kasza manna, rosół, kofeina od 22:00).
+
+### Psychologia supportu
+
+**Czego NIE mówić:**
+- „Zostało Ci 8 godzin" (absolutnie NIE w ogóle o czasie zostającym).
+- „Widzę, że zwalniasz" (brat wie).
+- „Mogłoby być lepiej" (idiotyczne po 20 h wysiłku).
+- „Tylko 40 km do 200" (liczby są brutalne po 16 h).
+
+**Co MÓWIĆ:**
+- „Świetnie wyglądasz" (nawet jeżeli wygląda jak trup).
+- „Następna pętla — kubek rosołu przy mnie."
+- „Mirek/Piotrek/Kowalski z Twojej kategorii zwolnił, podchodzisz do niego" (jeżeli prawda — support ma dostęp do live wyników).
+- „Jeszcze tylko 3 okrążenia do zmiany butów" (małe cele).
+- Cisza. Po 16 h najlepsze wsparcie to Twoja fizyczna obecność bez słów.
+
+**Reagowanie na załamanie**:
+- Brat siada, mówi „nie dam rady" po 18 h. **Nie przekonuj słowami**. **Posadź, daj ciepły kubek rosołu, masaż łydek, zmień skarpety**. Po 5 min sam wstanie. Jeżeli po 15 min nie wstanie — szanujesz decyzję.
+- Po 20 h jeżeli decyduje DNF — uszanuj. Nie próbuj "dotrwać za wszelką cenę". 24 h ultra kosztuje 4–6 tyg. regeneracji [OBSERWACJA, Millet 2011]; źle podjęta decyzja na finiszu = sezon urwany.
+
+---
+
+## 9. Red flags — kiedy przerwać
+
+### Objawy medyczne, przy których zawodnik musi zejść:
+
+🚨 **Hiponatremia (EAH)**: dezorientacja, niespójna mowa, bóle głowy nasilające się, nudności + wymioty + bladość + obrzęki palców/rąk + brak oddawania moczu przy dużym piciu — **stop, medyk, pomiar sodu w osoczu jeżeli dostępny** (Hew-Butler et al., 3rd International EAH Consensus Statement, 2015, Clin J Sport Med 25:303–320) [EBM]. Śmiertelność EAH w ultra: >12 udokumentowanych zgonów.
+
+🚨 **Rabdomioliza**: silny ból mięśni (nie „zwykłe zmęczenie"), nagła słabość, ciemny mocz koloru herbaty/coca-coli, skurcze uogólnione. **Obowiązkowo stop + medyk** (Lecina et al., 2021, Int J Environ Res Public Health — extreme ultra-trail rhabdo case) [OBSERWACJA, mocne].
+
+🚨 **Ostre uszkodzenie nerek (AKI)**: Krwiomocz, ostry ból w okolicy lędźwi, gwałtowny spadek diurezy + obrzęki + nudności. 34–85% finiszerów ultra ma subkliniczny AKI, ale klinicznie objawowy = stop (Lipman 2017).
+
+🚨 **Hipotermia (noc, deszcz)**: drżenie ustające (paradoks!), splątanie, spowolnienie myślenia, sztywność ruchowa. Temperatura ciała <35°C. **Natychmiastowe ogrzanie**.
+
+🚨 **Silna dezorientacja, nie-rozpoznawanie supportera, zaburzenia widzenia**: hiponatremia lub hipoglikemia lub exhaustion — **stop, test sodu, glukoza dożylnie lub doustnie**.
+
+🚨 **Ostry ból stawu/ścięgna z obrzękiem, niemożność obciążania**: podejrzenie tendinopathy/strain — stop, ryzyko stress fracture na 3 miesiące.
+
+### Prewencja najczęstszych problemów
+
+- **Pęcherze**: podwójne skarpety Wrightsock, Sudocrem między palcami, zmiana skarpet co 6 h, plastry Compeed przy pierwszych objawach. Pęcherz > 1 cm przebić sterylną igłą, nakleić Compeed [PRAKTYKA, Roche 2018].
+- **Odparzenia pachwiny/uda**: Sudocrem przed startem gruba warstwa, re-aplikacja co 6 h przy każdej zmianie butów.
+- **Obrzęk stóp** (~5–8% w 24 h): 3. para butów o 0,5 rozmiaru większa.
+- **Ból ścięgna Achillesa**: masaż łydek co 6 h podczas pit-stopu (30 sek. każdej), ciepła woda na łydki jeżeli dostępna (Epsom salt bath niemożliwy, ale ciepła gąbka OK).
+- **Nudności**: zmiana słodkie→słone, kostka lodu, odgazowana cola, małe porcje.
+- **Hipotermia nocna**: dodatkowa warstwa w godz. biegu 14 (21:00), jeszcze jedna w 18 (1:00), folia NRC pod koszulkę w kryzysie.
+
+---
+
+## 10. Źródła
+
+**Position statements i wytyczne organizacji (priorytet):**
+
+1. Tiller NB, Roberts JD, Beasley L, et al. **International Society of Sports Nutrition Position Stand: nutritional considerations for single-stage ultra-marathon training and racing**. *J Int Soc Sports Nutr*. 2019;16(1):50. doi:10.1186/s12970-019-0312-9. [otwarty dostęp: https://jissn.biomedcentral.com/articles/10.1186/s12970-019-0312-9]
+
+2. Guest NS, VanDusseldorp TA, Nelson MT, et al. **International society of sports nutrition position stand: caffeine and exercise performance**. *J Int Soc Sports Nutr*. 2021;18(1):1. doi:10.1186/s12970-020-00383-4.
+
+3. Hew-Butler T, Loi V, Pani A, Rosner MH. **Exercise-associated hyponatremia: 2017 update**. *Front Med*. 2017;4:21. doi:10.3389/fmed.2017.00021. [3rd International EAH Consensus Development Conference, Carlsbad 2015 — aktualnie obowiązujące wytyczne]
+
+**Kluczowe badania na temat węglowodanów w ultra:**
+
+4. Viribay A, Arribalzaga S, Mielgo-Ayuso J, et al. **Effects of 120 g/h of Carbohydrates Intake during a Mountain Marathon on Exercise-Induced Muscle Damage in Elite Runners**. *Nutrients*. 2020;12(5):1367. doi:10.3390/nu12051367.
+
+5. Urdampilleta A, Arribalzaga S, Viribay A, et al. **Effects of 120 vs. 60 and 90 g/h Carbohydrate Intake during a Trail Marathon on Neuromuscular Function and High Intensity Run Capacity Recovery**. *Nutrients*. 2020;12(7):2094. doi:10.3390/nu12072094.
+
+6. Viribay A, Arribalzaga S, Mielgo-Ayuso J, et al. **Relationship of Carbohydrate Intake during a Single-Stage One-Day Ultra-Trail Race with Fatigue Outcomes and Gastrointestinal Problems: A Systematic Review**. *Int J Environ Res Public Health*. 2021;18(11):5737.
+
+**Trening jelit (gut training):**
+
+7. Costa RJS, Miall A, Khoo A, et al. **Gut-training: the impact of two weeks repetitive gut-challenge during exercise on gastrointestinal status, glucose availability, fuel kinetics, and running performance**. *Appl Physiol Nutr Metab*. 2017;42(5):547–557. doi:10.1139/apnm-2016-0453.
+
+8. Miall A, Khoo A, Rauch C, et al. **Two weeks of repetitive gut-challenge reduce exercise-associated gastrointestinal symptoms and malabsorption**. *Scand J Med Sci Sports*. 2018;28(2):630–640. doi:10.1111/sms.12912.
+
+9. King AJ, Etxebarria N, Ross ML, et al. **Short-Term Very High Carbohydrate Diet and Gut-Training Have Minor Effects on Gastrointestinal Status and Performance in Highly Trained Endurance Athletes**. *Nutrients*. 2022;14(9):1929. doi:10.3390/nu14091929.
+
+**Ładowanie węglowodanów:**
+
+10. Sampson G, Morton JP, Areta JL. **A broken link: Knowledge of carbohydrate requirements do not predict carbohydrate intake around competition in endurance athletes**. *Eur J Sport Sci*. 2024;24(10):e12183. doi:10.1002/ejsc.12183. [10–12 g/kg/dzień — aktualne wytyczne]
+
+11. Bussau VA, Fairchild TJ, Rao A, Steele P, Fournier PA. **Carbohydrate loading in human muscle: an improved 1 day protocol**. *Eur J Appl Physiol*. 2002;87:290–295. [36-godzinny protokół bez deplecji]
+
+**Pacing w 24 h:**
+
+12. Bossi AH, Matta GG, Millet GY, et al. **Pacing Strategy During 24-Hour Ultramarathon-Distance Running**. *Int J Sports Physiol Perform*. 2017;12(5):590–596. doi:10.1123/ijspp.2016-0237.
+
+**NSAID i nefroprotekcja:**
+
+13. Lipman GS, Shea K, Christensen M, et al. **Ibuprofen versus placebo effect on acute kidney injury in ultramarathons: a randomised controlled trial**. *Emerg Med J*. 2017;34(10):637–642. doi:10.1136/emermed-2016-206353.
+
+**Azotany (buraki):**
+
+14. Wylie LJ, Kelly J, Bailey SJ, et al. **Beetroot juice and exercise: pharmacodynamic and dose-response relationships**. *J Appl Physiol*. 2013;115(3):325–336. doi:10.1152/japplphysiol.00372.2013.
+
+**Książki (2020+, aktualne):**
+
+15. Koop J, Rutberg J. **Training Essentials for Ultrarunning**. 2nd ed. VeloPress; 2021. [PRAKTYKA — najbardziej aktualny praktyczny podręcznik, dobrze zakotwiczony w badaniach]
+
+16. Burke L, Deakin V (eds). **Clinical Sports Nutrition**. 6th ed. McGraw-Hill; 2021. [standard w dietetyce sportowej]
+
+17. Fitzgerald M. **The Endurance Diet**. 2020+ (najnowsza edycja) / **Racing Weight**. 2018. [PRAKTYKA + synteza EBM]
+
+**Dodatkowo (krytyczne przeglądy):**
+
+18. Costa RJS, Hoffman MD, Stellingwerff T. **Considerations for ultra-endurance activities: part 1 — nutrition**. *Res Sports Med*. 2019;27(2):166–181. doi:10.1080/15438627.2018.1502188.
+
+19. Scheer V, Tiller NB, Doutreleau S, et al. **Potential Long-Term Health Problems Associated with Ultra-Endurance Running: A Narrative Review**. *Sports Med*. 2022;52(4):725–740.
+
+---
+
+## Mity, które odrzucam — [FOLKLOR — NIE ZALECAM]
+
+### Mit #1: „NLPZ (ibuprofen, ketonal) przed startem 'na zapas' albo w trakcie, żeby nie bolało"
+
+**Dlaczego błąd**: Ibuprofen 400 mg co 4 h w ultramaratonie podwaja ryzyko AKI vs placebo (52% vs 34%), number needed to harm = 5.5 (Lipman et al., 2017, *Emerg Med J*). Dodatkowo NLPZ zwiększają ryzyko EAH (hiponatremii) przez wpływ na ADH — Wharam et al., 2006, *Med Sci Sports Exerc* [EBM]. W 24 h na asfalcie ryzyko AKI + EAH + GI injury jest tak duże, że nigdy nie przewyższa benefit z redukcji bólu. **Paracetamol (do 2 × 500 mg / 24 h) jest dopuszczalną alternatywą w absolutnej konieczności** — nie jest nefrotoksyczny jak NLPZ.
+
+### Mit #2: „Biegi na pustym żołądku w treningu budują tłuszczospalanie i to trzeba robić przed 24 h"
+
+**Dlaczego błąd**: Periodyzacja „train low" ma miejsce w przygotowaniach 8–12 tygodniowych u ultra-elitarnych zawodników (np. Gemili 2020), ale **nie ma dowodów na korzyść w 38-dniowym oknie u zawodnika, który właśnie pobił życiówkę na maratonie**. Przy 90–110 g CHO/h podczas 24 h wydolność utleniania tłuszczu jest marginalna — dominuje metabolizm egzogennych węglowodanów. Meta-analiza Gejl & Nybo 2021, *J Int Soc Sports Nutr*: **periodyzowana restrykcja CHO nie poprawia wydolności u trained endurance athletes** [EBM]. W 38 dni lepiej trenować jelita do 110 g/h niż uczyć się spalać tłuszcz, którego nie zdążysz wykorzystać.
+
+### Mit #3: „Stare protokoły ładowania z fazą deplecji (3 dni low-carb + 3 dni high-carb)"
+
+**Dlaczego błąd**: Oryginalny protokół Astranda z lat 60. XX w. wymagał 3 dni niskiego spożycia CHO i wyczerpujących treningów — powodował irritability, zmniejszenie adaptacji, ryzyko kontuzji. **Bussau et al. 2002, *Eur J Appl Physiol*, pokazali że 36-godzinny protokół wysokiego CHO (10 g/kg/dzień) z lekkim treningiem daje identyczną super-kompensację glikogenu** bez fazy deplecji [EBM]. Aktualny standard: 10–12 g/kg/dzień przez 24–48 h przed startem, bez deplecji.
+
+### Mit #4: „Trzeba pić jak najwięcej, żeby się nie odwodnić"
+
+**Dlaczego błąd**: Odwodnienie 2–4% masy ciała jest w ultra NORMĄ i NIE obniża wydolności (Hew-Butler et al., 2015, 3rd International EAH Consensus). **Nadmierne picie hipotonicznego płynu → hiponatremia → zgony udokumentowane** (min. 12 zgonów sportowców). Złoty standard: **pić wg pragnienia (ad libitum), kontrolować kolor moczu**. Dla 24 h przy 15–18°C to typowo 400–600 ml/h, nie 1000 ml/h. Hoffman et al. wielokrotnie pokazali, że "wygranie" na picie nie chroni przed EAH, ale podwaja ryzyko.
+
+### Mit #5: „Sól w kapsułkach co godzinę chroni przed skurczami i hiponatremią"
+
+**Dlaczego błąd**: **Skurcze mięśniowe w ultra NIE są spowodowane hiponatremią lub utratą sodu** — są neuromięśniowe (teoria Schwellnus 2009 — altered neuromuscular control). Sól nie leczy skurczów [EBM]. Co do EAH: Hoffman & Stuempfle, 2015, *Med Sci Sports Exerc* pokazali że suplementacja sodem **nie zapobiega EAH** — mechanizmem EAH jest nadmierne picie, nie niedobór sodu (Hoffman & Stuempfle, 2015, Sodium supplementation and exercise-associated hyponatremia during prolonged exercise). Sód w rozsądnej dawce (500–700 mg/h) jest **elementem komfortu** (redukuje hipo-osmolar losses), ale nie silver bullet. Nie nadkompensuj.
+
+---
+
+## Czego nie wiem — doprecyzuj, zanim się zabierzesz
+
+1. **Ferrytyna Marcina** (kiedy ostatni raz sprawdzana, jaki poziom?). Jeżeli <30 ng/ml — musi być suplementacja żelaza START OD TERAZ (minimum 4 tyg. na efekt).
+2. **Witamina D 25(OH)** — wiosna w PL, M49 — typowy deficyt. Konkretny poziom?
+3. **Przyczyna DNF Kaliska Setka 29.10.2022** — kontuzja? GI? Bonk? Psychika? To informacja kluczowa: czy jest wzorzec załamania po 80–100 km na asfalcie?
+4. **Znane kontuzje**, szczególnie ścięgna Achillesa, kolano, dolny odcinek kręgosłupa, zapalenia stopy/palucha — w 24 h monotonia pętli to akcelerator.
+5. **Zaświadczenie lekarskie PZLA + licencja zawodnicza** — bez tego nie ma klasyfikacji MP, tylko Open.
+6. **Przynależność klubowa** — MP wymaga zgłoszenia klubowego.
+7. **Status kawowy** — ile kaw dziennie pije normalnie? Jeżeli 4 dziennie — protokół kofeinowy musi być inny (niemożliwy washout).
+8. **Habitualny sleep** — o której chodzi spać? Kiedy najłatwiej zasypia w kryzysie?
+9. **Alergie pokarmowe / nietolerancje (laktoza, gluten, FODMAP)** — jeżeli IBS-like, low-FODMAP w T-3 musi być bardziej restrykcyjny.
+10. **Masa w chwili startu** — 64 kg to aktualne pre-maraton. Jeżeli po maratonie spadł o 1,5 kg i nie odbił się — koryguj dawki CHO loading.
+11. **Konkretny zegarek GPS** Marcina — decyduje o strategii baterii.
+12. **Pogoda Pabianice** na 3 dni przed startem (sprawdzę/sprawdź na 3 dni przed).
+13. **Zmiennik supportera** — jest ktokolwiek dostępny na 4–6 h w nocy?
+14. **Żele i napoje przetestowane historycznie** — które konkretnie marki i smaki już zna?
+
+---
+
+### Podsumowanie operacyjne (co robisz w tym tygodniu, 22–27.04):
+
+1. **Marcin**: pełna regeneracja, 30–40 km luźno, SEN, białko 1,6 g/kg, low-stress.
+2. **Ty**: zamów testowane żele (Maurten 100, SiS Beta Fuel Gel 40, Maurten 320 Drink Mix) — **minimum 50 żeli + 8 tub drink mix** — czas dostawy 5–7 dni.
+3. **Ty**: zleć bratu badania: **morfologia + ferrytyna + wit. D 25(OH) + kreatynina + elektrolity Na/K/Mg** — wyniki w 3 dni.
+4. **Ty**: zapisz kalendarz treningowy brata na 38 dni (jeden plik, widoczny dla obu).
+5. **Ty**: wyślij organizatorowi 12 pytań z sekcji 8.
+6. **Ty**: dogadaj zmiennika na noc z So/Nd 30/31.05.
+7. **Marcin**: zamów 1 zapas czołówki (Nitecore NU25 lub podobnej, ~80 g) jeżeli nie ma — w takim okienku dostawa pod Twoje drzwi w 3 dni.
+8. **Marcin**: kup buty #2 i #3 na start, rozchodzi 50 km na każdych do T-2.
+
+Daj znać odpowiedzi na 14 pytań z sekcji "czego nie wiem", i rozłożę Ci tygodniowy kalendarz jednostka po jednostce (co do kilometra i dnia) z konkretnym żywieniem dla każdego treningu.

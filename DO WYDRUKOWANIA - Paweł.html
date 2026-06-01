@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Paweł — do wydrukowania, 24h Pabianice 2026</title>
+<style>
+@page { size: A4; margin: 1cm 1.2cm 1.2cm 1.2cm; }
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+  color: #111;
+  font-size: 9.5pt;
+}
+h1 {
+  font-size: 15pt;
+  border-bottom: 2px solid #000;
+  padding-bottom: 2px;
+  margin: 0 0 0.4em 0;
+  page-break-before: always;
+  page-break-after: avoid;
+}
+h1:first-of-type { page-break-before: avoid; }
+h2 {
+  font-size: 12pt;
+  border-bottom: 1px solid #888;
+  padding-bottom: 1px;
+  margin: 0.8em 0 0.3em 0;
+  page-break-after: avoid;
+}
+h3 {
+  font-size: 10.5pt;
+  margin: 0.6em 0 0.2em 0;
+  page-break-after: avoid;
+}
+h4 {
+  font-size: 10pt;
+  margin: 0.5em 0 0.15em 0;
+  page-break-after: avoid;
+}
+p { margin: 0.25em 0; }
+p, li { font-size: 9.5pt; }
+ul, ol { margin: 0.2em 0 0.3em 0; padding-left: 1.2em; }
+li { margin: 0.05em 0; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.3em 0;
+  page-break-inside: auto;
+  font-size: 8.5pt;
+}
+tr { page-break-inside: avoid; }
+th, td {
+  border: 1px solid #555;
+  padding: 2px 4px;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #eee; font-weight: bold; }
+code { background: #f0f0f0; padding: 0 3px; border-radius: 2px; font-size: 8.5pt; }
+pre {
+  background: #f0f0f0;
+  padding: 5px;
+  border-left: 3px solid #888;
+  font-size: 8.5pt;
+  margin: 0.3em 0;
+  page-break-inside: avoid;
+}
+blockquote {
+  border-left: 3px solid #888;
+  padding: 2px 8px;
+  margin: 0.3em 0;
+  background: #f8f8f8;
+  font-style: italic;
+  font-size: 9pt;
+}
+hr { border: none; border-top: 1px dashed #888; margin: 0.6em 0; }
+strong { color: #000; }
+@media print {
+  body { padding: 0; margin: 0; }
+  table, blockquote, pre { page-break-inside: avoid; }
+  tr { page-break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+  .live-section { display: none !important; }
+}
+
+/* ── LIVE WYNIKI — tylko na ekranie ── */
+@media screen {
+  .live-section {
+    background: #0d1b2a;
+    color: #dce8f5;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin: 0 0 18px 0;
+    border-left: 5px solid #f39c12;
+    font-size: 10pt;
+  }
+  .live-header {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #f39c12;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .live-btn {
+    background: #f39c12;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    padding: 3px 12px;
+    font-size: 9pt;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .live-ts { font-size: 8pt; color: #7a99b5; }
+  .live-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .live-cell {
+    background: rgba(255,255,255,0.07);
+    border-radius: 6px;
+    padding: 8px 12px;
+  }
+  .live-label { font-size: 7.5pt; color: #7a99b5; margin-bottom: 2px; text-transform: uppercase; letter-spacing: .04em; }
+  .live-val   { font-size: 15pt; font-weight: bold; line-height: 1.1; }
+  .live-sub   { font-size: 8pt; color: #9bbdd4; margin-top: 2px; }
+  .live-pbar  {
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 8.5pt;
+    margin-bottom: 8px;
+    color: #b0cce0;
+  }
+  .live-laps-wrap {
+    background: rgba(255,255,255,0.04);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 8pt;
+    max-height: 240px;
+    overflow-y: auto;
+  }
+  .live-laps-wrap table { width: 100%; border-collapse: collapse; color: #dce8f5; }
+  .live-laps-wrap th, .live-laps-wrap td { padding: 2px 6px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .live-laps-wrap th { color: #7a99b5; font-weight: normal; text-align: left; }
+  .live-laps-wrap tr.lap-fast td:nth-child(2) { color: #2ecc71; }
+  .live-laps-wrap tr.lap-fast td:nth-child(3) { color: #2ecc71; }
+  .live-laps-wrap tr.lap-slow td:nth-child(2) { color: #e74c3c; }
+  .live-laps-wrap tr.lap-slow td:nth-child(3) { color: #e74c3c; }
+  .live-laps-wrap tr.lap-pit  td { color: #7a99b5; font-style: italic; }
+  .live-error { color: #e74c3c; font-size: 9pt; padding: 6px; }
+  .live-note  { color: #7a99b5; font-size: 8pt; font-style: italic; margin-top: 6px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     LIVE WYNIKI — protimer.pl (nie drukuje się)
+     ═══════════════════════════════════════════════════════ -->
+<div class="live-section" id="live-results">
+  <div class="live-header">
+    ⚡ LIVE — MARCIN SZYSZKOWSKI #45
+    <button class="live-btn" onclick="refreshLive()">⟳ Odśwież</button>
+    <span class="live-ts" id="live-ts">— kliknij Odśwież —</span>
+  </div>
+  <div id="live-body"><em style="opacity:.5;font-size:9pt">Kliknij „Odśwież" lub poczekaj na auto-ładowanie...</em></div>
+</div>
+
+<h1>DO WYDRUKOWANIA — Paweł, supporter Marcina</h1>
+<blockquote>
+<p><strong>24h Pabianice 30.05.2026, START sobota 7:00, META niedziela 7:00</strong><br />
+Dyrektor: Piotr Kardas. Park Wolności, ul. Łaska 114, Pabianice.</p>
+<p><strong>JAK DRUKOWAĆ:</strong> otwórz w VSCode → prawy klik → „Open Preview" → Ctrl+P → Save as PDF. Albo otwórz w przeglądarce (kopiuj do https://markdownlivepreview.com) i wydrukuj.</p>
+<p>Każda sekcja oddzielona jest poziomą linią + nagłówkiem — sekcje 4–14 to <strong>karty A5 do teczki w zip-locku</strong> (jedna karta = jedna kartka).</p>
+</blockquote>
+<hr />
+<h1>CZĘŚĆ 1 — LISTA RZECZY DO SPAKOWANIA Z DOMU</h1>
+<blockquote>
+<p><strong>Drukuj to PIERWSZE. Spakuj wszystko zaznaczając ✓ po kolei.</strong><br />
+Marcin pakuje swoje rzeczy oddzielnie (sekcja H — sprawdź z nim przed wyjazdem). Ja (Paweł) biorę WSZYSTKO Z SEKCJI A–G + dodatkowo dla Marcina backup w sekcji B.</p>
+</blockquote>
+<h2>A. Moje (Pawła) — rzeczy supportera tylko dla mnie</h2>
+<ul>
+<li>☐ <strong>Śpiwór</strong> (w bazie zawodów są łóżka, ale śpiwór własny obowiązkowy)</li>
+<li>☐ Mata + mała poduszka (do mikro-drzemek 20 min)</li>
+<li>☐ <strong>Buty wygodne na 24h stania/chodzenia</strong> — nie sandały, nie tenisówki cienkie, sprawdzone</li>
+<li>☐ Zapasowa para butów (gdyby pierwsze przemokły)</li>
+<li>☐ <strong>Ciepła kurtka + czapka + rękawiczki</strong> (noc 8–13°C, możliwy deszcz)</li>
+<li>☐ Wiatrówka + plandeka/peleryna na deszcz</li>
+<li>☐ Bluza polarowa + spodnie polarowe (do drzemek nocnych)</li>
+<li>☐ Skarpety zapasowe (2–3 pary)</li>
+<li>☐ Bielizna zapasowa (1–2 zmiany)</li>
+<li>☐ Krem przeciwsłoneczny dla siebie (12h na słońcu w piątek/sobotę)</li>
+<li>☐ Okulary przeciwsłoneczne</li>
+<li>☐ <strong>Mój powerbank na MÓJ telefon</strong> (NIE używać powerbanków Marcina)</li>
+<li>☐ Ładowarka telefonu + kable</li>
+<li>☐ Moja apteczka prywatna (osobno od apteczki Marcina!)</li>
+<li>☐ Moje leki na stałe (jeśli biorę)</li>
+<li>☐ Mój termos (na MOJĄ kawę — nie zajmować termosu Marcina)</li>
+<li>☐ Mokre chusteczki, dezodorant (refresh co 6h)</li>
+<li>☐ Zapasowy zestaw ubrań (deszcz, polanie kawą)</li>
+<li>☐ Książka / audiobook / słuchawki (cisza między pit-stopami)</li>
+<li>☐ Krzesło karpiowe / wygodny leżak (do 5–7 min odpoczynku co godzinę)</li>
+</ul>
+<h2>B. Moje rzeczy które biorę DLA Marcina jako backup</h2>
+<ul>
+<li>☐ <strong>Zapasowa czołówka dla Marcina</strong> (Nitecore NU25 UL ~80 g, lub inna lekka — w kieszeni / u mnie w strefie)</li>
+<li>☐ <strong>2× powerbank 20 000 mAh</strong> (do ładowania jego zegarka, czołówki, telefonu)</li>
+<li>☐ <strong>3× kabel USB-C</strong> (zegarek + czołówka + telefon)</li>
+<li>☐ Przedłużacz 5 m (organizator daje 230V w bazie — czajniki, mikrofala, lodówka, warniki)</li>
+<li>☐ Latarka warsztatowa (moja praca w strefie w nocy)</li>
+<li>☐ <strong>Zapasowe sznurówki dla Marcina</strong> (×2 pary — zerwanie w nocy = strata 10 min)</li>
+<li>☐ Folia NRC (awaryjne ciepło)</li>
+<li>☐ Koc polarowy (Marcin po pit-stopie / moje mikro-drzemki)</li>
+<li>☐ Waga osobowa przenośna (screening EAH co 6h)</li>
+</ul>
+<h2>C. Sprzęt strefy supportu (wspólny — pakujemy razem)</h2>
+<ul>
+<li>☐ <strong>WŁASNY STOLIK KEMPINGOWY</strong> (komunikat 2026: pula organizatora niewystarczająca dla wszystkich → PRIORYTETOWE)</li>
+<li>☐ Namiot mały / parasol (zadaszenie w razie deszczu — organizator NIE gwarantuje)</li>
+<li>☐ <strong>Namiot noclegowy</strong> dla mnie (ZA strefą supportu — nie obok stolika)</li>
+<li>☐ Mata pod stopy (zmiana butów na czystym)</li>
+<li>☐ <strong>Butla gazowa + kuchenka turystyczna</strong> (backup, bo prąd w bazie może być zajęty)</li>
+<li>☐ Czajnik elektryczny (jeśli mam dostęp do prądu organizatora)</li>
+<li>☐ <strong>2× termos 1,5–3 L</strong> (rosół, kawa)</li>
+<li>☐ Garnek (na kuchenkę)</li>
+<li>☐ Miska (mycie produktów)</li>
+<li>☐ <strong>Kubki termiczne</strong> (rosół na biegu) — komunikat 2026: organizator NIE produkuje plastiku, <strong>własne kubki obowiązkowe</strong></li>
+<li>☐ <strong>Softflaski Marcina ×2</strong> (po 500 ml, testowane)</li>
+<li>☐ Łyżki, łyżeczki</li>
+<li>☐ Otwieracz, nóż, nożyczki</li>
+<li>☐ Wózek transportowy / taczka (z parkingu do bazy ~300 m)</li>
+</ul>
+<h2>D. Jedzenie sportowe + realne (kup w piątek po przyjeździe lub przywieź)</h2>
+<h3>Sportowe</h3>
+<ul>
+<li>☐ <strong>40 żeli testowanych</strong> (mix Dzik 1:0,8 + Maurten + SiS — Marcin lubi 3–4 smaki Dzika)</li>
+<li>☐ Drink mix (Maurten 320 / Tailwind / izotonik) — 2–3 opakowania</li>
+<li>☐ <strong>SaltStick Fastchews</strong> (mix smaków) + Precision PH 1500 (jeśli salty sweater)</li>
+<li>☐ Kapsułki kofeiny 100 mg (na noc — protokół 600 mg/24h)</li>
+</ul>
+<h3>Realna żywność</h3>
+<ul>
+<li>☐ <strong>Rosół 3 L w butelkach</strong> (zamrozić w piątek, rozmrażać systematycznie)</li>
+<li>☐ 20× bułka pszenna</li>
+<li>☐ Miód, marmolada</li>
+<li>☐ <strong>2 kg gotowanego ryżu</strong> (z miodem + solą — porcje zip-lock)</li>
+<li>☐ Pierogi ruskie 2 kg (gotowe, w lodówce/termosie)</li>
+<li>☐ Banany dojrzałe (10 szt.)</li>
+<li>☐ Daktyle</li>
+<li>☐ Chipsy / krakersy / paluszki słone</li>
+<li>☐ <strong>Coca-cola 6× 0,33 L</strong> (do odgazowania w pit-stopie) — UWAGA: cola JEST W BAZIE (mogę zmniejszyć zapas)</li>
+<li>☐ Mleko UHT</li>
+<li>☐ Kasza manna (gotowa)</li>
+<li>☐ Batoniki owsiane</li>
+</ul>
+<h3>Tłuszcz strategiczny (godz. 12+ biegu = od 19:00 sobota)</h3>
+<ul>
+<li>☐ Awokado / hummus (kanapki)</li>
+<li>☐ Ser</li>
+<li>☐ Orzechy</li>
+<li>☐ Masło orzechowe (z daktylami)</li>
+<li>☐ Kabanos / mała ilość mięsa</li>
+</ul>
+<h2>E. Ubrania Marcina — worki godzinowe</h2>
+<blockquote>
+<p><strong>Worki podpisane czarnym markerem.</strong> Każdy worek to osobny zestaw — Marcin/Paweł wyciąga w odpowiednim pit-stopie.</p>
+</blockquote>
+<h3>Worek „6h" (godz. 0–6 biegu, dzień, 7:00–13:00)</h3>
+<ul>
+<li>☐ Krótki rękaw (zapasowy)</li>
+<li>☐ Rękawki (zdejmowalne)</li>
+<li>☐ Czapka z daszkiem</li>
+<li>☐ Okulary fotochromowe</li>
+<li>☐ Krem SPF 50</li>
+</ul>
+<h3>Worek „12h" (godz. 6–12, popołudnie, 13:00–19:00)</h3>
+<ul>
+<li>☐ Krótki rękaw świeży</li>
+<li>☐ Skarpety #2 (Injinji/Drymax)</li>
+<li>☐ <strong>Hoka Clifton 10 Wide</strong> (zmiana butów ~godz. 8 = 15:00)</li>
+<li>☐ Krem SPF refresh</li>
+<li>☐ Body Glide refresh</li>
+</ul>
+<h3>Worek „16h" (godz. 12–16, wieczór, 19:00–23:00)</h3>
+<ul>
+<li>☐ Długi rękaw</li>
+<li>☐ Buff</li>
+<li>☐ Rękawki (jeśli zdjął wcześniej)</li>
+<li>☐ Skarpety #3</li>
+<li>☐ <strong>Czołówka</strong> (założenie ~20:30, bo LED w parku włącza się ~21:10)</li>
+</ul>
+<h3>Worek „20h" (godz. 16–20, noc, 23:00–03:00)</h3>
+<ul>
+<li>☐ Cienka kurtka softshell</li>
+<li>☐ <strong>Czapka</strong> ciepła</li>
+<li>☐ <strong>Suche rękawiczki</strong></li>
+<li>☐ Skarpety #4</li>
+<li>☐ Buty wymiana (powrót do Ride 18 lub kolejny Clifton)</li>
+</ul>
+<h3>Worek „24h" (godz. 20–24, świt, 03:00–07:00)</h3>
+<ul>
+<li>☐ Wszystkie warstwy nocne ZOSTAJĄ</li>
+<li>☐ Skarpety #5 (rezerwa)</li>
+<li>☐ Suche rękawiczki #2</li>
+</ul>
+<h3>Worek „AWARYJNE pogoda"</h3>
+<ul>
+<li>☐ Ultralekka wiatrówka (deszcz)</li>
+<li>☐ Para GTX (ulewa)</li>
+<li>☐ Zapasowa kurtka softshell</li>
+<li>☐ Zapasowy buff, rękawiczki</li>
+<li>☐ Suchy komplet bielizny</li>
+</ul>
+<h2>F. Apteczka (BEZ NLPZ!)</h2>
+<ul>
+<li>☐ <strong>Compeed ×10</strong> (pęcherze)</li>
+<li>☐ Igła sterylna ×5 + alkohol 70%</li>
+<li>☐ Taśma K-tape</li>
+<li>☐ <strong>Sudocrem</strong> mała tubka (refresh anty-odparzenia)</li>
+<li>☐ Body Glide sztyft</li>
+<li>☐ Wazelina (alternatywa)</li>
+<li>☐ <strong>Paracetamol max 1 g/24h</strong> (absolutna ostateczność) — <strong>ŻADNYCH NLPZ (Ibuprom, Ketonal, Nurofen)</strong></li>
+<li>☐ Elektrolity awaryjne (saszetki)</li>
+<li>☐ Gaza, nożyczki, pinceta</li>
+<li>☐ Termometr (kontrola hipotermii / hipertermii)</li>
+<li>☐ <strong>Waga osobowa</strong> (screening EAH co 6h)</li>
+<li>☐ Pickle juice 200 ml (skurcze — Miller 2010)</li>
+<li>☐ Mięta / imbir w cukierkach (nudności)</li>
+</ul>
+<h2>G. Łatwo zapomnieć (mała lista, krytyczne!)</h2>
+<ul>
+<li>☐ Agrafki ×4 (zapas dla numeru Marcina)</li>
+<li>☐ Nożyczki małe, pinceta</li>
+<li>☐ <strong>Repelent na komary</strong> (las, maj wieczór — plaga w Pabianicach)</li>
+<li>☐ SPF 50 + balsam do ust SPF</li>
+<li>☐ Opaska na głowę (pot w oczy)</li>
+<li>☐ Worek na śmieci duży (kilka)</li>
+<li>☐ Worki foliowe zamykane (mokre ubrania, telefon w deszczu)</li>
+<li>☐ Ręcznik szybkoschnący</li>
+<li>☐ Arnika (siniaki), mentol w żelu (odświeżacz łydek)</li>
+<li>☐ Zip-locki różne rozmiary (pakiety dla Marcina)</li>
+</ul>
+<h2>H. Sprawdź u Marcina (jego rzeczy, ale ja pilnuję przed wyjazdem)</h2>
+<ul>
+<li>☐ Dowód osobisty + NFZ + NNW + <strong>zaświadczenie lekarskie ≤12 miesięcy</strong></li>
+<li>☐ Strój startowy + 2–3 zmiany</li>
+<li>☐ <strong>Buty: Saucony Ride 18</strong> + <strong>Hoka Clifton 10 Wide</strong> + Brooks Hyperion 2 (awaryjne)</li>
+<li>☐ Skarpety 4–5 par (Injinji / Drymax / Wrightsock)</li>
+<li>☐ <strong>Zapasowe sznurówki ×2 pary</strong></li>
+<li>☐ Zegarek + ładowarka + kabel</li>
+<li>☐ Czołówka główna (Petzl Nao RL / Silva) + zapasowa</li>
+<li>☐ Soft-flaski ×2 (testowane)</li>
+<li>☐ Pas/vest biegowy</li>
+<li>☐ Buff, opaska przeciwpotna</li>
+<li>☐ <strong>Tape na sutki</strong> + <strong>paper tape na stopy</strong> (Lipman 2014 — redukcja pęcherzy o 40%)</li>
+<li>☐ Live Track Garmin zsynchronizowany + udostępniony link</li>
+<li>☐ Kontakty alarmowe w zegarku (Incident Detection)</li>
+<li>☐ Telefon Marcina (decyzja: u niego czy u mnie?)</li>
+<li>☐ <strong>Oświadczenie obuwie World Athletics</strong> — podpisuje w biurze zawodów w piątek (komunikat 2026: WSZYSCY zawodnicy)</li>
+</ul>
+<hr />
+<h1>CZĘŚĆ 2 — KARTY A5 DO TECZKI W ZIP-LOCKU</h1>
+<blockquote>
+<p><strong>Drukuj każdą kartę na osobnej stronie.</strong> Włóż do teczki A5 + zip-lock (deszcz, kawa). Papier &gt; telefon (telefon padnie / nie będzie zasięgu / zmoknie ekran o 03:00).</p>
+</blockquote>
+<hr />
+<h2>Karta 1 — SZYBKI START (1 strona, najważniejsza)</h2>
+<h3>Moja rola w czasie</h3>
+<table>
+<thead>
+<tr>
+<th>Faza</th>
+<th>Godz. biegu</th>
+<th>Co robię</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LUSTRO</strong></td>
+<td>0–6h (7:00–13:00)</td>
+<td>Zwierciadło faktów, BEZ EMOCJI. „Tempo 6:32. Plan 6:30–6:45. OK."</td>
+</tr>
+<tr>
+<td><strong>HAMULEC</strong></td>
+<td>0–6h równolegle</td>
+<td>„Za szybko" / „OK" / „Jedz" — 3 mantry, nic więcej</td>
+</tr>
+<tr>
+<td><strong>PALIWO</strong></td>
+<td>od 18h (~01:00)</td>
+<td>Pozytywne kotwice: „świetnie wyglądasz", „następna pętla — kubek rosołu"</td>
+</tr>
+</tbody>
+</table>
+<h3>3 mantry „pace police" (Hamulec)</h3>
+<ol>
+<li><strong>„Za szybko"</strong> — jeśli &gt;5% szybciej niż cel</li>
+<li><strong>„OK"</strong> — w celu</li>
+<li><strong>„Jedz"</strong> — jeśli &lt;70 g CHO/h średnio</li>
+</ol>
+<h3>Co IGNORUJĘ</h3>
+<ul>
+<li>Ból mięśni (normalne)</li>
+<li>„Zmęczenie" po 8h</li>
+<li>Subiektywne narzekania bez objawów</li>
+</ul>
+<h3>Co JEST kodem STOP (⚫ Czarny) — wzywam medyka</h3>
+<ul>
+<li>⚫ Ostre kłucie w kolanie / stawie</li>
+<li>⚫ Nudności z wymiotami &gt;2 epizody</li>
+<li>⚫ <strong>Mroczny mocz koloru coca-coli = RABDOMIOLIZA</strong></li>
+<li>⚫ Dezorientacja, bełkotliwa mowa, nie rozpoznaje mnie</li>
+<li>⚫ Brak moczu &gt;6h = ANURIA</li>
+<li>⚫ Drży i nagle PRZESTAŁ drżeć (paradoks hipotermii)</li>
+<li>⚫ Obrzęk twarzy/palców + bóle głowy = EAH</li>
+</ul>
+<h3>NIE mówić / Mówić</h3>
+<table>
+<thead>
+<tr>
+<th>❌ NIE mówić</th>
+<th>✅ Mówić</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>„Zostało ci 8 godzin"</td>
+<td>„Świetnie wyglądasz"</td>
+</tr>
+<tr>
+<td>„Widzę, że zwalniasz"</td>
+<td>„Następna pętla — kubek rosołu"</td>
+</tr>
+<tr>
+<td>„Tylko 40 km do 200"</td>
+<td>„Krok sprężysty"</td>
+</tr>
+<tr>
+<td>„Wyglądasz fatalnie"</td>
+<td>„Pozycja X, realizujemy ułamkami"</td>
+</tr>
+</tbody>
+</table>
+<h3>Komenda zmuszania (po 2 okrążeniach bez jedzenia)</h3>
+<blockquote>
+<p><strong>„To nie jest propozycja, pijesz."</strong></p>
+</blockquote>
+<h3>Co NIE robię</h3>
+<ul>
+<li>NIE zmuszam do DNF po 20h (decyzja Marcina)</li>
+<li>NIE przekonuję do kontynuacji po 18h bez fizycznego resetu (posadź → rosół → masaż łydek → 5–15 min sam wstanie lub nie)</li>
+</ul>
+<hr />
+<h2>Karta 2 — TELEFONY AWARYJNE (uzupełnij przed wyjazdem)</h2>
+<pre><code>Marcin (numer w razie zgubienia):    ______________________
+
+Żona Marcina:                         ______________________
+
+Lekarz Marcina:                       ______________________
+
+Dyr. zawodów Piotr Kardas:            ______________________
+(z numeru biura.ultrapark@gmail.com — uzupełnij T-3)
+
+Ratownictwo medyczne w Bazie:         ______________________
+(podadzą na odprawie 6:40)
+
+Najbliższy szpital (Pabianice):       ______________________
+
+Apteka 24h Pabianice:                 ______________________
+
+Mój zmiennik nocny (jeśli):           ______________________
+
+Telefon kontakt awaryjny moja rodzina: ______________________
+
+Hotel (nasz nocleg pt 29/sob 30):     ______________________
+
+112 — ratownictwo                     KAŻDY ZNA NA PAMIĘĆ
+</code></pre>
+<hr />
+<h2>Karta 3 — HARMONOGRAM DNI (kluczowe godziny)</h2>
+<h3>Piątek 29.05.2026 — T-1, dojazd</h3>
+<table>
+<thead>
+<tr>
+<th>Godz.</th>
+<th>Akcja</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rano</td>
+<td>Wyjazd z domu</td>
+</tr>
+<tr>
+<td>Po przyjeździe</td>
+<td><strong>Rozładowanie auta od ul. Łaskiej ≤22:00</strong> (potem zamknięte do 5:00 sob)</td>
+</tr>
+<tr>
+<td>13:00–20:00</td>
+<td><strong>Biuro zawodów otwarte</strong> — Marcin odbiera numer + podpisuje <strong>oświadczenie obuwie World Athletics</strong></td>
+</tr>
+<tr>
+<td>Wieczór</td>
+<td>Briefing #4 z Marcinem (powtórzenie sygnałów, kodu STOP, ściągi)</td>
+</tr>
+<tr>
+<td>21:30–22:00</td>
+<td>Marcin idzie spać (sleep ~6h przed startem)</td>
+</tr>
+</tbody>
+</table>
+<h3>Sobota 30.05.2026 — DZIEŃ STARTU</h3>
+<table>
+<thead>
+<tr>
+<th>Godz.</th>
+<th>Akcja</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>4:30</strong></td>
+<td>Pobudka Marcina, śniadanie, lubrykacja</td>
+</tr>
+<tr>
+<td><strong>5:00–6:30</strong></td>
+<td><strong>Biuro zawodów otwarte</strong> (sobota) — ostatnie sprawy</td>
+</tr>
+<tr>
+<td><strong>6:40</strong></td>
+<td><strong>ODPRAWA zawodników 24h</strong> (parking przy starcie) — Marcin obecny, ja kończę przygotowania strefy</td>
+</tr>
+<tr>
+<td><strong>6:50</strong></td>
+<td>Zbiórka zawodników, przejście na linię startu</td>
+</tr>
+<tr>
+<td><strong>7:00</strong></td>
+<td>🏁 <strong>START 24h</strong></td>
+</tr>
+<tr>
+<td>13:00 (godz. 5)</td>
+<td>Posiłek 1 organizatora: makaron bolognese/szpinak</td>
+</tr>
+<tr>
+<td>15:00 (godz. 8)</td>
+<td>Pace review — zwolnić jeśli 5% za szybko + zmiana butów Ride→Clifton</td>
+</tr>
+<tr>
+<td>18:00 (godz. 11)</td>
+<td>Posiłek 2: pomidorowa z ryżem</td>
+</tr>
+<tr>
+<td>19:00 (godz. 12)</td>
+<td>Fuel review — agresywnie dodać jeśli &lt;70 g CHO/h</td>
+</tr>
+<tr>
+<td>~20:30</td>
+<td>Czołówka założona (LED parku ~21:10)</td>
+</tr>
+<tr>
+<td>22:00 (godz. 15)</td>
+<td>Pierwszy bolus kofeinowy 200 mg</td>
+</tr>
+<tr>
+<td>24:00 (godz. 17)</td>
+<td>Posiłek 3: rosół / krem brokuły</td>
+</tr>
+</tbody>
+</table>
+<h3>Niedziela 31.05.2026 — META</h3>
+<table>
+<thead>
+<tr>
+<th>Godz.</th>
+<th>Akcja</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>03:00–05:00 (godz. 20–22)</td>
+<td>NAJTRUDNIEJSZE OKNO — kofeina, ciepły bulion, masaż</td>
+</tr>
+<tr>
+<td><strong>6:00 (godz. 23)</strong></td>
+<td>Posiłek 4: zupa jarzynowa</td>
+</tr>
+<tr>
+<td><strong>7:00</strong></td>
+<td>🏁 <strong>META 24h</strong> — Marcin oddaje chip</td>
+</tr>
+<tr>
+<td>10:00</td>
+<td>Dekoracja zwycięzców 24h (jeśli w stanie)</td>
+</tr>
+<tr>
+<td>Po dekoracji</td>
+<td>Wyjazd z parkingu (możliwy dopiero po końcu biegu 24h)</td>
+</tr>
+<tr>
+<td>Wieczór</td>
+<td>Nocleg jeszcze w Pabianicach</td>
+</tr>
+<tr>
+<td><strong>Poniedziałek 01.06 rano</strong></td>
+<td>Powrót do domu (po 6–8h snu)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Karta 4 — POSIŁKI ORGANIZATORA (24h, komunikat 2026)</h2>
+<blockquote>
+<p><strong>Kod na posiłek = na numerze startowym Marcina.</strong> Marcin lub ja (w jego imieniu) odbieramy za kod. Posiłki TYLKO dla zawodników. Jeśli Marcin nie chce — JA mogę odebrać i zjeść.</p>
+</blockquote>
+<h3>Ciepłe posiłki</h3>
+<table>
+<thead>
+<tr>
+<th>Czas zegarowy</th>
+<th>Godz. biegu</th>
+<th>Posiłek</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sob 12:00</strong></td>
+<td>5h</td>
+<td>Makaron z sosem bolognese <strong>/</strong> ze szpinakiem i susz. pomidorami</td>
+</tr>
+<tr>
+<td><strong>Sob 18:00</strong></td>
+<td>11h</td>
+<td><strong>Pomidorowa z ryżem</strong> (popołudniowy dip, CHO+sód)</td>
+</tr>
+<tr>
+<td><strong>Sob 24:00</strong></td>
+<td>17h</td>
+<td><strong>Rosół / krem z brokułów</strong> (najtrudniejsze okno!)</td>
+</tr>
+<tr>
+<td><strong>Ndz 6:00</strong></td>
+<td>23h</td>
+<td>Zupa jarzynowa</td>
+</tr>
+</tbody>
+</table>
+<h3>Zimny bufet (24/7)</h3>
+<p>Czekolada, banany, <strong>suszone daktyle, morele, rodzynki</strong>, orzechy włoskie, jajka, ziemniaki, chleb ze smalcem, chleb z dżemem, naleśniki, ciastka.</p>
+<h3>Napoje (24/7)</h3>
+<p>Woda, kawa, herbata, mięta, cola, <strong>izo Garminate</strong> (sprawdzić skład z Marcinem przed użyciem)</p>
+<h3>Po biegu</h3>
+<p>Posiłek regeneracyjny dla WSZYSTKICH (zawodnicy + support).</p>
+<h3>Baza zawodów ma</h3>
+<p>Prąd, czajniki, mikrofala, lodówka, warniki, woda pitna. <strong>Kilkanaście łóżek noclegowych</strong> (własny śpiwór obowiązkowy).</p>
+<hr />
+<h2>Karta 5 — PLAN FUELING MARCINA</h2>
+<h3>Średnie cele</h3>
+<table>
+<thead>
+<tr>
+<th>Składnik</th>
+<th>Zakres/h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CHO</strong></td>
+<td><strong>80–100 g/h</strong> średnio, szczyt 100–110 g/h przez pierwsze 8h</td>
+</tr>
+<tr>
+<td><strong>Proporcja glukoza:fruktoza</strong></td>
+<td><strong>1:0,8</strong> (Dzik, Maurten)</td>
+</tr>
+<tr>
+<td><strong>Płyny</strong></td>
+<td>400–600 ml/h ad libitum</td>
+</tr>
+<tr>
+<td><strong>Sód</strong></td>
+<td>500–700 mg/h (15–18°C); 700–1000 mg/h przy ≥22°C</td>
+</tr>
+<tr>
+<td><strong>Białko</strong></td>
+<td>5–10 g/h <strong>od godz. 8</strong></td>
+</tr>
+<tr>
+<td><strong>Tłuszcz</strong></td>
+<td><strong>0 g do godz. 12</strong>, potem <strong>10–20 g/h</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Bloki czasowe</h3>
+<p><strong>Godz. 0–8h (07:00–15:00) — sportowe sterylne</strong><br />
+- Żele Dzik 1:0,8 + izotonik<br />
+- 500–600 ml/h, 1× SaltStick/h<br />
+- Wysokie CHO 100–110 g/h jeśli żołądek wytrzymuje</p>
+<p><strong>Godz. 8–16h (15:00–23:00) — pół na pół</strong><br />
+- Kanapki z dżemem, ryż na słodko, banany<br />
+- Rotacja żel – napój – ziemniak/ryż – rosół<br />
+- Kabanos od ~godz. 15:00 (00:00 czasu zegar.)<br />
+- Redukcja słodkiego (palate fatigue)</p>
+<p><strong>Godz. 16–24h (23:00–07:00) — tryb przetrwania</strong><br />
+- Ciepły bulion, cola odgazowana, ziemniaki z solą, krakersy<br />
+- Białko + tłuszcz dominuje<br />
+- Żele tylko awaryjnie</p>
+<h3>Protokół kofeinowy (600 mg/24h, rozłożone)</h3>
+<table>
+<thead>
+<tr>
+<th>Godz. zegar.</th>
+<th>Godz. biegu</th>
+<th>Dawka</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>22:00</td>
+<td>15h</td>
+<td><strong>200 mg</strong> (otwarcie kryzysu nocnego)</td>
+</tr>
+<tr>
+<td>00:30</td>
+<td>17,5h</td>
+<td>100 mg</td>
+</tr>
+<tr>
+<td>02:00</td>
+<td>19h</td>
+<td>100 mg</td>
+</tr>
+<tr>
+<td>03:30</td>
+<td>20,5h</td>
+<td>100 mg</td>
+</tr>
+<tr>
+<td>04:30</td>
+<td>21,5h</td>
+<td>100 mg ostatnia (przed wschodem słońca)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Karta 6 — RUN-WALK PROTOKÓŁ</h2>
+<table>
+<thead>
+<tr>
+<th>Kiedy</th>
+<th>Co</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Każde okrążenie od 1.</strong></td>
+<td>Walk-through-aid 15–30 s w strefie supportu (jesz/pijesz marszem)</td>
+</tr>
+<tr>
+<td><strong>Po każdym solidnym posiłku</strong></td>
+<td>2 min marszu (mniej GI distress)</td>
+</tr>
+<tr>
+<td><strong>Co 2h</strong></td>
+<td>1 pełne okrążenie marszem (~15 min) — reset bioder, łydek</td>
+</tr>
+<tr>
+<td><strong>Po godz. 16 biegu (~23:00)</strong></td>
+<td>Dodatkowo 30 s marszu na każdej połowie pętli</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sumarycznie:</strong> ~10% marszu w 1. połowie, ~20% w drugiej.</p>
+<p><strong>Powiedz Marcinowi „chodzisz":</strong><br />
+- Po każdym posiłku ciężkim<br />
+- Co 2h (alarm na zegarku)<br />
+- Jeśli tempo niżej niż plan, ale nie wymięty<br />
+- Jeśli kuleje 1 okrążenie</p>
+<hr />
+<h2>Karta 7 — TEMPO CELE (alert zegarka OBOWIĄZKOWY)</h2>
+<table>
+<thead>
+<tr>
+<th>Cel</th>
+<th>Tempo biegowe</th>
+<th>Tempo brutto (z postojami)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200 km (A)</strong></td>
+<td>6:30–6:45/km start, później 6:35–7:00</td>
+<td>7:12/km średnia</td>
+</tr>
+<tr>
+<td><strong>220 km (stretch)</strong></td>
+<td>6:00–6:15/km start</td>
+<td>6:33/km średnia</td>
+</tr>
+<tr>
+<td><strong>180 km (B)</strong></td>
+<td>7:00–7:30/km</td>
+<td>8:00/km średnia</td>
+</tr>
+</tbody>
+</table>
+<p><strong>🚨 HARD CEILING pierwsze 6h: max 6:10/km.</strong><br />
+<strong>Ruda 2023 + DNF Kaliska 2022 — Marcin ma udokumentowaną tendencję do za szybkiego startu.</strong></p>
+<p>Reguła startu: „W godz. 0–2 powinieneś czuć się <strong>irytująco wolno</strong>."</p>
+<hr />
+<h2>Karta 8 — BLOKI CZASOWE + DECISION GATES</h2>
+<table>
+<thead>
+<tr>
+<th>Godz. biegu</th>
+<th>Pora zegar.</th>
+<th>Co kluczowe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–6h</td>
+<td>07–13:00</td>
+<td><strong>Dyscyplina pace.</strong> „Irytująco wolno." Walk-through-aid od 1. okr.</td>
+</tr>
+<tr>
+<td><strong>8h</strong></td>
+<td><strong>15:00</strong></td>
+<td>🚦 <strong>Pace review:</strong> jeśli 5% za szybko → ZWOLNIĆ. Zmiana butów Ride→Clifton</td>
+</tr>
+<tr>
+<td>6–12h</td>
+<td>13–19:00</td>
+<td>Popołudniowy dip + ciepło + palate fatigue. Cooling przy &gt;20°C.</td>
+</tr>
+<tr>
+<td><strong>12h</strong></td>
+<td><strong>19:00</strong></td>
+<td>🚦 <strong>Fuel review:</strong> jeśli &lt;70 g CHO/h → agresywnie dodać</td>
+</tr>
+<tr>
+<td>12–18h</td>
+<td>19–01:00</td>
+<td><strong>„Tu wygrywasz lub przegrywasz."</strong> Bulion co 2 okr. Słone zamiast słodkiego. Czołówka ~20:30.</td>
+</tr>
+<tr>
+<td><strong>15h</strong></td>
+<td><strong>22:00</strong></td>
+<td>🚦 Pierwszy bolus kofeinowy 200 mg, zmiana warstw nocnych</td>
+</tr>
+<tr>
+<td><strong>16h</strong></td>
+<td><strong>23:00</strong></td>
+<td>🚦 Zmiana butów (Ride lub Clifton)</td>
+</tr>
+<tr>
+<td>18–24h</td>
+<td>01–07:00</td>
+<td><strong>Kryzys nocny 02–05.</strong> Ciepły bulion na stojąco, masaż łydek. Mikro-pit-stopy 5–15 min.</td>
+</tr>
+<tr>
+<td><strong>20h</strong></td>
+<td><strong>03:00</strong></td>
+<td>🚦 <strong>Decyzja finiszu</strong> — A czy B? Mantra: „pozycja X, ułamki"</td>
+</tr>
+<tr>
+<td><strong>22h</strong></td>
+<td><strong>05:00</strong></td>
+<td>🚦 Sprint czy utrzymanie? Wschód słońca = psych reset, stop kofeiny</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Karta 9 — RED FLAGS (kod STOP)</h2>
+<h3>🟢 ZIELONY — wszystko OK</h3>
+<p>Tempo ±5%, nogi/żołądek/głowa ≥6/10, mocz słomkowy, żołądek przyjmuje plan.</p>
+<h3>🟡 ŻÓŁTY — interwencja w następnym okrążeniu</h3>
+<ul>
+<li>Tempo zwolnione, lekkie nudności, ból łydki, formujący się pęcherz, mokro/zimno, dół energetyczny → <strong>przygotuj rozwiązanie na następny pit-stop</strong></li>
+</ul>
+<h3>🔴 CZERWONY — STOP, rozmawiamy</h3>
+<ul>
+<li>Wymioty 2× pod rząd, pęcherz duży + ból, ITBS &gt;7/10, dół energetyczny po 14h, nie utrzymuje A-goal → <strong>wspólna decyzja</strong></li>
+</ul>
+<h3>⚫ CZARNY — DNF, MEDYK (nie pytam Marcina, wzywam)</h3>
+<table>
+<thead>
+<tr>
+<th>Patologia</th>
+<th>Objawy → AKCJA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EAH (hiponatremia)</strong></td>
+<td>Dezorientacja, bełkotliwa mowa, zataczanie, obrzęk twarzy/palców, bóle głowy, wymioty, brak moczu mimo picia → <strong>NIE PODAWAĆ WODY</strong> + medyk</td>
+</tr>
+<tr>
+<td><strong>Rabdomioliza</strong></td>
+<td><strong>Mocz koloru coca-coli</strong> = #1 znak. Ból mięśni nieproporcjonalny. Skąpomocz &gt;12h → <strong>SOR/medyk</strong></td>
+</tr>
+<tr>
+<td><strong>Anuria</strong></td>
+<td>Brak moczu &gt;6h → medyk</td>
+</tr>
+<tr>
+<td><strong>Hipotermia</strong></td>
+<td>Drży i <strong>PRZESTAJE drżeć</strong> (paradoks!), splątanie, motoryka dłoni → folia NRC + bulion + medyk jeśli 15 min nie pomaga</td>
+</tr>
+<tr>
+<td><strong>Dezorientacja</strong></td>
+<td>Nie rozpoznaje mnie, nie wie gdzie jest → STOP + medyk</td>
+</tr>
+<tr>
+<td><strong>Krwiomocz brązowy</strong></td>
+<td>= rabdo → SOR</td>
+</tr>
+<tr>
+<td><strong>Hipertermia / udar cieplny</strong></td>
+<td>T core &gt;40°C, brak potu w upale → lód pachwiny/szyja + medyk</td>
+</tr>
+<tr>
+<td><strong>Ostry ból stawu/ścięgna</strong> z obrzękiem + kulanie 2 okr.</td>
+<td>STOP — możliwe złamanie przeciążeniowe</td>
+</tr>
+</tbody>
+</table>
+<h3>Co Paweł pyta przy każdym pit-stopie</h3>
+<pre><code>☐ Mocz — kolor?
+  - słomkowy → 🟢 OK
+  - ciemny żółty → 🟡 pić więcej
+  - brązowy → ⚫ STOP, RABDO
+  - brak &gt;6h → ⚫ STOP, ANURIA
+
+☐ Pyt. kontrolne: „Jak masz na imię? Kto wygrał ostatni Mundial?&quot;
+  - adekwatna → 🟢
+  - wolna ale OK → 🟡
+  - dezorientacja → ⚫ STOP
+
+☐ Drżenie / temperatura
+  - normalnie → 🟢
+  - drży → 🟡 dodaj warstwę
+  - PRZESTAŁ drżeć ale zimny → ⚫ HIPOTERMIA
+
+☐ Obrzęk twarzy/palców?
+  - brak → 🟢
+  - lekki + waga +0% → 🟡 STOP picia
+  - wyraźny → ⚫ EAH, STOP
+</code></pre>
+<h3>🚨 BEZ NLPZ (Ibuprom, Ketonal, Nurofen, Diclofenac)</h3>
+<p>Lipman 2017 RCT: AKI 52% (ibuprofen) vs 34% (placebo). Tylko <strong>paracetamol max 1 g/24h</strong>.</p>
+<hr />
+<h2>Karta 10 — DZIENNIK SUPPORTERA (pusty szablon)</h2>
+<blockquote>
+<p>Notes A5, długopis. <strong>Papier nie telefon.</strong> Kolumna „Nastrój" — trend ważniejszy niż wartość.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Godz. biegu</th>
+<th>Czas zegar.</th>
+<th>Okr. #</th>
+<th>Tempo</th>
+<th>Pobrał (bidon)</th>
+<th>Zjadł/wypił</th>
+<th>Sód (mg)</th>
+<th>Kofeina (mg)</th>
+<th>Żołądek/Nogi/Głowa</th>
+<th>Kolor</th>
+<th>Uwagi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td>🟢🟡🔴⚫</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>21</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>23</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>/  /</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ważenie EAH co 6h</strong> (osobny zapis):<br />
+- T-0 (start, 7:00): <strong><em>_</em> kg<br />
+- T-6h (13:00): </strong><strong><em> kg → różnica: </em></strong><strong><br />
+- T-12h (19:00): <strong><em>_</em> kg → różnica: </strong><strong><em><br />
+- T-18h (01:00): </em></strong></strong> kg → różnica: <strong><em>_</em><br />
+- T-24h (07:00): </strong><strong><em> kg → różnica: </em></strong>__</p>
+<p>🚨 Jeśli waga <strong>&gt;0% vs start</strong> = STOP picia, dodaj sól, możliwe EAH.</p>
+<hr />
+<h2>Karta 11 — LOGISTYKA STREFY SUPPORTU + PARKING</h2>
+<h3>Parking (komunikat 2026)</h3>
+<ul>
+<li><strong>Główny:</strong> wewnątrz parku, <strong>wjazd od ul. 15-go Pułku Piechoty</strong>. Do bazy ~300 m.</li>
+<li><strong>Wjazd od ul. Łaskiej:</strong> TYLKO do wypakowania bagaży. Okno: <strong>do 22:00 piątku</strong> + <strong>od 5:00 soboty</strong>. Między 22:00 pt a 5:00 sob — zamknięte.</li>
+<li>🚨 <strong>NIE MOŻNA wyjechać autem</strong> z parkingu wewnętrznego przed końcem biegu 24h (niedziela 7:00) i 48h.</li>
+<li>🚨 <strong>Wjazd przecina trasę biegu</strong> — bardzo ostrożnie, słuchaj obsługi.</li>
+<li>Alternatywa: parkowanie na ul. 15-go Pułku Piechoty (po stronie parku).</li>
+</ul>
+<h3>Strefa supportu</h3>
+<ul>
+<li>Małe namioty support, <strong>stolik min. 1 m od krawędzi biegu</strong> (sędziowie egzekwują)</li>
+<li><strong>Brak rezerwacji</strong> (kto pierwszy)</li>
+<li>Namioty noclegowe <strong>ZA</strong> strefą support (nie obok stolika)</li>
+<li><strong>Jedno miejsce wejścia/wyjścia Marcina</strong> — <strong>każde zejście zgłaszane sędziemu PZLA</strong></li>
+<li>Suport: podajemy odżywkę, <strong>NIE biegamy</strong> za zawodnikiem</li>
+<li>W bazie: prąd, czajniki, mikrofala, lodówka, warniki, woda pitna</li>
+<li>Łóżka noclegowe (kilkanaście) — własny śpiwór</li>
+</ul>
+<h3>Oświetlenie pętli</h3>
+<ul>
+<li>Nowe lampy LED, <strong>włączają się 20 min po zachodzie słońca</strong> (~21:10 sob 30.05)</li>
+<li>Czołówka Marcina na 1–2 okrążenia <strong>20:30–21:15</strong> + w pasku przez całą noc (awaria LED)</li>
+</ul>
+<h3>NIE WOLNO opuszczać terenu zawodów</h3>
+<p>Opuszczenie = automatyczne zakończenie + oddanie chipa firmie pomiarowej + zgłoszenie sędziom.</p>
+<h3>Medyk</h3>
+<p><strong>Ratownicy medyczni w bazie cały czas.</strong> Lokalizacja w bazie zawodów.</p>
+<hr />
+<h2>Karta 12 — PIT-STOP WORKFLOW (60 sekund)</h2>
+<h3>Każde okrążenie (walk-through-aid, ~30 s)</h3>
+<table>
+<thead>
+<tr>
+<th>Czas</th>
+<th>Akcja</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30 s przed przyjściem</td>
+<td><strong>Szykuję pakiet</strong> (bidon + 2 produkty w zip-locku)</td>
+</tr>
+<tr>
+<td>0–10 s</td>
+<td>Bidon nowy do ręki Marcina, stary do kosza</td>
+</tr>
+<tr>
+<td>10–30 s</td>
+<td>Marcin zjada pakiet <strong>marszem</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Co 4. okrążenie (pełny pit-stop, ~60 s)</h3>
+<table>
+<thead>
+<tr>
+<th>Czas</th>
+<th>Akcja</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–10 s</td>
+<td>Bidon + pakiet</td>
+</tr>
+<tr>
+<td>10–30 s</td>
+<td>Zjedzenie marszem</td>
+</tr>
+<tr>
+<td><strong>30–45 s</strong></td>
+<td><strong>Pytam:</strong> „żołądek/nogi/głowa 1–10?" — <strong>notuję</strong></td>
+</tr>
+<tr>
+<td>45–60 s</td>
+<td>Następny pakiet do kieszeni, <strong>restart biegu</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>Komunikat: „Okr. X, pozycja Y, tempo Z" — <strong>i koniec rozmowy</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Duże pit-stopy (5–15 min, ~6× w 24h)</h3>
+<table>
+<thead>
+<tr>
+<th>Godz. biegu</th>
+<th>Pora</th>
+<th>Cel</th>
+<th>Czas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>8h</strong></td>
+<td>~15:00</td>
+<td>Zmiana butów Ride→Clifton + Sudocrem + pęcherze</td>
+<td>5 min</td>
+</tr>
+<tr>
+<td>11–12h</td>
+<td>~18–19:00</td>
+<td>Zmiana warstw (rękawki, buff) + ciepłe jedzenie</td>
+<td>3–5 min</td>
+</tr>
+<tr>
+<td><strong>15h</strong></td>
+<td>~22:00</td>
+<td>Bolus kofeinowy 200 mg + warstwy nocne</td>
+<td>5 min</td>
+</tr>
+<tr>
+<td>16–17h</td>
+<td>~23–24:00</td>
+<td>Zmiana butów (Ride lub Clifton)</td>
+<td>5 min</td>
+</tr>
+<tr>
+<td>20–22h</td>
+<td>~03–05:00</td>
+<td>Ciepły bulion, masaż łydek</td>
+<td>5–15 min</td>
+</tr>
+</tbody>
+</table>
+<h3>Pakiety w zip-lockach (zawartość przykładowa)</h3>
+<p><strong>Godz. 0–8 (sportowy):</strong> żel Dzik 1:0,8 + SaltStick + bidon 500 ml izotonik</p>
+<p><strong>Godz. 8–12 (popołudnie):</strong> bułka z miodem + banan + bidon izotonik + SaltStick</p>
+<p><strong>Godz. 12–18 (wieczór):</strong> pierogi ruskie 3 szt. + kubek rosołu + woda + SaltStick</p>
+<p><strong>Godz. 18–24 (noc):</strong> kanapka awokado/hummus + kubek rosołu + cola odgazowana + kapsułka kofeiny 100 mg</p>
+<hr />
+<h2>Karta 13 — MIKRO-DRZEMKI PAWŁA (gdy bez zmiennika)</h2>
+<blockquote>
+<p>Microsleeps 20 min — bez inercji snu (Fullagar 2015). Budzik 5 min przed spodziewanym przyjściem Marcina.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Godz. biegu</th>
+<th>Pora zegar.</th>
+<th>Drzemka</th>
+<th>Budzik</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8h (opcj.)</td>
+<td>~15:00</td>
+<td>20 min</td>
+<td>po 5 min przed Marcin</td>
+</tr>
+<tr>
+<td>12h</td>
+<td>~19:00</td>
+<td>19:00–19:20</td>
+<td>19:25</td>
+</tr>
+<tr>
+<td>17h</td>
+<td>~24:00</td>
+<td>24:00–24:20</td>
+<td>24:25</td>
+</tr>
+<tr>
+<td>22h</td>
+<td>~05:00</td>
+<td>05:00–05:20</td>
+<td>05:25</td>
+</tr>
+</tbody>
+</table>
+<h3>Moje (Pawła) jedzenie i kawa</h3>
+<ul>
+<li><strong>Co 2h</strong> alarm: jedzenie pełnowartościowe (kanapka, ryż, owoc — NIE tylko chipsy)</li>
+<li><strong>Co 4h</strong> kawa (NIE co 2h: tachykardia → złe decyzje)</li>
+<li><strong>Co godzinę</strong> — 5–7 min siedzenia (między pit-stopami)</li>
+</ul>
+<h3>Plan B jeśli zmiennika nie ma</h3>
+<ol>
+<li>Mikro-drzemki 4× obowiązkowo</li>
+<li>Buddy-system telefoniczny — żona Marcina dostępna 02:00–05:00, dzwonię co godzinę</li>
+<li>Coffee discipline: kawa co 4h</li>
+<li>Karta kontrolna pit-stopu jako zabezpieczenie przed brakami pamięci</li>
+</ol>
+<hr />
+<h2>Karta 14 — OTWARTE PYTANIA do ODPRAWY 6:40 sob.</h2>
+<blockquote>
+<p>Lista do dopytania organizatora / sędziego na odprawie.</p>
+</blockquote>
+<ul>
+<li>[ ] Toalety — liczba, lokalizacja, dostęp 24/7</li>
+<li>[ ] AED w bazie (defibrylator)?</li>
+<li>[ ] Słuchawki / muzyka — dozwolone?</li>
+<li>[ ] Procedura liczenia ostatniej niepełnej pętli po 24h</li>
+<li>[ ] Zadaszenie strefy w razie ulewy</li>
+<li>[ ] Numer telefonu do bazy organizatora na żywo (gdyby zgubił telefon)</li>
+<li>[ ] Gdzie dokładnie wejście/wyjście Marcina ze strefy support (sędzia weryfikuje)</li>
+</ul>
+<hr />
+<h2>KONIEC</h2>
+<p><strong>Tylna strona teczki — zapisz:</strong><br />
+- Numer startowy Marcina: <strong><em>_</em><br />
+- Kod na posiłki: </strong><strong><em><br />
+- Hasło-bezpieczeństwa DNF od Marcina: </em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+- Mój zmiennik (jeśli): </strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong></p>
+<p>🍀 Powodzenia!</p>
+
+<script>
+// ── Stałe ────────────────────────────────────────────────
+const RACE_START  = new Date('2026-05-30T07:00:00+02:00');
+const LAP_M       = 1725;
+const PID         = 354648;
+const RESULTS_URL = 'https://protimer.pl/bio/export/results_online_ajax/1434/16030/';
+const DETAILS_URL = 'https://protimer.pl/bio/export/details/1434/16030/';
+let   _timer      = null;
+let   _prevState  = null;   // fallback: {laps, cumSec}
+let   _lapHistory = [];     // fallback: obliczone z różnic między odświeżeniami
+
+// ── Helpers ──────────────────────────────────────────────
+function parseHMS(s) {
+  if (!s) return 0;
+  const p = s.trim().split(':').map(Number);
+  return p.length === 3 ? p[0]*3600+p[1]*60+p[2] : p.length===2 ? p[0]*60+p[1] : 0;
+}
+function secToHMS(s) {
+  s = Math.max(0, Math.floor(s));
+  return [Math.floor(s/3600), Math.floor((s%3600)/60), s%60]
+    .map(n => String(n).padStart(2,'0')).join(':');
+}
+function secToMS(s) {
+  s = Math.max(0, Math.floor(s));
+  return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
+}
+function pace(sKm) { return `${secToMS(Math.round(sKm))}/km`; }
+
+// ── Fetch GET (direct → corsproxy) ───────────────────────
+async function getFetch(url) {
+  const opts = { mode:'cors', credentials:'omit', headers:{'X-Requested-With':'XMLHttpRequest'} };
+  for (const u of [url, `https://corsproxy.io/?${encodeURIComponent(url)}`]) {
+    try { const r = await fetch(u, opts); if (r.ok) return r.text(); } catch {}
+  }
+  return null;
+}
+
+// ── Fetch POST form-encoded (direct → corsproxy) ─────────
+async function postFetch(url, body) {
+  const encoded = new URLSearchParams(body).toString();
+  const tryPost = async (u, extra={}) => {
+    const r = await fetch(u, {
+      method: 'POST', mode: 'cors', credentials: 'omit',
+      headers: { 'Content-Type':'application/x-www-form-urlencoded',
+                 'X-Requested-With':'XMLHttpRequest', ...extra },
+      body: encoded
+    });
+    if (!r.ok) throw new Error(r.status);
+    return r.text();
+  };
+  try { return await tryPost(url); } catch {}
+  try { return await tryPost(`https://corsproxy.io/?${encodeURIComponent(url)}`); } catch {}
+  return null;
+}
+
+// ── Parser: główna tabela standings ──────────────────────
+function parseStandings(html) {
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const a = doc.querySelector(`[data-participant="${PID}"]`);
+  if (!a) return null;
+  const tds = [...a.closest('tr').querySelectorAll('td')];
+  return {
+    pos:     (tds[0].textContent.match(/\d+/) || ['?'])[0],
+    laps:    parseInt(tds[7].textContent) || 0,
+    cumTime: tds[8].textContent.trim(),
+    cumSec:  parseHMS(tds[8].textContent.trim()),
+    dist:    parseFloat(tds[9].textContent.replace(',', '.')) || 0,
+    catPos:  (tds[6].querySelector('b') || {textContent:'?'}).textContent.trim()
+  };
+}
+
+// ── Parser: szczegóły uczestnika → czasy okrążeń ─────────
+// Format odpowiedzi: <tr><th>Okrążenie N</th><td>MM:SS / pos</td><td>HH:MM:SS.mmm</td></tr>
+function parseLapDetails(html) {
+  if (!html) return null;
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const laps = [];
+  for (const row of doc.querySelectorAll('tr')) {
+    const rh = row.querySelector('th');
+    if (!rh || !/^Okrążenie\s+\d+/.test(rh.textContent.trim())) continue;
+    const cells = [...row.querySelectorAll('td')];
+    if (!cells.length) continue;
+    const raw = cells[0].textContent.trim();          // "00:10:05 / 39"
+    const [tStr, pStr = '0'] = raw.split('/').map(s => s.trim());
+    laps.push({
+      lap:    parseInt(rh.textContent.match(/\d+/)[0]),
+      lapSec: parseHMS(tStr),
+      lapStr: tStr,
+      pos:    parseInt(pStr) || 0,
+      clock:  cells[1] ? cells[1].textContent.trim().slice(0, 8) : ''
+    });
+  }
+  return laps.length ? laps : null;
+}
+
+// ── Render tabeli okrążeń ─────────────────────────────────
+function renderLapTable(laps, note='') {
+  const avg = laps.reduce((s, l) => s + l.lapSec, 0) / laps.length;
+  const PIT = avg * 1.10;   // >10% ponad średnią = pit-stop lub marsz
+  let prev = 0;
+  let html = `<div class="live-laps-wrap">
+    <div class="live-label" style="margin-bottom:5px">
+      Czasy okrążeń (${laps.length} · śred. ${secToMS(avg)} · ${pace(avg / (LAP_M/1000))})
+    </div>
+    <table>
+      <tr><th>#</th><th>Czas</th><th>Tempo</th><th>Poz.</th><th>↕</th></tr>`;
+  for (const l of laps) {
+    const isPit  = l.lapSec > PIT;
+    const isFast = !isPit && l.lapSec < avg * 0.97;
+    const isSlow = !isPit && l.lapSec > avg * 1.03;
+    const cls    = isPit ? 'lap-pit' : isFast ? 'lap-fast' : isSlow ? 'lap-slow' : '';
+    const delta  = prev > 0 ? l.pos - prev : 0;
+    const arrow  = delta < 0 ? `<span style="color:#2ecc71">▲${-delta}</span>`
+                 : delta > 0 ? `<span style="color:#e74c3c">▼${delta}</span>` : '—';
+    html += `<tr class="${cls}">
+      <td>${l.lap}</td>
+      <td>${secToMS(l.lapSec)}</td>
+      <td>${pace(l.lapSec / (LAP_M/1000))}</td>
+      <td>${l.pos || '—'}</td>
+      <td>${arrow}</td>
+    </tr>`;
+    if (l.pos) prev = l.pos;
+  }
+  html += `</table>${note ? `<div class="live-note">${note}</div>` : ''}</div>`;
+  return html;
+}
+
+// ── Główna funkcja odświeżania ────────────────────────────
+async function refreshLive() {
+  if (_timer) clearTimeout(_timer);
+  const tsEl = document.getElementById('live-ts');
+  tsEl.textContent = '⏳';
+
+  const now      = new Date();
+  const elapsed  = Math.max(0, (now - RACE_START) / 1000);
+  const elapsedH = elapsed / 3600;
+
+  // Równolegle: GET standings + POST participant details
+  const [resultsHtml, detailsHtml] = await Promise.all([
+    getFetch(RESULTS_URL),
+    postFetch(DETAILS_URL, { participant: PID })
+  ]);
+
+  if (!resultsHtml) {
+    document.getElementById('live-body').innerHTML =
+      `<div class="live-error">⚠️ Brak danych (CORS lub brak sieci). Otwórz
+       <a href="https://protimer.pl/bio/export/results_online/1434/16030"
+          target="_blank" style="color:#f39c12">protimer.pl</a>
+       w osobnej karcie.</div>`;
+    tsEl.textContent = `Błąd ${now.toLocaleTimeString('pl-PL')}`;
+    _timer = setTimeout(refreshLive, 60_000);
+    return;
+  }
+
+  const d = parseStandings(resultsHtml);
+  if (!d) {
+    document.getElementById('live-body').innerHTML =
+      '<div class="live-error">⚠️ Marcin nie znaleziony w tabeli wyników.</div>';
+    _timer = setTimeout(refreshLive, 30_000);
+    return;
+  }
+
+  // Fallback: state-tracking historii okrążeń z GET-ów
+  if (_prevState && d.laps > _prevState.laps) {
+    const added  = d.laps - _prevState.laps;
+    const lapSec = (d.cumSec - _prevState.cumSec) / added;
+    for (let i = 0; i < added; i++) {
+      _lapHistory.push({ lap: _prevState.laps + i + 1, lapSec,
+                         lapStr: secToMS(lapSec), pos: 0, clock: '' });
+    }
+  }
+  _prevState = { laps: d.laps, cumSec: d.cumSec };
+
+  // Obliczenia
+  const avgLapSec = d.laps > 0 ? d.cumSec / d.laps : 0;
+  const avgPaceKm = avgLapSec / (LAP_M / 1000);
+  const projDist  = elapsedH > 0 ? (d.dist / elapsedH) * 24 : 0;
+  const paceA = 24*3600/200, paceB = 24*3600/180, paceS = 24*3600/220;
+
+  let goalTag, goalColor;
+  if      (avgPaceKm <= paceS) { goalTag = '🚀 STRETCH 220+'; goalColor = '#2ecc71'; }
+  else if (avgPaceKm <= paceA) { goalTag = '✅ CEL A 200km';  goalColor = '#2ecc71'; }
+  else if (avgPaceKm <= paceB) { goalTag = '🟡 CEL B 180km'; goalColor = '#f1c40f'; }
+  else                          { goalTag = '🔴 PONIŻEJ B';   goalColor = '#e74c3c'; }
+
+  // Sekcja okrążeń
+  const detailLaps = parseLapDetails(detailsHtml);
+  let lapSection;
+  if (detailLaps && detailLaps.length > 0) {
+    lapSection = renderLapTable(detailLaps);
+  } else if (_lapHistory.length > 0) {
+    lapSection = renderLapTable(_lapHistory,
+      '* Obliczone z różnic między odświeżeniami — czas może obejmować kilka okrążeń naraz.');
+  } else {
+    lapSection = `<div class="live-note">
+      Czasy okrążeń pojawią się automatycznie. Jeśli nie — otwórz
+      <a href="https://protimer.pl/bio/export/results_online/1434/16030"
+         target="_blank" style="color:#f39c12">protimer.pl</a>
+      w tej samej przeglądarce (zaloguje sesję), potem wróć i odśwież.
+    </div>`;
+  }
+
+  document.getElementById('live-body').innerHTML = `
+<div class="live-grid">
+  <div class="live-cell">
+    <div class="live-label">Overall</div>
+    <div class="live-val">${d.pos}</div>
+  </div>
+  <div class="live-cell">
+    <div class="live-label">Kategoria M40</div>
+    <div class="live-val">${d.catPos}.</div>
+  </div>
+  <div class="live-cell">
+    <div class="live-label">Okrążenia</div>
+    <div class="live-val">${d.laps}</div>
+    <div class="live-sub">${d.dist.toFixed(2)} km</div>
+  </div>
+  <div class="live-cell">
+    <div class="live-label">Czas sum.</div>
+    <div class="live-val">${d.cumTime}</div>
+    <div class="live-sub">bieg trwa: ${secToHMS(elapsed)}</div>
+  </div>
+  <div class="live-cell">
+    <div class="live-label">Śred. okrążenie</div>
+    <div class="live-val">${secToMS(avgLapSec)}</div>
+    <div class="live-sub">${pace(avgPaceKm)}</div>
+  </div>
+  <div class="live-cell">
+    <div class="live-label">Projekcja 24h</div>
+    <div class="live-val">${projDist.toFixed(1)} km</div>
+    <div class="live-sub" style="color:${goalColor}">${goalTag}</div>
+  </div>
+</div>
+<div class="live-pbar">
+  Cele:
+  <strong>Stretch 220</strong>=${pace(paceS)} &nbsp;·&nbsp;
+  <strong>A 200</strong>=${pace(paceA)} &nbsp;·&nbsp;
+  <strong>B 180</strong>=${pace(paceB)}
+  &emsp;|&emsp;
+  Aktualne: <strong style="color:${goalColor}">${pace(avgPaceKm)}</strong>
+</div>
+${lapSection}`;
+
+  tsEl.textContent = `Aktualizacja: ${now.toLocaleTimeString('pl-PL')} · auto za 2 min`;
+  _timer = setTimeout(refreshLive, 120_000);
+}
+
+window.addEventListener('DOMContentLoaded', refreshLive);
+</script>
+
+</body>
+</html>
